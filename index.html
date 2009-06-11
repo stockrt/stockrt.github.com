@@ -56,8 +56,6 @@ img#forkme {
 </style>
 <!-- /Style -->
 
-http://github.com/api/v2/json/repos/show/stockrt
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
@@ -65,7 +63,7 @@ $(function() {
 	var login = 'stockrt'
 
 	$.getJSON('http://github.com/api/v2/json/repos/show/' + login + '?callback=?', function(data) {
-		var repos = $.grep(data.user.repositories, function() {
+		var repos = $.grep(data.repositories, function() {
 			return !this.fork
 		})
 
