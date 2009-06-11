@@ -1,25 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta name="Content-Type" content="text/html; charset=UTF-8" />
 <title>Rogério Schneider weekend coding</title>
-<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+<meta http-equiv="Refresh" content="60"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Rogério Carvalho Schneider"/>
+<meta name="description" content="Weekend codes I did and hosted on GitHub to share with you" xml:lang="en" lang="en"/>
+<meta name="keywords" content="Python, github, weekend, modules, code" xml:lang="en" lang="en"/>
+
+<!-- Style -->
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-weight: normal;
+	margin-bottom: 30px;
+	color: #222;
+	font-size: 40px;
+}
+h2 {
+	font-weight: normal;
+	margin-bottom: 30px;
+	color: #222;
+	font-size: 30px;
+}
+body {
+	font-family: 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+	background-color: #fff;
+	overflow: auto;
+	font-size: 20px;
+	width:750px;
+	margin:0 auto;
+	margin-top:30px;
+}
+a {
+	text-decoration: none;
+	color: #777;
+}
+a:hover {color: #444;}
+img#forkme {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+#container {
+	width: 500pt;
+	text-align: center;
+	margin-top: 100px;
+}
+#footer {margin-top: 100px;}
+</style>
+<!-- /Style -->
+
+http://github.com/api/v2/json/repos/show/stockrt
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	var repolimit = 10
+	var login = 'stockrt'
+
+	$.getJSON('http://github.com/api/v2/json/repos/show/' + login + '?callback=?', function(data) {
+		var repos = $.grep(data.user.repositories, function() {
+			return !this.fork
+		})
+
+		repos.sort(function(a, b) {
+			return b.watchers - a.watchers
+		})
+
+		$.each(repos.slice(0, repolimit), function() {
+			$('#repos').append('<p><a href="' + this.url + '">' + this.name + '</a> - ' + this.description + '</p><br/>')
+		})
+	})
+})
+</script>
 </head>
+
 <body>
-<!--	<a href="http://github.com/stockrt"><img id="forkme" src="forkme_left_darkblue.png" alt="Fork me on GitHub" /></a>
--->
-	<a href="http://github.com/stockrt"><img id="forkme" src="forkme_right_orange.png" alt="Fork me on GitHub" /></a>
-	<div id="container">
-		<h1>Hi</h1>
-		<h1><strong>I’m Rogério Schneider</strong></h1>
-		<h2>and here you can find some of my weekend codes:</h2>
+<a href="http://github.com/stockrt"><img id="forkme" src="forkme_right_orange.png" alt="Fork me on GitHub"/></a>
+<div id="container">
+	<h1>Hi</h1>
+	<h1><strong>I’m Rogério Schneider</strong></h1>
+	<h2>and here you can find some of my weekend codes:</h2>
 	<br/>
 	<br/>
-		<p>
-			<a href="http://github.com/stockrt/tahoe-mount/tree">tahoe-mount</a> - Tahoe-LAFS aliases mount/umount scripts
-		</p><br/>
-		<p>
-			<a href="http://github.com/stockrt/hadoop-spec/tree">hadoop-spec</a> - The specfile for building Hadoop's Core RPM for RHEL Linux distributions
-		</p><br/>
+	<div id="repos">
+		<li><h3>repositories</h3></li>
+	</div>
+	<br/>
 	<br/>
 	<div id="footer">
 		<a href="http://github.com/stockrt">projects</a> |
@@ -27,7 +100,9 @@
 		<a href="mailto:stockrt@gmail.com">reachme</a> |
 		<a href="http://stockrtweb.homelinux.com">directory listing at home</a>
 	</div>
-	</div>
+	<br/>
+	<br/>
+</div>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
