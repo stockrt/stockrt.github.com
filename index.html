@@ -59,20 +59,20 @@ img#forkme {
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
-	var repolimit = 10
 	var login = 'stockrt'
+	var excludepage = 'stockrt.github.com'
 
 	$.getJSON('http://github.com/api/v2/json/repos/show/' + login + '?callback=?', function(data) {
 		var repos = $.grep(data.repositories, function() {
 			return !this.fork
 		})
-
 		repos.sort(function(a, b) {
 			return b.watchers - a.watchers
 		})
-
-		$.each(repos.slice(0, repolimit), function() {
-			$('#repos').append('<p><a href="' + this.url + '">' + this.name + '</a> - ' + this.description + '</p><br/>')
+		$.each(repos, function() {
+			if (this.name != excludepage) {
+				$('#repos').append('<li><a href="' + this.url + '">' + this.name + '</a> - ' + this.description + '</li><br/>')
+			}
 		})
 	})
 })
@@ -85,20 +85,18 @@ $(function() {
 	<h1>Hi</h1>
 	<h1><strong>I’m Rogério Schneider</strong></h1>
 	<h2>and here you can find some of my weekend codes:</h2>
-	<br/>
-	<br/>
+	<br/><br/>
+
 	<div id="repos">
-		<li><h3>repositories</h3></li>
 	</div>
-	<br/>
-	<br/>
+	<br/><br/>
+
 	<div id="footer">
 		<a href="http://github.com/stockrt">projects</a> |
 		<a href="http://twitter.com/stockrt">twitter</a> |
 		<a href="mailto:stockrt@gmail.com">reachme</a> |
 		<a href="http://stockrtweb.homelinux.com">directory listing at home</a>
 	</div>
-	<br/>
 	<br/>
 </div>
 
