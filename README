@@ -1,0 +1,19 @@
+#
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+# URL:    http://stockrt.github.com
+#
+
+These are the core files I use for making my personal page here at GitHub.
+
+My projects' name and description are dynamically listed and sorted by
+relevance, and this is somewhat cool.
+You can copy the generation samples from here and use it to make your own
+personal page for 'yournickname.github.com'.
+If you are going to use my code, please keep the reference.
+
+My page (the one that uses this files you have found here) is:
+http://stockrt.github.com
+
+For more GitHub API samples and doc, see:
+v1: http://github.com/guides/the-github-api
+v2: http://develop.github.com
