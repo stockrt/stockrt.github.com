@@ -37,7 +37,7 @@ v1: http://github.com/guides/the-github-api
 v2: http://develop.github.com
 
 Samples you can pick to generate your page:
-http://github.com/stockrt/stockrt.github.com/tree/masterXXXXXXXXXXXXXXXXXXX
+http://github.com/stockrt/stockrt.github.com/tree/master/tests
 
 GPGEN - Engine for generating your static, cooler, better and faster homepage:
 http://github.com/stockrt/gpgen
