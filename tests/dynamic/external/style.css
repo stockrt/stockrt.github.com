@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-weight: normal;
+	margin-bottom: 30px;
+	color: #222;
+	font-size: 35px;
+}
+h2 {
+	font-weight: normal;
+	margin-bottom: 30px;
+	color: #222;
+	font-size: 30px;
+}
+body {
+	font-family: 'Palatino Linotype', Palatino, Georgia, 'Times New Roman',
+	serif;
+	background-color: #fff;
+	overflow: auto;
+	font-size: 20px;
+	width:750px;
+	margin:0 auto;
+	margin-top:30px;
+}
+a {
+	text-decoration: none;
+	color: #777;
+}
+a:hover {color: #444;}
+img#forkme {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+#container {
+	width: 500pt;
+	text-align: center;
+	margin-top: 100px;
+}
+#footer {margin-top: 100px;}
