@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Rogério Schneider - Weekend blogging
+title: Blog
 ---
 
-This project <a href="http://github.com/stockrt/stockrt.github.com">Rogério Schneider - Weekend blogging</a> is awesome.
+This project <a href="http://github.com/stockrt/stockrt.github.com">Blog</a> is awesome.
 
 To enable Disqus comments + badges for this site, [add it to your Disqus account](http://disqus.com/add/).
 
