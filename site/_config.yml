@@ -1,5 +1,6 @@
-rdiscount: true
 pygments: true
+rdiscount: true
+paginate: 5
 
 title: Rogério Schneider - Weekend coding blog
 subtitle: Weekend codes I made and hosted on GitHub to share with you
