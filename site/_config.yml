@@ -3,6 +3,9 @@ rdiscount: true
 permalink: pretty
 paginate: 5
 
+post_defaults:
+    layout: post
+
 title: Rogério Schneider - Weekend coding blog
 subtitle: Weekend codes I made and hosted on GitHub to share with you
 
