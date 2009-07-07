@@ -2,8 +2,8 @@
  Header
  --------------------------------------------------------------*/
 
-#header {
-  background: url("/images/header_shadow.gif") repeat-x left bottom;
+#header { 
+  background: url(../../images/theme/header_shadow.gif) repeat-x left bottom;
 }
 
 #header a:link,
@@ -231,33 +231,29 @@
 #content li.comment .author div {
   margin: 0 0 0.5em 0.5em;
   width: 60px; height: 60px;
-  background: url("/images/gravatar.gif") no-repeat left top;
+  background: url(../../images/theme/gravatar.gif) no-repeat left top;
   float: right; 
 }
 
-#content #comment-form {
+#content form.comments {
   background: #f2f2f2;
   border-top: 1px solid #ddd;
   padding: 1em 0.5em;
 }
 
-#content #comment-form fieldset { 
+#content form.comments fieldset { 
   border: none;
 }
 
-#content #comment-form legend { 
+#content form.comments legend { 
   display: none;
 }
 
-#content #comment-form label { 
+#content form.comments label { 
   font-weight: bold;
 }
 
-#content #comment-form input[type=text] {
-  width: 300px;
-}
-
-#content #comment-form textarea { 
+#content form.comments textarea { 
   width: 90%; height: 150px;
   padding: 3px;
 }
@@ -304,6 +300,65 @@
 
 #sidebar .search p input {
   font-size: 11px; width: 92%;
+}
+
+#sidebar .search .loading {
+  background: url(../../images/theme/spinner.gif) no-repeat left 50%;
+  margin: 1em 0; padding: 0 0 0 20px;
+  height: 15px;
+}
+
+#sidebar .search .results { 
+  margin: 0 0 1.25em;
+}
+
+#sidebar .search .results h3 {
+  margin-top: 1em;
+}
+
+#sidebar .search .results p { 
+  font: bold 14px "lucidamac bold", "lucida grande", verdana, arial, helvetica, sans-serif;
+  margin: 0 0 0.5em;
+}
+
+#sidebar .search .results ul { 
+  margin: 0; padding: 3px;
+}
+
+#sidebar .search .results li { background: #ffc; padding: 0.2em; }
+
+#sidebar .search .results a:link,
+#sidebar .search .results a:visited {
+  color: #222;
+}
+
+#sidebar .search .results a:hover, 
+#sidebar .search .results a:active  {
+  color: #fff;
+}
+
+/* Flickr sidebar-node */
+#sidebar #flickr {
+  margin: 0 0 2em;
+  clear: both;
+}
+
+#sidebar #flickr div {
+}
+
+#sidebar #flickr img { 
+  margin: 0 0 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  display: block;
+}
+        
+#sidebar #flickr img:hover {
+  background: #ffc;
+}
+        
+#sidebar #flickr a { 
+  border: none;
 }
 
 /*--------------------------------------------------------------

@@ -4,9 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title></title>
-  
-  <link href="http://stockrt.github.com/blog/atom.xml" rel="alternate" title="Rogério Schneider - Weekend coding blog" type="application/atom+xml" />
+  <title>{{ page.title }}</title>
+  {% if page.author %}<meta name="author" content="{{ page.author }}" />{% endif %}
+  <link href="{{ site.feed }}" rel="alternate" title="{{ site.name }}" type="application/atom+xml" />
 
   <link rel="stylesheet" href="/stylesheets/application.css" type="text/css" />
 </head>
@@ -14,23 +14,13 @@
 <body>
 <div id="container">
   <div id="header">
-    <h1><span><a href="/">Rogério Schneider - Weekend coding blog</a></span></h1>
-    <h2>Site subtitle</h2>
+    <h1><span><a href="/">{{ site.name }}</a></span></h1>
+    <h2>{{ site.subtitle }}</h2>
   </div>
 
   <div id="page">
     <div id="content">
-      
-<div id="home">
-  <h1>Blog Posts</h1>
-  
-  
-<ul class="posts">
-  
-</ul>
-
-</div>
-
+      {{ content }}
     </div>
 
     <div id="sidebar">
@@ -57,7 +47,7 @@
 
   <div id="footer">
     <hr />
-    <p><a href="/">Rogério Schneider - Weekend coding blog</a></p>
+    <p><a href="/">{{ site.name }}</a></p>
     <ul>
       <li>made with <a href="http://github.com/vilcans/scribbish-jekyll">scribbish-jekyll</a></li>
     </ul>

@@ -6,7 +6,6 @@
 @import 'layout.css';
 @import 'content.css';
 @import 'syntax.css';
-@import 'local.css';
 
 @media print { #sidebar { display: none; }
                #content { float: none; width: 90%; }
