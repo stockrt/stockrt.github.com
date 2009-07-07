@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title></title>
- <link href="" rel="self"/>
- <link href=""/>
- <updated>2009-07-07T11:51:06-03:00</updated>
- <id>/</id>
- 
-
- 
- <entry>
-   <title>My first post</title>
-   <link href="/2009/07/03/first-post.html"/>
-   <updated>2009-07-03T00:00:00-03:00</updated>
-   <id>/2009/07/03/first-post</id>
-   <content type="html">&lt;p&gt;My first post is this one, dude!&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>The Git Parable</title>
-   <link href="/2009/05/19/the-git-parable.html"/>
-   <updated>2009-05-19T00:00:00-03:00</updated>
-   <id>/2009/05/19/the-git-parable</id>
-   <content type="html">&lt;h1&gt;The Git Parable&lt;/h1&gt;
+    <title></title>
+    <link href="" rel="self"/>
+    <link href=""/>
+    <updated>2009-07-07T13:45:17-03:00</updated>
+    <id>/</id>
+    
+    
+        <entry>
+        <title>My first post</title>
+        <link href="/2009/07/03/first-post.html"/>
+        <updated>2009-07-03T00:00:00-03:00</updated>
+        <id>/2009/07/03/first-post</id>
+        <content type="html">&lt;p&gt;My first post is this one, dude!&lt;/p&gt;</content>
+        </entry>
+    
+        <entry>
+        <title>The Git Parable</title>
+        <link href="/2009/05/19/the-git-parable.html"/>
+        <updated>2009-05-19T00:00:00-03:00</updated>
+        <id>/2009/05/19/the-git-parable</id>
+        <content type="html">&lt;h1&gt;The Git Parable&lt;/h1&gt;
 &lt;p class="meta"&gt;19 May 2009 &amp;#8211; San Francisco&lt;/p&gt;
 &lt;p&gt;Git is a simple, but extremely powerful system. Most people try to teach Git by demonstrating a few dozen commands and then yelling &amp;#8220;tadaaaaa.&amp;#8221; I believe this method is flawed. Such a treatment may leave you with the ability to use Git to perform simple tasks, but the Git commands will still feel like magical incantations. Doing anything out of the ordinary will be terrifying. Until you understand the concepts upon which Git is built, you&amp;#8217;ll feel like a stranger in a foreign land.&lt;/p&gt;
 &lt;p&gt;The following parable will take you on a journey through the creation of a Git-like system from the ground up. Understanding the concepts presented here will be the most valuable thing you can do to prepare yourself to harness the full power of Git. The concepts themselves are quite simple, but allow for an amazing wealth of functionality to spring into existence. Read this parable all the way through and you should have very little trouble mastering the various Git commands and wielding the awesome power that Git makes available to you.&lt;/p&gt;
@@ -107,14 +105,14 @@
 &lt;p&gt;&amp;#8212;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://news.ycombinator.com/item?id=615308"&gt;Discuss this post on Hacker News&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/80x15.png" /&gt;&lt;/a&gt;&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Blogging Like a Hacker</title>
-   <link href="/2008/11/17/blogging-like-a-hacker.html"/>
-   <updated>2008-11-17T00:00:00-02:00</updated>
-   <id>/2008/11/17/blogging-like-a-hacker</id>
-   <content type="html">&lt;h1&gt;Blogging Like a Hacker&lt;/h1&gt;
+        </entry>
+    
+        <entry>
+        <title>Blogging Like a Hacker</title>
+        <link href="/2008/11/17/blogging-like-a-hacker.html"/>
+        <updated>2008-11-17T00:00:00-02:00</updated>
+        <id>/2008/11/17/blogging-like-a-hacker</id>
+        <content type="html">&lt;h1&gt;Blogging Like a Hacker&lt;/h1&gt;
 &lt;p class="meta"&gt;17 Nov 2008 &amp;#8211; San Francisco&lt;/p&gt;
 &lt;p&gt;Back in 2000, when I thought I was going to be a professional writer, I spent hours a day on LiveJournal doing writing practice with other aspiring poets and authors. Since then I&amp;#8217;ve blogged at three different domains about web standards, print design, photography, Flash, illustration, information architecture, ColdFusion, package management, &lt;span class="caps"&gt;PHP&lt;/span&gt;, &lt;span class="caps"&gt;CSS&lt;/span&gt;, advertising, Ruby, Rails, and Erlang.&lt;/p&gt;
 &lt;p&gt;I love writing. I get a kick out of sharing my thoughts with others. The act of transforming ideas into words is an amazingly efficient way to solidify and refine your thoughts about a given topic. But as much as I enjoy blogging, I seem to be stuck in a cycle of quitting and starting over. Before starting the current iteration, I resolved to do some introspection to determine the factors that were leading to this destructive pattern.&lt;/p&gt;
@@ -132,14 +130,14 @@
 &lt;pre class="terminal"&gt;&lt;code&gt;$ jekyll /path/to/raw/site /path/to/place/generated/site&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Jekyll is still a very young project. I&amp;#8217;ve only developed the exact functionality that I&amp;#8217;ve needed. As time goes on I&amp;#8217;d like to see the project mature and support additional features. If you end up using Jekyll for your own blog, drop me a line and let me know what you&amp;#8217;d like to see in future versions. Better yet, fork the project over at GitHub and hack in the features yourself!&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve been living with Jekyll for just over a month now. I love it. Driving the development of Jekyll based on the needs of my blog has been very rewarding. I can edit my posts in TextMate, giving me automatic and competent spell checking. I have immediate and first class access to the &lt;span class="caps"&gt;CSS&lt;/span&gt; and page templates. Everything is backed up on GitHub. I feel a lightness now when I&amp;#8217;m writing a post. The system is simple enough that I can keep the entire conversion process in my head. The distance from my brain to my blog has shrunk, and, in the end, I think that will make me a better author.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>How to Meet Your Next Cofounder</title>
-   <link href="/2008/11/03/how-to-meet-your-next-cofounder.html"/>
-   <updated>2008-11-03T00:00:00-02:00</updated>
-   <id>/2008/11/03/how-to-meet-your-next-cofounder</id>
-   <content type="html">&lt;h1&gt;How to Meet Your Next Cofounder&lt;/h1&gt;
+        </entry>
+    
+        <entry>
+        <title>How to Meet Your Next Cofounder</title>
+        <link href="/2008/11/03/how-to-meet-your-next-cofounder.html"/>
+        <updated>2008-11-03T00:00:00-02:00</updated>
+        <id>/2008/11/03/how-to-meet-your-next-cofounder</id>
+        <content type="html">&lt;h1&gt;How to Meet Your Next Cofounder&lt;/h1&gt;
 &lt;p class="meta"&gt;3 Nov 2008 &amp;#8211; San Francisco&lt;/p&gt;
 &lt;p&gt;Over the last few months I&amp;#8217;ve seen a number of people looking for cofounders on Hacker News or via their own personal blogs. I think this is, at best, a highly inefficient way to find a cofounder and, at worst, a way to fool yourself into finding the &lt;strong&gt;wrong&lt;/strong&gt; cofounder. In any case, it&amp;#8217;s a naive approach to finding the person that will need to stand by your side in the coming storm that we call &amp;#8220;running a startup.&amp;#8221;&lt;/p&gt;
 &lt;p&gt;Don&amp;#8217;t get me wrong, the internet is an amazing tool for meeting people. The wider the net you cast, the more likely you are to find the perfect match. But the internet has its limitations. I&amp;#8217;ve had internet friends that were engaging, witty, and brilliant online, but in person felt awkward and boring. Conversely, I know people that are volatile and inflammatory online, but present an attitude of friendliness and caring in person. This phenomenon makes it difficult to gauge an individual&amp;#8217;s personality from online interaction alone.&lt;/p&gt;
@@ -149,14 +147,14 @@
 &lt;p&gt;This all sounds like a lot of hard work. Maybe you&amp;#8217;re wondering if it would be better to just go solo. I did that with Gravatar, and, in retrospect, it&amp;#8217;s painfully obvious that I made a lot of stupid mistakes. When it&amp;#8217;s just you and your thoughts it becomes too easy to pick the first thing that pops into your head. We&amp;#8217;re programmed to think all of our ideas are good, but reality tells a different story. Truly good decisions are forged from the furnace of argument, not plucked like daisies from the pasture of a peaceful mind. A good cofounder tells you when your ideas are half-baked and ensures that your good ideas actually get implemented.&lt;/p&gt;
 &lt;p&gt;The second biggest danger with going solo is the loss of motivation. Solipsism might make you feel important at first, but the constant lack of feedback and the absence of support during tough times can easily lead to a premature end to your adventure. Cofounders are like workout buddies. Just when you think there&amp;#8217;s no possible way you can do another rep, there they are, rooting you on toward an achievement that wouldn&amp;#8217;t be possible without them.&lt;/p&gt;
 &lt;p&gt;Your choice of cofounder will affect everything you do in your startup. They&amp;#8217;ll share every defeat with you and celebrate every success. They&amp;#8217;ll help you understand your own ideas better by offering a different perspective. They&amp;#8217;ll be the single most important decision you make during the tenure of your startup, so choose wisely and with extreme care.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Looking back on Selling Gravatar to Automattic</title>
-   <link href="/2008/10/27/looking-back-on-selling-gravatar-to-automattic.html"/>
-   <updated>2008-10-27T00:00:00-02:00</updated>
-   <id>/2008/10/27/looking-back-on-selling-gravatar-to-automattic</id>
-   <content type="html">&lt;h1&gt;Looking back on Selling Gravatar to Automattic&lt;/h1&gt;
+        </entry>
+    
+        <entry>
+        <title>Looking back on Selling Gravatar to Automattic</title>
+        <link href="/2008/10/27/looking-back-on-selling-gravatar-to-automattic.html"/>
+        <updated>2008-10-27T00:00:00-02:00</updated>
+        <id>/2008/10/27/looking-back-on-selling-gravatar-to-automattic</id>
+        <content type="html">&lt;h1&gt;Looking back on Selling Gravatar to Automattic&lt;/h1&gt;
 &lt;p class="meta"&gt;23 Oct 2008 &amp;#8211; San Francisco&lt;/p&gt;
 &lt;p&gt;For an entrepreneur, the line between horrible mistake and runaway success can be so thin that even Kate Moss would be envious. I lived with &lt;a href="http://gravatar.com/"&gt;Gravatar&lt;/a&gt; for nearly four years before that line even became thick enough to measure.&lt;/p&gt;
 &lt;p&gt;As it&amp;#8217;s become one of my favorite parables, I&amp;#8217;ll save the details of how I came up with the idea for Gravatar for a future post. What&amp;#8217;s important to know is that the idea was spawned not from a business perspective, but from a desperate desire to create something new in the world of blogging.&lt;/p&gt;
@@ -176,14 +174,14 @@
 &lt;p&gt;Four days later, Automattic made their official offer. On September 21st, 2007 we inked the deal and Gravatar became both the first company that I ever sold and the first company that Automattic ever acquired.&lt;/p&gt;
 &lt;p&gt;I am quite satisfied with the sale to Automattic. Some will say that I should have pursued VC funding. Indeed, I was contacted by several firms but never travelled very far down that road. I always felt like Gravatar was a feature, and I wasn&amp;#8217;t comfortable building a company on such a tiny foundation. Reinforcing this decision, no viable business model ever coalesced during the time I was building the site. It was also made clear by Toni that Automattic would maintain Gravatar as a separate brand and continue its evolution (instead of just absorbing it into WordPress). This appealed to my ego. Most companies kill or maim everything they acquire, but here was a chance for Gravatar to carry forward with all of Automattic&amp;#8217;s resources behind it (instead of two measly servers). Part of me just wanted to see what Gravatar could become with time, money, and man-power moving it forward.&lt;/p&gt;
 &lt;p&gt;Things always seem so clear in retrospect. But it was pride and persistence that kept me in the game long enough to have anything to look back on at all. While the line between horrible mistake and runaway success may be difficult to see, you can still find it if you look hard enough.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>How I Turned Down $300,000 from Microsoft to go Full-Time on GitHub</title>
-   <link href="/2008/10/18/how-i-turned-down-300k.html"/>
-   <updated>2008-10-18T00:00:00-03:00</updated>
-   <id>/2008/10/18/how-i-turned-down-300k</id>
-   <content type="html">&lt;h1&gt;How I Turned Down $300,000 from Microsoft to go Full-Time on GitHub&lt;/h1&gt;
+        </entry>
+    
+        <entry>
+        <title>How I Turned Down $300,000 from Microsoft to go Full-Time on GitHub</title>
+        <link href="/2008/10/18/how-i-turned-down-300k.html"/>
+        <updated>2008-10-18T00:00:00-03:00</updated>
+        <id>/2008/10/18/how-i-turned-down-300k</id>
+        <content type="html">&lt;h1&gt;How I Turned Down $300,000 from Microsoft to go Full-Time on GitHub&lt;/h1&gt;
 &lt;p class="meta"&gt;18 Oct 2008 &amp;#8211; San Francisco&lt;/p&gt;
 &lt;p&gt;2008 is a leap year. That means that three hundred and sixty six days ago, almost to the minute, I was sitting alone in a booth at Zeke&amp;#8217;s Sports Bar and Grill on 3rd Street in San Francisco. I wouldn&amp;#8217;t normally hang out at a sports bar, let alone a sports bar in &lt;span class="caps"&gt;SOMA&lt;/span&gt;, but back then Thursday was &amp;#8220;I Can Has Ruby&amp;#8221; night. I guess back then &amp;#8220;I can has _______&amp;#8221; was also a reasonable moniker to attach to pretty much anything. &lt;span class="caps"&gt;ICHR&lt;/span&gt; was a semi-private meeting of like minded Ruby Hackers that generally and willingly devolved into late night drinking sessions. Normally these nights would fade away like my hangover the next morning, but this night was different. This was the night that &lt;a href="http://github.com/"&gt;GitHub&lt;/a&gt; was born.&lt;/p&gt;
 &lt;p&gt;I think I was sitting at the booth alone because I&amp;#8217;d just ordered a fresh Fat Tire and needed a short break from the socializing that was happening over at the long tables in the dimly lit aft portion of the bar. On the fifth or sixth sip, Chris Wanstrath walked in. I have trouble remembering now if I&amp;#8217;d even classify Chris and I as &amp;#8220;friends&amp;#8221; at the time. We knew each other through Ruby meetups and conferences, but only casually. Like a mutual &amp;#8220;hey, I think your code is awesome&amp;#8221; kind of thing. I&amp;#8217;m not sure what made me do it, but I gestured him over to the booth and said &amp;#8220;dude, check this out.&amp;#8221; About a week earlier I&amp;#8217;d started work on a project called &lt;a href="http://github.com/mojombo/grit"&gt;Grit&lt;/a&gt; that allowed me to access Git repositories in an object oriented manner via Ruby code. Chris was one of only a handful of Rubyists at the time that was starting to become serious about Git. He sat down and I started showing him what I had. It wasn&amp;#8217;t much, but it was enough to see that it had sparked something in Chris. Sensing this, I launched into my half-baked idea for some sort of website that acted as hub for coders to share their Git repositories. I even had a name: GitHub. I may be paraphrasing, but his response was along the lines of a very emphatic &amp;#8220;I&amp;#8217;m in. Let&amp;#8217;s do it!&amp;#8221;&lt;/p&gt;
@@ -196,7 +194,6 @@
 &lt;p&gt;If you want a recipe for restless sleep, I can give you one. Add one part &amp;#8220;what will my wife think&amp;#8221; with 3,000 parts Benjamin Franklin; stir in a &amp;#8220;beer anytime you damn well please&amp;#8221; and top with a chance at financial independence.&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve become pretty good at giving my employers the bad news that I&amp;#8217;m leaving the company to go do something cooler. I broke the news to my boss at Powerset on the day the employment offer was due. I told him I was quitting to go work full time on GitHub. Like any great boss, he was bummed, but understanding. He didn&amp;#8217;t try to tempt me with a bigger bonus or anything. I think deep down he knew I was going to leave. I may have even received a larger incentive to stay than others, on account of my being a flight risk. Those Microsoft managers are crafty, I tell you. They&amp;#8217;ve got retention bonuses down to a science. Well, except when you throw an entrepreneur, the singularity of the business world, into the mix. Everything goes wacky when you&amp;#8217;ve got one of those around.&lt;/p&gt;
 &lt;p&gt;In the end, just as Indiana Jones could never turn down the opportunity to search for the Holy Grail, I could no less turn down the chance to work for myself on something I truly love, no matter how safe the alternative might be. When I&amp;#8217;m old and dying, I plan to look back on my life and say &amp;#8220;wow, that was an adventure,&amp;#8221; not &amp;#8220;wow, I sure felt safe.&amp;#8221;&lt;/p&gt;</content>
- </entry>
- 
- 
+        </entry>
+    
 </feed>
