@@ -1,2 +1,15 @@
-markdown: rdiscount
-pygments: true
+name: Rogério Schneider - Weekend coding blog
+subtitle: Site subtitle
+
+# Absolute base URL for this site without trailing slash
+url: http://stockrt.github.com/blog
+
+# Absolute URL of feed.
+# You may want to change this URL to point to a feedburner feed.
+feed: http://stockrt.github.com/blog/atom.xml
+
+# Author element in atom feed. Optional.
+# If email is supplied, name is required.
+author:
+    name: Rogério Schneider
+    email: stockrt@gmail.com

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Rogério Schneider - Weekend coding blog
-url: http://stockrt.github.com
 ---
 
-{% for post in site.posts %}
-    {% include post.html %}
-{% endfor %}
+<div id="home">
+  <h1>Blog Posts</h1>
+  {% assign posts = site.posts %}
+  {% include postlist.html %}
+</div>
