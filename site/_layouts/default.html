@@ -1,119 +1,57 @@
----
-author: Rogério Schneider
-email: stockrt@gmail.com
-title: Rogério Schneider - Weekend coding blog
-url: http://stockrt.github.com
----
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-  <title>{{page.title}}</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="author" content="{{author}}" />
-  <!--  <link href="http://feeds2.feedburner.com/thinkingconcurrently" rel="alternate" title="Ben Browning" type="application/atom+xml" /> -->
-  <link href="css/application.css" rel="stylesheet" type="text/css" />
+  <title>{{ page.title }}</title>
+  {% if page.author %}<meta name="author" content="{{ page.author }}" />{% endif %}
+  <link href="{{ site.feed }}" rel="alternate" title="{{ site.name }}" type="application/atom+xml" />
+
+  <link rel="stylesheet" href="stylesheets/application.css" type="text/css" />
 </head>
+
 <body>
 <div id="container">
   <div id="header">
-    <h1><span><a href="">{{page.title}}</a></span></h1>
-    <h2>{{page.title }}</h2>
+    <h1><span><a href="">{{ site.name }}</a></span></h1>
+    <h2>{{ site.subtitle }}</h2>
   </div>
 
   <div id="page">
     <div id="content">
-      {{content}}
+      {{ content }}
     </div>
 
     <div id="sidebar">
-
-      <div class="sidebar-node" style="margin-bottom: 15px;">
-        <div id="search" class="search">
-            <form action="{{url}}/search.html" id="cse-search-box">
-            <div>
-              <input type="hidden" name="cx" value="001827129866108411058:wgo0d4aznj0" />
-              <input type="hidden" name="cof" value="FORID:10" />
-              <input type="hidden" name="ie" value="UTF-8" />
-              <input type="text" name="q" />
-              <!--<input type="submit" name="sa" value="Search" />-->
-            </div>
-          </form>
-          <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-          <script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-          <script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&t13n_langs=en"></script>
-          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
-        </div>
+      <!-- search -->
+      <div id="search" class="search">
+        <form action="/search" id="sform" method="get">
+          <p><input type="text" id="q" name="q" value="" /></p>
+        </form>
+        <br />
+        <div id="loading" class="loading" style="display:none;">Searching...</div>
+        <div id="results" class="results"></div>
       </div>
 
+      <!-- sidebar components -->
       <div class="sidebar-node">
-        <h3>Contact</h3>
+        <h3>Links</h3>
         <ul>
-          <li><a href="http://github.com/bbrowning">GitHub</a></li>
-          <li><a href="http://twitter.com/bbrowning">Twitter</a></li>
+          <li><a href="TODO: some link">TODO: some link</a></li>
         </ul>
       </div>
-
-      {% comment %}
-      <!-- Delete the comment blocks if you'd like to display links for the monthly archive -->
-      {% if section.months.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Archives</h3>
-        <ul>
-        {% for month in section.months %}
-          <li>{{ section | link_to_month: month }} ({{ section | monthly_articles: month | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      <div class="item">
-        <script type="text/javascript" src="http://disqus.com/forums/stockrt.github.com/combination_widget.js?num_items=5&color=orange&default_tab=recent"></script>
-      </div>
-      {% endif %}
-      {% endcomment %}
-
-      {% comment %}
-      <!-- Delete the comment blocks if you'd like to list out your sections -->
-      {% if site.sections.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Sections</h3>
-        <ul>
-        {% for section in site.sections %}
-          <li>{{ section | link_to_section }} ({{ section.articles | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      {% endcomment %}
-
-      {% comment %}
-      <!-- Delete the comment blocks if you'd like to list out your tags -->
-      {% if site.tags.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Tags</h3>
-        <ul>
-        {% for tag in site.tags %}
-          <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      {% endcomment %}
-
     </div>
     <br style="clear:both;" />
-
   </div>
 
   <div id="footer">
     <hr />
-    <p><a href="">{{ page.site_title }}</a></p>
+    <p><a href="">{{ site.name }}</a></p>
     <ul>
-      <li>powered by <a href="http://pages.github.com">GitHub Pages</a> /
-          styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
+      <li>made with <a href="http://github.com/vilcans/scribbish-jekyll">scribbish-jekyll</a></li>
     </ul>
   </div>
-
 </div>
-
 </body>
 </html>
-
