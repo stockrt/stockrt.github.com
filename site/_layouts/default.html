@@ -6,7 +6,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>{{ page.title }}</title>
   {% if page.author %}<meta name="author" content="{{ page.author }}" />{% endif %}
-  <link href="{{ site.feed }}" rel="alternate" title="{{ site.name }}" type="application/atom+xml" />
+  <link href="{{ site.feed }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
 
   <link rel="stylesheet" href="stylesheets/application.css" type="text/css" />
    <!-- syntax highlighting CSS -->
@@ -19,7 +19,7 @@
 <body>
 <div id="container">
   <div id="header">
-    <h1><span><a href="">{{ site.name }}</a></span></h1>
+    <h1><span><a href="">{{ site.title }}</a></span></h1>
     <h2>{{ site.subtitle }}</h2>
   </div>
 
@@ -46,13 +46,57 @@
           <li><a href="TODO: some link">TODO: some link</a></li>
         </ul>
       </div>
+      <div class="sidebar-node">
+        <div id="search" class="search">
+          <form action="/search" id="sform" method="get" name="sform">
+            <p><input type="text" id="q" name="q" value="" /></p>
+          </form>
+        </div>
+      </div>
+
+      {% if section.months.size > 0 %}
+      <div class="sidebar-node">
+        <h3>Archives</h3>
+        <ul>
+        {% for month in section.months %}
+          <li>{{ section | link_to_month: month }} ({{ section | monthly_articles: month | size }})</li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if site.sections.size > 0 %}
+      <div class="sidebar-node">
+        <h3>Sections</h3>
+        <ul>
+        {% for section in site.sections %}
+          <li>{{ section | link_to_section }} ({{ section.articles | size }})</li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if site.tags.size > 0 %}
+      <div class="sidebar-node">
+        <h3>Tags</h3>
+        <ul>
+        {% for tag in site.tags %}
+          <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      <div class="sidebar-node">
+        <p><a href="http://mephistoblog.com/" class="powered">{{ 'mephisto-badge-tiny.png' | img_tag }}</a></p>
+      </div>
     </div>
     <br style="clear:both;" />
   </div>
 
   <div id="footer">
     <hr />
-    <p><a href="">{{ site.name }}</a></p>
+    <p><a href="/">{{ site.title }}</a></p>
     <ul>
       <li>made with <a href="http://github.com/vilcans/scribbish-jekyll">scribbish-jekyll</a></li>
     </ul>
