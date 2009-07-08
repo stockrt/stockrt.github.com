@@ -3,15 +3,22 @@ layout: default
 ---
 <div id="home">
   {% assign posts = site.posts %}
+
+  {% comment %}
   {% include postlist.html %}
+  {% endcomment %}
 
   <ul class="posts">
     {% for post in site.posts %}
-      <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; -->
+      <h2 class="date-header">
+        {{ post.date | date_to_string }}
+      </h2>
       <li>
-      <span><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></span>
+        <span><a href="{{ site.url }}{{ post.url }}"><h3 class="post-title">{{ post.title }}</h3></a></span>
       </li>
-      {{ post.content }}
+      <div class="post-body">
+        {{ post.content }}
+      </div>
     {% endfor %}
   </ul>
 </div>
