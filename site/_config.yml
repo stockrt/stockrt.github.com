@@ -3,8 +3,6 @@ pygments: true
 rdiscount: true
 permalink: pretty
 paginate: 5
-post_defaults:
-    layout: post
 
 # Blog title and subtitle
 title: Rogério Schneider - Weekend coding
