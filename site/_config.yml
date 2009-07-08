@@ -1,19 +1,20 @@
+# General configuration
 pygments: true
 rdiscount: true
 permalink: pretty
 paginate: 5
-
 post_defaults:
     layout: post
 
+# Blog title and subtitle
 title: Rogério Schneider - Weekend coding blog
 subtitle: Weekend codes I made and hosted on GitHub to share with you
 
 # Absolute base URL for this site without trailing slash
 url: http://stockrt.github.com/blog
 
-# Absolute URL of feed.
-# You may want to change this URL to point to a feedburner feed.
+# Absolute URL of feed
+# You may want to change this URL to point to a feedburner feed
 feed: http://stockrt.github.com/blog/atom.html
 
 # Author element in atom feed. Optional.
@@ -22,5 +23,6 @@ author:
     name: Rogério Schneider
     email: stockrt@gmail.com
 
-#http://quotedprintable.com/pages/scribbish
-#http://github.com/vilcans/scribbish-jekyll
+# Reference:
+# http://quotedprintable.com/pages/scribbish
+# http://github.com/vilcans/scribbish-jekyll

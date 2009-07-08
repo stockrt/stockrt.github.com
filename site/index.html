@@ -2,15 +2,16 @@
 layout: default
 ---
 <div id="home">
-    <h1>Blog Posts</h1>
-    {% assign posts = site.posts %}
-    {% include postlist.html %}
-    <ul class="posts">
+  {% assign posts = site.posts %}
+  {% include postlist.html %}
+
+  <ul class="posts">
     {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo;
-        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-        {{ post.content }}
-        </li>
+      <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; -->
+      <li>
+      <span><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></span>
+      </li>
+      {{ post.content }}
     {% endfor %}
-    </ul>
+  </ul>
 </div>
