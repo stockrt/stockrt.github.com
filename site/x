@@ -1,0 +1,344 @@
+#b-navbar {
+   height:0px;
+   visibility:hidden;
+   display:none
+   }
+
+#navbar-iframe {
+height: 0px;
+visibility: hidden;
+display: none;
+}
+
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#fff;
+  margin:0;
+  padding:40px 20px;
+  font:x-small Helvetica,Georgia,Serif;
+  text-align:center;
+  color:#222;
+  font-size: /**/medium;
+  }
+
+a:link, a:visited {
+ color: #8080c0;
+ text-decoration: none;
+ border-bottom: 1px dotted #cccccc;
+}
+
+a:hover, a:active {
+ color: #8080c0;
+ text-decoration: none;
+ border-bottom: 1px dotted #8080c0;
+}
+a img {
+  border-width:0;
+  }
+
+strong {
+ color: #ff8080;
+}
+
+/* Header
+----------------------------------------------- */
+@media all {
+  #header {
+    width:760px;
+    margin:0 auto 10px;
+    border-bottom: 1px dotted #ccc;
+    }
+  }
+@media handheld {
+  #header {
+    width:90%;
+    }
+  }
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#666;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#c60;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Content
+----------------------------------------------- */
+@media all {
+  #content {
+    width:760px;
+    margin:0 auto;
+    padding:0;
+    text-align:left;
+    }
+  #main {
+    width:500px;
+    float:left;
+    }
+  #sidebar {
+    width:200px;
+    float:right;
+    font-size:80%
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color: #bbb;
+  padding-left: 10px;
+  border-left: 7px solid  #ccc;
+
+  }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+  .date-header {
+    margin:1.5em 0 .5em;
+    }
+  .post {
+    margin:.5em 0 1.5em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:1.5em;
+    }
+  }
+@media handheld {
+  .date-header {
+    padding:0 1.5em 0 1.5em;
+    }
+  .post {
+    padding:0 1.5em 0 1.5em;
+    }
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:110%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#000;
+  
+  }
+
+.post-body {
+  font-size:85%;
+  text-align:justify;
+
+}
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#c60;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:0px solid #ddd;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 80%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:100%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1em;
+  font-size:80%;    
+ }
+#comments-block dt {
+  margin:.5em 0;
+  font-size:80%;  
+}
+#comments-block dd {
+  margin:.25em 0 0;
+  font-size:80%;   
+}
+
+#comments-block dd.comment-body {
+  margin:0.5em 0 0.2em;
+  background: #f8f8f8;
+  border: 1px dotted #ccc;
+ font-size:80%;   
+}
+
+#comments-block dd.comment-timestamp {
+  margin:0em 0em 2em;
+  font:80%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+#comments-block dd p {
+  margin:0.75em 0.5em .75em;
+  font-size:120%;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  /*border-bottom:1px dotted #ccc;*/
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  /*border-bottom:1px dotted #ccc;*/
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #ddd;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
