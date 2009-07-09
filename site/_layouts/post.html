@@ -51,6 +51,8 @@ layout: default
       <a href="http://del.icio.us/post?url={{ site.url }}{{ page.url }}&title={{ page.title }}">del.icio.us</a>
       <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}">stumbleupon</a>
     </li>
+
+    <li>Published at: {{ page.date | date_to_string }}</li>
   </ul>
 
   <ul class="posts">
