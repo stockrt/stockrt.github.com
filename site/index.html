@@ -5,7 +5,7 @@ layout: default
   {% assign posts = site.posts %}
   <ul class="posts">
     {% for post in site.posts %}
-      <span><a href="{{ site.url }}{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a></span>
+      <span><a href="{{ site.url }}{{ post.url }}"><h2 class="entry-title">{{ post.title }}</h2></a></span>
       <div class="date-header">
         {{ post.date | date_to_string }}
       </div>
