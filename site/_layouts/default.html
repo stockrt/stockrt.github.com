@@ -36,6 +36,7 @@
         </ul>
       </div>
 
+      {% comment %}
       {% if section.months.size > 0 %}
       <div class="sidebar-node">
         <h3>Archives</h3>
@@ -46,6 +47,7 @@
         </ul>
       </div>
       {% endif %}
+      {% endcomment %}
 
       {% if site.sections.size > 0 %}
       <div class="sidebar-node">
@@ -89,7 +91,11 @@
     <hr/>
     <p><a href="{{ site.url }}">{{ site.title }}</a></p>
     <ul>
-      <li>made with <a href="http://github.com/vilcans/scribbish-jekyll">scribbish-jekyll</a></li>
+      <li>
+        made with modified<a href="http://github.com/vilcans/scribbish-jekyll">scribbish-jekyll</a> &raquo;
+        styled with modified<a href="http://quotedprintable.com/pages/scribbish">scribbish</a> &raquo;
+        auto generated with <a href="http://github.com/mojombo/jekyll">mojombo-jekyll</a> &raquo;
+      </li>
     </ul>
   </div>
 </div>

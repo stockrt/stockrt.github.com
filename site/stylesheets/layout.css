@@ -9,18 +9,9 @@
  *   #footer
  */
 body {
-  background: #fff;
-  margin: 0;
-  padding: 40px 20px;
-  font: x-small Helvetica, Georgia, Serif;
-  text-align: center;
-  color: #222;
-  font-size: medium;
-}
-/*body {
   text-align: center;
   margin: 0; padding: 0.6em 1em 1em 1em;
-}*/
+}
 
 #container {
   width: 900px;
