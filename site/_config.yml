@@ -1,8 +1,8 @@
 # General configuration
 pygments: true
 rdiscount: true
-#permalink: pretty
-paginate: 5
+permalink: /p/:title
+paginate: 1
 
 # Blog title and subtitle
 title: Rogério Schneider - Weekend coding
