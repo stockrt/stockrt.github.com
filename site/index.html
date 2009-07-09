@@ -3,11 +3,6 @@ layout: default
 ---
 <div id="home">
   {% assign posts = site.posts %}
-
-  {% comment %}
-  {% include postlist.html %}
-  {% endcomment %}
-
   <ul class="posts">
     {% for post in site.posts %}
       <div class="date-header">

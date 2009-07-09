@@ -5,8 +5,8 @@ permalink: /p/:title
 paginate: 1
 
 # Blog title and subtitle
-title: Rogério Schneider - Weekend coding
-subtitle: Weekend codes I made and hosted on GitHub to share with you
+title: Weekend codes
+subtitle: Codes and random stuff I am up to share with you
 
 # Absolute base URL for this site without trailing slash
 url: http://stockrt.github.com/blog
