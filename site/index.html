@@ -8,11 +8,7 @@ layout: default
       <div class="date-header">
         {{ post.date | date_to_string }}
       </div>
-
-      <li><span>
-        <a href="{{ site.url }}{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a>
-      </span></li>
-
+      <span><a href="{{ site.url }}{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a></span>
       <div class="post-body">
         {{ post.content }}
       </div>
