@@ -33,6 +33,26 @@ google_analytics: |
     } catch(err) {}
     </script>
 
+google_cse: |
+    <!-- Google Custom Search Element -->
+    <div id="cse" style="width:100%;">Loading</div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1');
+      google.setOnLoadCallback(function(){
+        new google.search.CustomSearchControl('000162502351056619788:rgh3bxf1v7e').draw('cse');
+      }, true);
+    </script>
+
+#    <div id="cse" style="width:100%;">Loading</div>
+#    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+#    <script type="text/javascript">
+#      google.load('search', '1');
+#      google.setOnLoadCallback(function(){
+#        new google.search.CustomSearchControl().draw('cse');
+#      }, true);
+#    </script>
+
 # Reference:
 # http://quotedprintable.com/pages/scribbish
 # http://github.com/vilcans/scribbish-jekyll
