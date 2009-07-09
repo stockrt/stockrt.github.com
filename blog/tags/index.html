@@ -41,6 +41,19 @@
       
 
       
+
+      <div class="sidebar-node">
+        <h3>Search (CSE)</h3>
+        <div id="cse" style="width:100%;">Loading</div>
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">
+          google.load('search', '1');
+          google.setOnLoadCallback(function(){
+            new google.search.CustomSearchControl().draw('cse');
+          }, true);
+        </script>
+      </div>
+
     </div>
     <br style="clear:both;"/>
   </div>
@@ -53,5 +66,18 @@
     </ul>
   </div>
 </div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5567404-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
 </body>
 </html>

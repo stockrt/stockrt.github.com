@@ -1,7 +1,7 @@
 # General configuration
 pygments: true
 rdiscount: true
-permalink: pretty
+#permalink: pretty
 paginate: 5
 
 # Blog title and subtitle
@@ -21,8 +21,21 @@ author:
     name: Rogério Schneider
     email: stockrt@gmail.com
 
+google_analytics: |
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-5567404-4");
+    pageTracker._trackPageview();
+    } catch(err) {}
+    </script>
+
 # Reference:
 # http://quotedprintable.com/pages/scribbish
 # http://github.com/vilcans/scribbish-jekyll
 # TODO: google-analytics
 # http://tracker.icerocket.com/project.create.php
+# http://sharethis.com/
