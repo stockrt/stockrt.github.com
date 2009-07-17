@@ -1,0 +1,24 @@
+.overlay {
+	BACKGROUND: url(../img/loader/overlay_bg.jpg); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%; TEXT-ALIGN: center
+}
+.loading_div {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; BACKGROUND: url(../img/loader/loading_bg.jpg) #f1f1f1 repeat-x; MARGIN: 0px auto; BORDER-LEFT: #aaa 1px solid; WIDTH: 250px; BORDER-BOTTOM: #aaa 1px solid; POSITION: absolute; TEXT-ALIGN: center
+}
+.loading_div .logo {
+	FLOAT: left; MARGIN: 8px 10px
+}
+.loading_div .barra_progresso {
+	BACKGROUND: url(../img/loader/progress_bar.jpg) no-repeat; MARGIN: 25px; OVERFLOW: hidden; WIDTH: 200px; HEIGHT: 14px
+}
+.loading_div .barra {
+	BACKGROUND: url(../img/loader/progress_bg.jpg); MARGIN: 2px; WIDTH: 0px; HEIGHT: 10px
+}
+.loading_div .loadingText {
+	MARGIN: 20px 0px; FONT: bold 11px verdana; COLOR: #00529b
+}
+.loading_div .loadingGif {
+	MARGIN-BOTTOM: 10px
+}
+.porcentagem {
+	FLOAT: left; FONT: bold 12px verdana
+}

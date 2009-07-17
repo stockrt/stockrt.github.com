@@ -1,0 +1,15 @@
+.tooltip {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 0px; BACKGROUND: #055296; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; POSITION: absolute
+}
+.wrapper {
+	BORDER-RIGHT: #686a67 1px solid; BORDER-TOP: #686a67 1px solid; BORDER-LEFT: #686a67 1px solid; BORDER-BOTTOM: #686a67 1px solid
+}
+.tooltip .wrapper {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: #dae9f7; PADDING-BOTTOM: 5px; MARGIN: 0px; FONT: 10px verdana; PADDING-TOP: 5px
+}
+.wrapper IMG {
+	FLOAT: left; MARGIN-RIGHT: 10px
+}
+.wrapper B {
+	FONT: bold 10px verdana; COLOR: #000000
+}
