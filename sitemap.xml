@@ -6,7 +6,7 @@
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://stockrt.github.com/</loc>
-  <lastmod>2009-07-01T03:26:39Z</lastmod>
+  <lastmod>2009-07-17T04:05:49Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -16,57 +16,167 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/blog/</loc>
-  <lastmod>2009-07-01T03:05:52Z</lastmod>
+  <lastmod>2009-07-13T17:31:28Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/_layouts/</loc>
-  <lastmod>2009-07-01T03:05:52Z</lastmod>
+  <loc>http://stockrt.github.com/blog/atom.html</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/_layouts/default.html</loc>
-  <lastmod>2009-07-01T03:05:43Z</lastmod>
+  <loc>http://stockrt.github.com/blog/build.sh</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/_layouts/post.html</loc>
-  <lastmod>2009-07-01T03:05:43Z</lastmod>
+  <loc>http://stockrt.github.com/blog/images/</loc>
+  <lastmod>2009-07-09T02:05:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/_posts/</loc>
-  <lastmod>2009-07-01T03:05:52Z</lastmod>
+  <loc>http://stockrt.github.com/blog/images/background.gif</loc>
+  <lastmod>2009-07-09T02:05:53Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/_posts/2009-07-01-first-post.markdown</loc>
-  <lastmod>2009-07-01T03:05:43Z</lastmod>
+  <loc>http://stockrt.github.com/blog/images/gravatar.gif</loc>
+  <lastmod>2009-07-09T02:05:53Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/atom.xml</loc>
-  <lastmod>2009-07-01T03:05:43Z</lastmod>
+  <loc>http://stockrt.github.com/blog/images/header_shadow.gif</loc>
+  <lastmod>2009-07-09T02:05:53Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/config.yml</loc>
-  <lastmod>2009-07-01T03:05:43Z</lastmod>
+  <loc>http://stockrt.github.com/blog/images/rss.png</loc>
+  <lastmod>2009-07-09T02:05:53Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/css/</loc>
-  <lastmod>2009-07-01T03:05:47Z</lastmod>
+  <loc>http://stockrt.github.com/blog/images/spinner.gif</loc>
+  <lastmod>2009-07-09T02:05:53Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/css/stylesheet.css</loc>
-  <lastmod>2009-07-01T03:05:43Z</lastmod>
+  <loc>http://stockrt.github.com/blog/index.html</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/blog/index.markdown</loc>
-  <lastmod>2009-07-01T03:05:43Z</lastmod>
+  <loc>http://stockrt.github.com/blog/lista-ping</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/p/</loc>
+  <lastmod>2009-07-13T17:20:50Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/p/first-post/</loc>
+  <lastmod>2009-07-13T17:31:28Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/p/first-post/index.html</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/p/second-post/</loc>
+  <lastmod>2009-07-13T17:31:29Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/p/second-post/index.html</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/page2/</loc>
+  <lastmod>2009-07-13T17:31:28Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/page2/index.html</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/page3/</loc>
+  <lastmod>2009-07-13T17:31:28Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/page3/index.html</loc>
+  <lastmod>2009-07-09T03:05:18Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/stylesheets/</loc>
+  <lastmod>2009-07-09T02:56:52Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/stylesheets/application.css</loc>
+  <lastmod>2009-07-09T02:56:50Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/stylesheets/content.css</loc>
+  <lastmod>2009-07-09T02:05:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/stylesheets/layout.css</loc>
+  <lastmod>2009-07-09T02:26:13Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/stylesheets/local.css</loc>
+  <lastmod>2009-07-09T02:56:50Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/stylesheets/syntax.css</loc>
+  <lastmod>2009-07-09T02:05:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/tags/</loc>
+  <lastmod>2009-07-09T02:44:42Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/tags/index.html</loc>
+  <lastmod>2009-07-09T02:44:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/tags/page2/</loc>
+  <lastmod>2009-07-09T02:44:42Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/tags/page2/index.html</loc>
+  <lastmod>2009-07-09T02:44:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/tags/page3/</loc>
+  <lastmod>2009-07-09T02:44:42Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/blog/tags/page3/index.html</loc>
+  <lastmod>2009-07-09T02:44:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/favicon.ico</loc>
+  <lastmod>2009-07-07T02:03:44Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -76,72 +186,222 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/index.html</loc>
-  <lastmod>2009-07-01T03:26:34Z</lastmod>
+  <lastmod>2009-07-17T04:02:10Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/misc/</loc>
-  <lastmod>2009-06-30T03:12:20Z</lastmod>
+  <lastmod>2009-07-17T03:56:51Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/misc/vitae/</loc>
-  <lastmod>2009-07-02T14:25:31Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.doc</loc>
-  <lastmod>2009-07-02T14:14:00Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.docx</loc>
-  <lastmod>2009-07-02T14:14:19Z</lastmod>
+  <lastmod>2009-07-17T16:36:28Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.html</loc>
-  <lastmod>2009-07-02T14:18:10Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.mhtml</loc>
-  <lastmod>2009-07-02T14:14:52Z</lastmod>
+  <lastmod>2009-07-17T12:14:15Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.pdf</loc>
-  <lastmod>2009-07-02T14:25:31Z</lastmod>
+  <lastmod>2009-07-17T16:36:28Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.rtf</loc>
-  <lastmod>2009-07-02T14:14:08Z</lastmod>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/</loc>
+  <lastmod>2009-07-17T12:14:23Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_arquivos/</loc>
-  <lastmod>2009-07-02T14:19:08Z</lastmod>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/cnpqLoader.css</loc>
+  <lastmod>2009-07-17T12:14:15Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_arquivos/filelist.xml</loc>
-  <lastmod>2009-07-02T14:19:08Z</lastmod>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/cnpqLoader.js</loc>
+  <lastmod>2009-07-17T12:06:37Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_arquivos/image001.jpg</loc>
-  <lastmod>2009-07-02T14:13:53Z</lastmod>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/curriculo.css</loc>
+  <lastmod>2009-07-17T12:14:15Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_arquivos/image002.jpg</loc>
-  <lastmod>2009-07-02T14:13:53Z</lastmod>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/hint_ajax.css</loc>
+  <lastmod>2009-07-17T12:14:15Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_arquivos/image003.gif</loc>
-  <lastmod>2009-07-02T14:13:53Z</lastmod>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/hint_ajax.js</loc>
+  <lastmod>2009-07-17T12:06:38Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/ico_relevante.gif</loc>
+  <lastmod>2009-07-17T12:06:38Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/jquery-1.3.2.min.js</loc>
+  <lastmod>2009-07-17T12:06:38Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/servletcarimbo.jpg</loc>
+  <lastmod>2009-07-17T12:14:15Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/servletrecuperafoto.jpg</loc>
+  <lastmod>2009-07-17T12:06:52Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/util.js</loc>
+  <lastmod>2009-07-17T12:06:37Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/</loc>
+  <lastmod>2009-07-09T03:04:58Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_config.yml</loc>
+  <lastmod>2009-07-09T02:44:19Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_includes/</loc>
+  <lastmod>2009-07-08T03:18:58Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_includes/postlist.html</loc>
+  <lastmod>2009-07-08T03:18:48Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_layouts/</loc>
+  <lastmod>2009-07-09T02:39:41Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_layouts/default.html</loc>
+  <lastmod>2009-07-09T02:39:37Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_layouts/post.html</loc>
+  <lastmod>2009-07-09T02:15:12Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_posts/</loc>
+  <lastmod>2009-07-09T01:08:50Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_posts/2009-07-07-first-post.markdown</loc>
+  <lastmod>2009-07-08T03:28:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/_posts/2009-07-08-second-post.markdown</loc>
+  <lastmod>2009-07-09T01:08:46Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/atom.xml</loc>
+  <lastmod>2009-07-08T02:08:20Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/build.sh</loc>
+  <lastmod>2009-07-07T19:58:42Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/</loc>
+  <lastmod>2009-07-07T14:50:45Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/background.gif</loc>
+  <lastmod>2009-07-07T02:23:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/gravatar.gif</loc>
+  <lastmod>2009-07-07T02:23:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/header_shadow.gif</loc>
+  <lastmod>2009-07-07T02:23:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/rss.png</loc>
+  <lastmod>2009-07-07T14:50:45Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/spinner.gif</loc>
+  <lastmod>2009-07-07T02:23:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/index.html</loc>
+  <lastmod>2009-07-09T03:04:53Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/lista-ping</loc>
+  <lastmod>2009-07-08T18:06:24Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/stylesheets/</loc>
+  <lastmod>2009-07-09T02:53:47Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/stylesheets/application.css</loc>
+  <lastmod>2009-07-09T02:53:42Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/stylesheets/content.css</loc>
+  <lastmod>2009-07-09T01:36:14Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/stylesheets/layout.css</loc>
+  <lastmod>2009-07-09T02:17:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/stylesheets/local.css</loc>
+  <lastmod>2009-07-07T22:18:43Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/stylesheets/syntax.css</loc>
+  <lastmod>2009-07-07T02:23:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/tags/</loc>
+  <lastmod>2009-07-08T02:14:38Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/tags/index.html</loc>
+  <lastmod>2009-07-08T02:14:35Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
