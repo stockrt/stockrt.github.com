@@ -45,6 +45,18 @@
         </ul>
       </div>
 
+      <!-- tags -->
+      {% if site.tags.size > 0 %}
+      <div class="sidebar-node">
+        <h3>Tags</h3>
+        <ul>
+        {% for tag in site.tags %}
+          <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
       {% comment %}
       <!-- archives -->
       {% if section.months.size > 0 %}
@@ -58,43 +70,6 @@
       </div>
       {% endif %}
       {% endcomment %}
-
-      <!-- categories -->
-      {% if site.categories.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Categories</h3>
-        <ul>
-        {% for category in site.categories %}
-          <li>{{ category | link_to_category }} ({{ category.articles | size }})</li>
-          <li>{{ category | link_to_section }} ({{ category.articles | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      <!-- sections -->
-      {% if site.sections.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Sections</h3>
-        <ul>
-        {% for section in site.sections %}
-          <li>{{ section | link_to_section }} ({{ section.articles | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      <!-- tags -->
-      {% if site.tags.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Tags</h3>
-        <ul>
-        {% for tag in site.tags %}
-          <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
 
       <!-- blogroll -->
       <div class="sidebar-node">
