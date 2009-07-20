@@ -46,6 +46,9 @@ layout: default
     </li>
 
     <li>Published at: {{ page.date | date_to_string }}</li>
+    <li>Published at: {{ page.date | format_date: 'long' }}</li>
+    <li>Published at: {{ page.date | date: '%Y-%m-%dT%H:%M:%S+00:00' }}</li>
+    <li>Published at: {{ page.date | date: '%A, %B %d' }}</li>
   </ul>
 
   <ul class="posts">
