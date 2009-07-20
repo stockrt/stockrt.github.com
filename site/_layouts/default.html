@@ -50,7 +50,7 @@
       <div class="sidebar-node">
         <h3>Tags</h3>
         <ul>
-        {% for tag in page.tags %}
+        {% for tag in site.tags %}
           <li><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a></li>
         {% endfor %}
         </ul>
