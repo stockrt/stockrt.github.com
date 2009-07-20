@@ -66,6 +66,7 @@
         <ul>
         {% for category in site.categories %}
           <li>{{ category | link_to_category }} ({{ category.articles | size }})</li>
+          <li>{{ category | link_to_section }} ({{ category.articles | size }})</li>
         {% endfor %}
         </ul>
       </div>
