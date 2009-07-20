@@ -52,6 +52,7 @@
         <ul>
         {% for tag in site.tags %}
           <li><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a></li>
+          <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
         {% endfor %}
         </ul>
       </div>
