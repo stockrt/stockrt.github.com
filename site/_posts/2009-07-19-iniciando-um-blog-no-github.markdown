@@ -1,8 +1,7 @@
 ---
 layout: post
-category: [github, pt-br]
-categories: [githubs, pt-brs]
-sections: [githubs2, pt-brs2]
-tags: [githubs3, pt-brs3]
+categories: [github-cat, pt-br-cat]
+sections: [github-sec, pt-br-sec]
+tags: [github-tag, pt-br-tag]
 ---
 Use jekyll, facilita a sua vida.
