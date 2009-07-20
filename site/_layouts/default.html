@@ -45,13 +45,18 @@
         </ul>
       </div>
 
+      {% for tag in page.tags %}
+        <a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a>
+      {% endfor %}
+
       <!-- tags -->
       {% if site.tags.size > 0 %}
       <div class="sidebar-node">
         <h3>Tags</h3>
         <ul>
         {% for tag in site.tags %}
-          <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
+          <li><a href="{{ site.url }}/tags/#{{ tag | link_to_tag }}">({{ tag | tagged_articles | size }})</a></li>
+          <li><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a></li>
         {% endfor %}
         </ul>
       </div>
