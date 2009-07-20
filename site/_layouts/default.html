@@ -50,11 +50,8 @@
       <div class="sidebar-node">
         <h3>Tags</h3>
         <ul>
-        {% for tag in site.tags %}
-          <li><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag | size }}</a></li>
-        {% endfor %}
         {% for tag in page.tags %}
-          <li><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag | size }}</a></li>
+          <li><a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a></li>
         {% endfor %}
         </ul>
       </div>
