@@ -24,11 +24,9 @@ layout: default
 
   <ul class="meta">
     {% if page.tags != empty %}
-      <!-- TODO: correct link to tags -->
-<!-- <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li> -->
       <li>Tags:
       {% for tag in page.tags %}
-        <a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag | cgi_escape }}</a>
+        <a href="{{ site.url }}/tags/#{{ tag | first | cgi_escape }}">{{ tag | first | cgi_escape }}</a>
       {% endfor %}
       </li>
     {% endif %}
