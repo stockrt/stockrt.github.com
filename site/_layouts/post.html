@@ -23,6 +23,14 @@ layout: default
   </div>
 
   <ul class="meta">
+    {% if page.categories != empty %}
+      <li>Categories:
+      {% for cat in page.categories %}
+        <a href="{{ site.url }}/tags/#{{ cat | cgi_escape }}">{{ cat }}</a>
+      {% endfor %}
+      </li>
+    {% endif %}
+
     {% if page.tags != empty %}
       <!-- TODO: correct link to tags -->
 <!-- <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li> -->
@@ -46,9 +54,6 @@ layout: default
     </li>
 
     <li>Published at: {{ page.date | date_to_string }}</li>
-    <li>Published at: {{ page.date | format_date: 'long' }}</li>
-    <li>Published at: {{ page.date | date: '%Y-%m-%dT%H:%M:%S+00:00' }}</li>
-    <li>Published at: {{ page.date | date: '%A, %B %d' }}</li>
   </ul>
 
   <ul class="posts">
