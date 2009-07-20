@@ -23,27 +23,12 @@ layout: default
   </div>
 
   <ul class="meta">
-    {% if page.categories != empty %}
-      <li>Categories:
-      {% for t in page.categories %}
-        <a href="{{ site.url }}/{{ t | cgi_escape }}/">{{ t }}</a>
-      {% endfor %}
-      </li>
-    {% endif %}
-
-    {% if page.sections != empty %}
-      <li>Sections:
-      {% for t in page.sections %}
-        <a href="{{ site.url }}/{{ t | cgi_escape }}/">{{ t }}</a>
-      {% endfor %}
-      </li>
-    {% endif %}
-
     {% if page.tags != empty %}
       <!-- TODO: correct link to tags -->
+<!-- <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li> -->
       <li>Tags:
-      {% for t in page.tags %}
-        <a href="{{ site.url }}/tags/#{{ t | cgi_escape }}">{{ t }}</a>
+      {% for tag in page.tags %}
+        <a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a>
       {% endfor %}
       </li>
     {% endif %}
