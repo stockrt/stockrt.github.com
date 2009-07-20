@@ -9,11 +9,13 @@ title: Weekend codes
 subtitle: Codes and random stuff I am up to share with you
 
 # Absolute base URL for this site without trailing slash
-url: http://stockrt.github.com/blog
+#url: http://stockrt.github.com/blog
+url: http://stockrt.github.com
 
 # Absolute URL of feed
 # You may want to change this URL to point to a feedburner feed
-feed: http://stockrt.github.com/blog/atom.html
+#feed: http://stockrt.github.com/blog/atom.xml
+feed: http://stockrt.github.com/atom.xml
 
 # Author element in atom feed. Optional.
 # If email is supplied, name is required.
@@ -55,6 +57,6 @@ google_cse: |
 # Reference:
 # http://quotedprintable.com/pages/scribbish
 # http://github.com/vilcans/scribbish-jekyll
-# TODO: google-analytics
+# TODO:
 # http://tracker.icerocket.com/project.create.php
 # http://sharethis.com/
