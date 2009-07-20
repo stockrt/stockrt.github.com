@@ -23,20 +23,12 @@ layout: default
   </div>
 
   <ul class="meta">
-    {% if page.categories != empty %}
-      <li>Categories:
-      {% for cat in page.categories %}
-        <a href="{{ site.url }}/tags/#{{ cat | cgi_escape }}">{{ cat }}</a>
-      {% endfor %}
-      </li>
-    {% endif %}
-
     {% if page.tags != empty %}
       <!-- TODO: correct link to tags -->
 <!-- <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li> -->
       <li>Tags:
       {% for tag in page.tags %}
-        <a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a>
+        <a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}">{{ tag | cgi_escape }}</a>
       {% endfor %}
       </li>
     {% endif %}
