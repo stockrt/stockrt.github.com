@@ -3,7 +3,7 @@
   <title>Weekend codes</title>
   <link href="http://stockrt.github.com/atom.xml" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-07-19T21:52:54-03:00</updated>
+  <updated>2009-07-19T23:45:00-03:00</updated>
   <id>http://stockrt.github.com</id>
 
   
@@ -17,19 +17,11 @@
 
   
     <entry>
-      <title>My second post</title>
-      <link href="http://stockrt.github.com/p/second-post"/>
-      <updated>2009-07-08T00:00:00-03:00</updated>
-      <id>http://stockrt.github.com/p/second-post</id>
-      <content type="html">&lt;p&gt;My second post is this one, dude!&lt;/p&gt;</content>
-    </entry>
-  
-    <entry>
-      <title>My first post</title>
-      <link href="http://stockrt.github.com/p/first-post"/>
-      <updated>2009-07-07T00:00:00-03:00</updated>
-      <id>http://stockrt.github.com/p/first-post</id>
-      <content type="html">&lt;p&gt;My first post is this one, dude!&lt;/p&gt;</content>
+      <title>Iniciando Um Blog No Github</title>
+      <link href="http://stockrt.github.com/p/iniciando-um-blog-no-github"/>
+      <updated>2009-07-19T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/iniciando-um-blog-no-github</id>
+      <content type="html">&lt;p&gt;Use jekyll, facilita a sua vida.&lt;/p&gt;</content>
     </entry>
   
 </feed>

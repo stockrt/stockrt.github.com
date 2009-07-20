@@ -31,6 +31,14 @@ layout: default
       </li>
     {% endif %}
 
+    {% if page.sections != empty %}
+      <li>Sections:
+      {% for t in page.sections %}
+        <a href="{{ site.url }}{{ t | cgi_escape }}/">{{ t }}</a>
+      {% endfor %}
+      </li>
+    {% endif %}
+
     {% if page.tags != empty %}
       <!-- TODO: correct link to tags -->
       <li>Tags:
