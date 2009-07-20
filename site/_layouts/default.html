@@ -28,6 +28,16 @@
 
     <!-- sidebar -->
     <div id="sidebar">
+      <!-- search -->
+      {% if site.google_cse != empty %}
+      <div class="sidebar-node">
+        <!-- Google Custom Search Element -->
+        <h3>Search (CSE)</h3>
+        {{ site.google_cse }}
+      </div>
+      {% endif %}
+
+      <!-- blogroll -->
       <div class="sidebar-node">
         <h3>Blogroll</h3>
         <ul>
@@ -36,7 +46,16 @@
         </ul>
       </div>
 
+      <!-- links -->
+      <div class="sidebar-node">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="http://{{ site.url }}/projects">Projects</a></li>
+        </ul>
+      </div>
+
       {% comment %}
+      <!-- archives -->
       {% if section.months.size > 0 %}
       <div class="sidebar-node">
         <h3>Archives</h3>
@@ -49,6 +68,19 @@
       {% endif %}
       {% endcomment %}
 
+      <!-- categories -->
+      {% if site.categories.size > 0 %}
+      <div class="sidebar-node">
+        <h3>Categories</h3>
+        <ul>
+        {% for category in site.categories %}
+          <li>{{ category | link_to_category }} ({{ category.articles | size }})</li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      <!-- sections -->
       {% if site.sections.size > 0 %}
       <div class="sidebar-node">
         <h3>Sections</h3>
@@ -60,6 +92,7 @@
       </div>
       {% endif %}
 
+      <!-- tags -->
       {% if site.tags.size > 0 %}
       <div class="sidebar-node">
         <h3>Tags</h3>
@@ -71,18 +104,11 @@
       </div>
       {% endif %}
 
-      {% if site.google_cse != empty %}
-      <div class="sidebar-node">
-        <!-- Google Custom Search Element -->
-        <h3>Search (CSE)</h3>
-        {{ site.google_cse }}
-      </div>
-      {% endif %}
-
     </div>
     <br style="clear:both;"/>
   </div>
 
+  <!-- footer -->
   <div id="footer">
     <hr/>
     <p><a href="{{ site.url }}">{{ site.title }}</a></p>
