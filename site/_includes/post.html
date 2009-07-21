@@ -9,9 +9,11 @@
     </div>
   {% endif %}
 
+  {% comment %}
   <abbr class="published" title="{{ page.date | date_to_xmlschema }}">
     {{ page.date | date_to_string }}
   </abbr>
+  {% endcomment %}
 
   <br class="clear"/>
 
@@ -39,7 +41,8 @@
       <a href="http://del.icio.us/post?url={{ site.url }}{{ page.url }}&title={{ page.title }}">del.icio.us</a>
       <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}">stumbleupon</a>
     </li>
-
+    {% comment %}
     <li>Published at: {{ page.date | date_to_string }}</li>
+    {% endcomment %}
   </ul>
 </div>
