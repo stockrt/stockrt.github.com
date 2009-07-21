@@ -6,23 +6,6 @@ layout: default
   <ul class="posts">
     {% for post in site.posts %}
       {% include post.html %}
-
-      {% comment %}
-      <h2 class="entry-title">
-        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-      </h2>
-
-      <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
-        {{ post.date | date_to_string }}
-      </abbr>
-
-      <br class="clear"/>
-
-      <div class="entry-content">
-        {{ post.content }}
-      </div>
-      {% endcomment %}
-
     {% endfor %}
   </ul>
 </div>
