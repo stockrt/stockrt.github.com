@@ -4,17 +4,15 @@ rdiscount: true
 permalink: /p/:title
 paginate: 1
 
-# Blog title and subtitle
+# Blog title and description
 title: Weekend codes
 description: Codes and random stuff I am up to share with you
 
 # Absolute base URL for this site without trailing slash
-#url: http://stockrt.github.com/blog
 url: http://stockrt.github.com
 
 # Absolute URL of feed
 # You may want to change this URL to point to a feedburner feed
-#feed: http://stockrt.github.com/blog/atom.xml
 feed: http://stockrt.github.com/atom.xml
 
 # Author element in atom feed. Optional.
