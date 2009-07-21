@@ -51,7 +51,8 @@
         <h3>Tags</h3>
         <ul>
         {% for tag in site.tags %}
-          <li><a href="{{ site.url }}/tags/#{{ tag | first | cgi_escape }}">{{ tag | first | cgi_escape }}</a></li>
+          {% assign t = tag.first %}
+          <li><a href="{{ site.url }}/tags/#{{ t | xml_escape }}">{{ t | xml_escape }}</a></li>
         {% endfor %}
         </ul>
       </div>
