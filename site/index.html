@@ -5,6 +5,7 @@ layout: default
   {% assign posts = site.posts %}
   <ul class="posts">
     {% for post in site.posts %}
+      {% include post.html %}
       <h2 class="entry-title">
         <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
       </h2>
