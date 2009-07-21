@@ -1,0 +1,43 @@
+<div class="hentry" id="{{ page.id }}">
+  <h2 class="entry-title">
+    <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+  </h2>
+
+  {% if page.author %}
+    <div class="vcard">
+      Posted by <span class="fn">{{ page.author }}</span>
+    </div>
+  {% endif %}
+
+  <abbr class="published" title="{{ page.date | date_to_xmlschema }}">
+    {{ page.date | date_to_string }}
+  </abbr>
+
+  <br class="clear"/>
+
+  <div class="entry-content">
+    {{ page.content }}
+  </div>
+
+  <ul class="meta">
+    {% if page.tags != empty %}
+      <li>Tags:
+      {% for tag in page.tags %}
+        <a href="{{ site.url }}/tags/#{{ tag | xml_escape }}">{{ tag | xml_escape }}</a>
+      {% endfor %}
+      </li>
+    {% endif %}
+
+    <li>Meta:
+      <a href="{{ site.url }}{{ page.url }}" rel="bookmark">permalink</a>
+      <a href="{{ site.feed }}">atom</a>
+    </li>
+
+    <li>Share:
+      <a href="http://slashdot.org/slashdot-it.pl?op=basic&url={{ site.url }}{{ page.url }}&title={{ page.title }}">slashdot it</a>
+      <a href="http://digg.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}">digg this</a>
+      <a href="http://del.icio.us/page?url={{ site.url }}{{ page.url }}&title={{ page.title }}">del.icio.us</a>
+      <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}">stumbleupon</a>
+    </li>
+  </ul>
+</div>
