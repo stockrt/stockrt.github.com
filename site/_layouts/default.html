@@ -13,7 +13,7 @@
   {% if page.author %}
     <meta name="author" content="{{ page.author }}"/>
   {% else if site.author %}
-    <meta name="author" content="{{ site.author }}"/>
+    <meta name="author" content="{{ site.author.name }}"/>
   {% endif %}
 
   {% if page.description %}
