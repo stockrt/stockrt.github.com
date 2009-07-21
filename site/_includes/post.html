@@ -9,16 +9,14 @@
     </div>
   {% endif %}
 
-  {% comment %}
   <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
     {{ post.date | date_to_string }}
   </abbr>
-  {% endcomment %}
 
   <br class="clear"/>
 
   <div class="entry-content">
-    {{ content }}
+    {{ post.content }}
   </div>
 
   <ul class="meta">
@@ -41,8 +39,7 @@
       <a href="http://del.icio.us/post?url={{ site.url }}{{ post.url }}&title={{ post.title }}">del.icio.us</a>
       <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ post.url }}&title={{ post.title }}">stumbleupon</a>
     </li>
-    {% comment %}
+
     <li>Published at: {{ post.date | date_to_string }}</li>
-    {% endcomment %}
   </ul>
 </div>
