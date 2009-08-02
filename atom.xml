@@ -3,7 +3,7 @@
   <title>Weekend codes</title>
   <link href="http://stockrt.github.com/atom.xml" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-02T03:16:09-03:00</updated>
+  <updated>2009-08-02T04:00:54-03:00</updated>
   <id>http://stockrt.github.com</id>
 
   
@@ -53,7 +53,29 @@ Fri Jul 31 12:00:01 2009&lt;/code&gt;&lt;/pre&gt;</content>
       <link href="http://stockrt.github.com/p/iniciando-um-blog-no-github"/>
       <updated>2009-07-19T00:00:00-03:00</updated>
       <id>http://stockrt.github.com/p/iniciando-um-blog-no-github</id>
-      <content type="html">&lt;p&gt;Use jekyll, facilita a sua vida. Estou iniciando esse blog, ainda em fase de testes. Quando tiver sido feito o release, eu aviso oficialmente. Por enquanto fique com o link &lt;a href='http://stockrt.github.com/projects'&gt;Projects&lt;/a&gt; ao lado, lá você deverá encontrar algo útil.&lt;/p&gt;</content>
+      <content type="html">&lt;p&gt;Use jekyll, facilita a sua vida.&lt;/p&gt;
+
+&lt;p&gt;Estou usando o GitHub para hospedar meu blog/site, mas como ele não oferece nenhuma engine dinâmica de blog, tipo wordpress ou alguma outra feita em php, python, ruby&amp;#8230;, estou gerando o site estaticamente e depois faço o upload para o GitHub. Uso jekyll para gerar o site, criar as co-relações entre posts, fazer a formatação, paginação, lista de tags, links e blogroll.&lt;/p&gt;
+
+&lt;p&gt;Jekyll é muito legal, vale a pena dar uma olhada. Com esse modelo de geração estática é possível se fazer posts com apenas alguns passos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd yournickname.github.com/site
+./new_post.sh &amp;quot;nome do post&amp;quot;
+vi _posts/$(date +&amp;quot;%Y-%m-%d&amp;quot;)-nome-do-post.markdown
+./build.sh; cd ..
+git add .
+git commit -a -m &amp;#39;New blog post&amp;#39;
+git push origin master&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Eu gosto dessa forma de &amp;#8220;bloggar&amp;#8221; pois assim evito de entrar em editores HTML ou páginas web lentas. Faço tudo daqui do meu shell mesmo, onde me sinto mais à vontade :)&lt;/p&gt;
+
+&lt;p&gt;A formatação dos textos é feita usando &lt;a href='http://daringfireball.net/projects/markdown/syntax'&gt;markdown&lt;/a&gt;, bem mais fácil do que HTML para postar da forma como escolhi, pelo shell.&lt;/p&gt;
+
+&lt;p&gt;Recomendo ler um pequeno texto que fiz informando sobre como usar o template para jekyll que eu modifiquei:&lt;/p&gt;
+
+&lt;p&gt;http://github.com/stockrt/stockrt.github.com/tree/master&lt;/p&gt;
+
+&lt;p&gt;Outra dica: No link &lt;a href='http://stockrt.github.com/projects'&gt;Projects&lt;/a&gt; ao lado você poderá encontrar algo útil. Se sim, me avisa.&lt;/p&gt;</content>
     </entry>
   
 </feed>
