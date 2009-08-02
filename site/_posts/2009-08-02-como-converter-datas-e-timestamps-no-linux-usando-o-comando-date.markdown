@@ -2,16 +2,25 @@
 layout: post
 tags: [linux, pt-br]
 ---
-## Para converter datas no shell do linux, podemos usar:
+Se você chegou até aqui, anote esta dica.
+
+Uma hora ou outra a gente sempre chega neste problema: Converter datas com
+timestamp, seja de timestamp para string ou o contrário.
+
+Pois ai vai a dica para converter datas no Linux:
+
+### String da data atual
+    $ date
+    Sun Aug  2 03:13:19 2009
 
 ### Timestamp (seconds from the Epoch) da data atual
     $ date +"%s"
-    1249184050
+    1249193599
 
-### Timestamp para uma determinada data
+### Timestamp de uma determinada string de data
     $ date -d '2009-07-31 12:00:01' +"%s"
     1249052401
 
-### Data a partir de um determinado timestamp
+### String de data a partir de um determinado timestamp
     $ python -c "import time; print time.ctime(1249052401)"
     Fri Jul 31 12:00:01 2009

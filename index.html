@@ -50,19 +50,28 @@
   <br class="clear"/>
 
   <div class="entry-content">
-    <h2 id='para_converter_datas_no_shell_do_linux_podemos_usar'>Para converter datas no shell do linux, podemos usar:</h2>
+    <p>Se você chegou até aqui, anote esta dica.</p>
+
+<p>Uma hora ou outra a gente sempre chega neste problema: Converter datas com timestamp, seja de timestamp para string ou o contrário.</p>
+
+<p>Pois ai vai a dica para converter datas no Linux:</p>
+
+<h3 id='string_da_data_atual'>String da data atual</h3>
+
+<pre><code>$ date
+Sun Aug  2 03:13:19 2009</code></pre>
 
 <h3 id='timestamp_seconds_from_the_epoch_da_data_atual'>Timestamp (seconds from the Epoch) da data atual</h3>
 
 <pre><code>$ date +&quot;%s&quot;
-1249184050</code></pre>
+1249193599</code></pre>
 
-<h3 id='timestamp_para_uma_determinada_data'>Timestamp para uma determinada data</h3>
+<h3 id='timestamp_de_uma_determinada_string_de_data'>Timestamp de uma determinada string de data</h3>
 
 <pre><code>$ date -d &#39;2009-07-31 12:00:01&#39; +&quot;%s&quot;
 1249052401</code></pre>
 
-<h3 id='data_a_partir_de_um_determinado_timestamp'>Data a partir de um determinado timestamp</h3>
+<h3 id='string_de_data_a_partir_de_um_determinado_timestamp'>String de data a partir de um determinado timestamp</h3>
 
 <pre><code>$ python -c &quot;import time; print time.ctime(1249052401)&quot;
 Fri Jul 31 12:00:01 2009</code></pre>
