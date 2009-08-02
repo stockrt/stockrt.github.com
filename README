@@ -3,41 +3,37 @@
 # URL:    http://stockrt.github.com
 #
 
-These are the core files I use for making my personal page here at GitHub.
+These are the core files I use for my blog hosted on GitHub.
 
-My projects' name and description are dynamically listed, and this is
-somewhat cool.
-You can copy the generation samples from here and use it to make your own
-personal page for 'yournickname.github.com'.
-If you are going to use my code, please keep the reference.
+Since they do not provide any dynamic content generation engine (like
+wordpress or any other php/ruby/python blog) I need to generate my blog
+statically, so I use jekyll and my templates to do it.
 
-My page (the one that uses this files you have found here) is:
-http://stockrt.github.com
+You can find my blog/site templates here:
+http://github.com/stockrt/stockrt.github.com/tree/master/site
 
-I have made four different versions of my homepage:
-- Dynamic, all external (JS/CSS) http://stockrt.github.com/tests/dynamic/external/index.html
-- Dynamic, all embedded (JS/CSS) http://stockrt.github.com/tests/dynamic/embedded/index.html
-- Static, all external (JS/CSS) http://stockrt.github.com/tests/static/external/index.html
-- Static, all embedded (JS/CSS) http://stockrt.github.com/tests/static/embedded/index.html
+To build your own, do the following:
+    gem source -a http://gems.github.com
+    gem source -a http://gems.rubyforge.org
+    gem install mojombo-jekyll
 
-If you try each one, you will probably see that the last one, static, all
-embedded, is the fastest one. This is the one I picked for the official
-page, http://stockrt.github.com
+    cd /tmp
+    git clone git://github.com/stockrt/stockrt.github.com.git
+    mkdir mysite
+    mv stockrt.github.com/site mysite/
+    cd mysite/site
 
-To maintain this static page updated (listing the newer repos I create, or
-listing the updated descriptions, for instance) would require some work of
-the 'webmaster' (me, you) and this is kinda boring. Because of that I made
-this simple script called GPGEN. It does the same as the dynamic versions
-of my page, but using a template engine and simplejson, to query GitHub API
-of my updates, and then to generate my new index.html.
-You can get this cool script here: http://github.com/stockrt/gpgen
+    ./new_post.sh "a new post"
+    vi _posts/$(date +"%Y-%m-%d")-a-new-post.markdown
+    ./build.sh
 
-For more GitHub API samples and doc, see:
-v1: http://github.com/guides/the-github-api
-v2: http://develop.github.com
+    # You may have some difficulty with other dependencies for jekyll, just
+    # install them as you will be asked for.
+    # See it for more help: http://wiki.github.com/mojombo/jekyll/install
 
-Samples you can pick to generate your page:
-http://github.com/stockrt/stockrt.github.com/tree/master/tests
-
-GPGEN - Engine for generating your static, cooler, better and faster homepage:
-http://github.com/stockrt/gpgen
+For more helpful documentation on how to build your site, see:
+http://github.com/vilcans/scribbish-jekyll
+http://quotedprintable.com/pages/scribbish
+http://github.com/mojombo/jekyll
+http://daringfireball.net/projects/markdown/syntax
+http://www.yaml.org

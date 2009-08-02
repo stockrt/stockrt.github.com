@@ -2,7 +2,7 @@
 pygments: true
 rdiscount: true
 permalink: /p/:title
-paginate: 1
+paginate: 10
 
 # Blog title and description
 title: Weekend codes
@@ -43,18 +43,27 @@ google_cse: |
       }, true);
     </script>
 
-#    <div id="cse" style="width:100%;">Loading</div>
-#    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-#    <script type="text/javascript">
-#      google.load('search', '1');
-#      google.setOnLoadCallback(function(){
-#        new google.search.CustomSearchControl('000162502351056619788:rgh3bxf1v7e').draw('cse');
-#      }, true);
-#    </script>
+links:
+    - name: Projects
+      url: http://stockrt.github.com/projects
+    - name: Home Directory Listing
+      url: http://stockrtweb.homelinux.com
+
+blogroll:
+    - name: Petryx (Marlon Petry)
+      url: http://petryx.blogrs.com.br
+    - name: Nardol (Pablo Lorenzzoni)
+      url: http://nardol.org
+    - name: Ahã... programando...! (Leonir Zimmermann)
+      url: http://ahaprogramando.wordpress.com
 
 # Reference:
-# http://quotedprintable.com/pages/scribbish
 # http://github.com/vilcans/scribbish-jekyll
+# http://quotedprintable.com/pages/scribbish
+# http://github.com/mojombo/jekyll
+# http://daringfireball.net/projects/markdown/syntax
+# http://www.yaml.org
+
 # TODO:
 # http://tracker.icerocket.com/project.create.php
 # http://sharethis.com/
