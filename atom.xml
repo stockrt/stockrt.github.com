@@ -3,7 +3,7 @@
   <title>Weekend codes</title>
   <link href="http://stockrt.github.com/atom.xml" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-02T04:00:54-03:00</updated>
+  <updated>2009-08-02T04:04:00-03:00</updated>
   <id>http://stockrt.github.com</id>
 
   
@@ -73,7 +73,7 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Recomendo ler um pequeno texto que fiz informando sobre como usar o template para jekyll que eu modifiquei:&lt;/p&gt;
 
-&lt;p&gt;http://github.com/stockrt/stockrt.github.com/tree/master&lt;/p&gt;
+&lt;p&gt;&lt;a href='http://github.com/stockrt/stockrt.github.com/tree/master'&gt;http://github.com/stockrt/stockrt.github.com/tree/master&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Outra dica: No link &lt;a href='http://stockrt.github.com/projects'&gt;Projects&lt;/a&gt; ao lado você poderá encontrar algo útil. Se sim, me avisa.&lt;/p&gt;</content>
     </entry>
