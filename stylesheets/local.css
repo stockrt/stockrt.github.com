@@ -18,4 +18,3 @@
 #ribbon a:hover { background: transparent; }
 
 @media print { #ribbon { display: none; } }
-

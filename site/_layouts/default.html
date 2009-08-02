@@ -35,7 +35,7 @@
       <h1><span>
         <a href="{{ site.url }}">{{ site.title }}</a>
         <span class="rss">
-          <a href="{{ site.feed }}"><img src="{{ site.url }}/images/rss-small.png"/></a>
+          <a href="{{ site.feed }}"><img src="{{ site.url }}/images/feed-icon-orange.ico"/></a>
         </span>
         <!--      <a href="{{ site.feed }}" style="background: url({{ site.url }}/images/rss.png) center left no-repeat; padding-left: 18px;"> </a>-->
       </span></h1>
@@ -55,22 +55,6 @@
         <!-- Google Custom Search Element -->
         <h3>Search (CSE)</h3>
         {{ site.google_cse }}
-      </div>
-      {% endif %}
-
-      <!-- feed -->
-      {% if site.feed != empty %}
-      <div class="sidebar-node">
-        <h3>Feed</h3>
-        <ul>
-<!--          <li><a href="{{ site.feed }}">RSS Feed</a></li> -->
-<div class="subscribe_services" id="subscribe_me">
-<div class="subscribe_service"><a href="{{ site.feed }}" style="background: url({{ site.url }}/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></div>
-<div class="subscribe_service"><a href="http://www.bloglines.com/sub/{{ site.feed }}"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></div>
-<div class="subscribe_service"><a href="http://fusion.google.com/add?feedurl={{ site.feed | xmlescape }}"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></div>
-<div class="subscribe_service"><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xmlescape }}"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></div>
-</div>
-        </ul>
       </div>
       {% endif %}
 
@@ -121,6 +105,21 @@
           {% for blog in site.blogroll %}
             <li><a href="{{ blog.url }}">{{ blog.name }}</a></li>
           {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      <!-- feed -->
+      {% if site.feed != empty %}
+      <div class="sidebar-node">
+        <h3>Feeds</h3>
+        <ul>
+          <div class="subscribe_services" id="subscribe_me">
+            <div class="subscribe_service"><a href="{{ site.feed }}" style="background: url({{ site.url }}/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></div>
+            <div class="subscribe_service"><a href="http://www.bloglines.com/sub/{{ site.feed }}"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></div>
+            <div class="subscribe_service"><a href="http://fusion.google.com/add?feedurl={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></div>
+            <div class="subscribe_service"><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></div>
+          </div>
         </ul>
       </div>
       {% endif %}
