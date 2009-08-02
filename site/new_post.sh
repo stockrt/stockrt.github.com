@@ -2,7 +2,7 @@
 
 if [[ ! -n $1 ]]
 then
-    echo "Usage: $0 \"Post Title\""
+    echo "Usage: $0 \"post title\""
     exit 1
 fi
 
