@@ -53,12 +53,16 @@
       {% endif %}
 
       <!-- links -->
+      {% if site.links.size > 0 %}
       <div class="sidebar-node">
         <h3>Links</h3>
         <ul>
-          <li><a href="{{ site.url }}/projects">Projects</a></li>
+          {% for link in site.links %}
+            <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+          {% endfor %}
         </ul>
       </div>
+      {% endif %}
 
       <!-- tags -->
       {% if site.tags.size > 0 %}
@@ -73,7 +77,7 @@
       </div>
       {% endif %}
 
-      {% comment %}
+{% comment %}
       <!-- archives -->
       {% if section.months.size > 0 %}
       <div class="sidebar-node">
@@ -85,16 +89,19 @@
         </ul>
       </div>
       {% endif %}
-      {% endcomment %}
+{% endcomment %}
 
       <!-- blogroll -->
+      {% if site.blogroll.size > 0 %}
       <div class="sidebar-node">
         <h3>Blogroll</h3>
         <ul>
-          <li><a href="http://petryx.blogrs.com.br">Petryx (Marlon Petry)</a></li>
-          <li><a href="http://nardol.org">Nardol (Pablo Lorenzzoni)</a></li>
+          {% for blog in site.blogroll %}
+            <li><a href="{{ blog.url }}">{{ blog.name }}</a></li>
+          {% endfor %}
         </ul>
       </div>
+      {% endif %}
 
     </div>
     <br style="clear:both;"/>

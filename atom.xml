@@ -3,7 +3,7 @@
   <title>Weekend codes</title>
   <link href="http://stockrt.github.com/atom.xml" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-07-21T00:25:32-03:00</updated>
+  <updated>2009-08-02T02:29:39-03:00</updated>
   <id>http://stockrt.github.com</id>
 
   
@@ -15,6 +15,29 @@
     </author>
   
 
+  
+    <entry>
+      <title>Como Converter Datas E Timestamps No Linux Usando O Comando Date</title>
+      <link href="http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date"/>
+      <updated>2009-08-02T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date</id>
+      <content type="html">&lt;h2 id='para_converter_datas_no_shell_do_linux_podemos_usar'&gt;Para converter datas no shell do linux, podemos usar:&lt;/h2&gt;
+
+&lt;h3 id='timestamp_seconds_from_the_epoch_da_data_atual'&gt;Timestamp (seconds from the Epoch) da data atual&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ date +&amp;quot;%s&amp;quot;
+1249184050&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='timestamp_para_uma_determinada_data'&gt;Timestamp para uma determinada data&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ date -d &amp;#39;2009-07-31 12:00:01&amp;#39; +&amp;quot;%s&amp;quot;
+1249052401&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='data_a_partir_de_um_determinado_timestamp'&gt;Data a partir de um determinado timestamp&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ python -c &amp;quot;import time; print time.ctime(1249052401)&amp;quot;
+Fri Jul 31 12:00:01 2009&lt;/code&gt;&lt;/pre&gt;</content>
+    </entry>
   
     <entry>
       <title>Iniciando Um Blog No Github</title>
