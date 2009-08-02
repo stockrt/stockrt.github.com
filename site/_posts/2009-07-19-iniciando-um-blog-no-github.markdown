@@ -32,7 +32,7 @@ do que HTML para postar da forma como escolhi, pelo shell.
 Recomendo ler um pequeno texto que fiz informando sobre como usar o template
 para jekyll que eu modifiquei:
 
-http://github.com/stockrt/stockrt.github.com/tree/master
+[http://github.com/stockrt/stockrt.github.com/tree/master](http://github.com/stockrt/stockrt.github.com/tree/master)
 
 Outra dica: No link [Projects](http://stockrt.github.com/projects) ao lado
 você poderá encontrar algo útil. Se sim, me avisa.
