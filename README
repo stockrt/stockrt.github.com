@@ -31,6 +31,10 @@ To build your own, do the following:
     # install them as you will be asked for.
     # See it for more help: http://wiki.github.com/mojombo/jekyll/install
 
+All you need to do is to make new posts using "./new_post.sh" and to
+configure this set of templates with your own data in the file "_config.yml",
+and then build you site with: "./build.sh".
+
 For more helpful documentation on how to build your site, see:
 http://github.com/vilcans/scribbish-jekyll
 http://quotedprintable.com/pages/scribbish
