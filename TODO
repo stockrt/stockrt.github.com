@@ -1,0 +1,34 @@
+
+http://petryx.blogrs.com.br/wp-content/plugins/sem-subscribe-me/img/addbloglines.gif
+http://www.bloglines.com/sub/http://petryx.blogrs.com.br/feed/
+
+http://petryx.blogrs.com.br/wp-content/plugins/sem-subscribe-me/img/addgoogle.gif
+http://fusion.google.com/add?feedurl=http%3A%2F%2Fpetryx.blogrs.com.br%2Ffeed%2F
+
+
+http://petryx.blogrs.com.br/wp-content/plugins/sem-subscribe-me/img/addmyyahoo.gif
+http://add.my.yahoo.com/rss?url=http%3A%2F%2Fpetryx.blogrs.com.br%2Ffeed%2F
+
+
+<h2>Assine os feeds</h2>
+
+<div>
+<div class="subscribe_services" id="subscribe_me">
+
+<div class="subscribe_service"><a href="{{ site.feed }}" style="background: url({{ site.url }}/images/rss.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></div>
+
+<div class="subscribe_service"><a href="http://www.bloglines.com/sub/{{ site.feed }}"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></div>
+
+<div class="subscribe_service"><a href="http://fusion.google.com/add?feedurl={{ site.feed | xmlescape }}"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></div>
+
+<div class="subscribe_service"><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xmlescape }}"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></div>
+
+</div>
+</div>
+
+
+    <div class="rss">
+      <a href="http://feeds.feedburner.com/tom-preston-werner">
+      <img src="/images/rss.png" alt="Subscribe to RSS Feed"/>
+      </a>
+    </div>

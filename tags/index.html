@@ -17,7 +17,7 @@
   
 
   <!-- feed -->
-  <link href="http://stockrt.github.com/atom.xml" rel="alternate" title="Weekend codes" type="application/atom+xml"/>
+  <link href="http://feeds.feedburner.com/weekendcodes" rel="alternate" title="Weekend codes" type="application/atom+xml"/>
 
   <!-- style -->
   <link rel="stylesheet" href="http://stockrt.github.com/stylesheets/application.css" type="text/css"/>
@@ -26,7 +26,13 @@
 <body>
 <div id="container">
   <div id="header">
-    <h1><span><a href="http://stockrt.github.com">Weekend codes</a></span></h1>
+      <h1><span>
+        <a href="http://stockrt.github.com">Weekend codes</a>
+        <span class="rss">
+          <a href="http://feeds.feedburner.com/weekendcodes"><img src="http://stockrt.github.com/images/rss-small.png"/></a>
+        </span>
+        <!--      <a href="http://feeds.feedburner.com/weekendcodes" style="background: url(http://stockrt.github.com/images/rss.png) center left no-repeat; padding-left: 18px;"> </a>-->
+      </span></h1>
     <h2>Codes and random stuff I am up to share with you</h2>
   </div>
 
@@ -96,6 +102,22 @@
       </div>
       
 
+      <!-- feed -->
+      
+      <div class="sidebar-node">
+        <h3>Feed</h3>
+        <ul>
+<!--          <li><a href="http://feeds.feedburner.com/weekendcodes">RSS Feed</a></li> -->
+<div class="subscribe_services" id="subscribe_me">
+<div class="subscribe_service"><a href="http://feeds.feedburner.com/weekendcodes" style="background: url(http://stockrt.github.com/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></div>
+<div class="subscribe_service"><a href="http://www.bloglines.com/sub/http://feeds.feedburner.com/weekendcodes"><img src="http://stockrt.github.com/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></div>
+<div class="subscribe_service"><a href="http://fusion.google.com/add?feedurl=http://feeds.feedburner.com/weekendcodes"><img src="http://stockrt.github.com/images/addgoogle.gif" alt="Subscribe to Google"/></a></div>
+<div class="subscribe_service"><a href="http://add.my.yahoo.com/rss?url=http://feeds.feedburner.com/weekendcodes"><img src="http://stockrt.github.com/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></div>
+</div>
+        </ul>
+      </div>
+      
+
       <!-- links -->
       
       <div class="sidebar-node">
@@ -155,6 +177,11 @@
   <div id="footer">
     <hr/>
     <p><a href="http://stockrt.github.com">Weekend codes</a></p>
+<!--    <p>
+        <span class="rss">
+          <a href="http://feeds.feedburner.com/weekendcodes"><img src="http://stockrt.github.com/images/rss.png"/></a>
+      </span>-->
+    </p>
     <ul>
       <li>
         made with modified <a href="http://github.com/vilcans/scribbish-jekyll">scribbish-jekyll</a><br/>
@@ -164,6 +191,8 @@
     </ul>
   </div>
 </div>
+
+<!-- analytics -->
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -175,6 +204,7 @@ var pageTracker = _gat._getTracker("UA-5567404-4");
 pageTracker._trackPageview();
 } catch(err) {}
 </script>
+
 
 
 </body>
