@@ -103,7 +103,7 @@
         <h3>Blogroll</h3>
         <ul>
           {% for blog in site.blogroll %}
-            <li><a href="{{ blog.url }}">{{ blog.name }}</a></li>
+            <li><a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -114,10 +114,10 @@
       <div class="sidebar-node">
         <h3>Subscribe</h3>
         <ul>
-          <li><a href="{{ site.feed }}" style="background: url({{ site.url }}/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></li>
-          <li><a href="http://www.bloglines.com/sub/{{ site.feed }}"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></li>
-          <li><a href="http://fusion.google.com/add?feedurl={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></li>
-          <li><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></li>
+          <li><a href="{{ site.feed }}" target="_blank" style="background: url({{ site.url }}/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></li>
+          <li><a href="http://www.bloglines.com/sub/{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></li>
+          <li><a href="http://fusion.google.com/add?feedurl={{ site.feed | xml_escape }}" target="_blank"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></li>
+          <li><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xml_escape }}" target="_blank"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></li>
         </ul>
       </div>
       {% endif %}
