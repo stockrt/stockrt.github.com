@@ -112,14 +112,12 @@
       <!-- feed -->
       {% if site.feed != empty %}
       <div class="sidebar-node">
-        <h3>Feeds</h3>
+        <h3>Subscribe</h3>
         <ul>
-          <div class="subscribe_services" id="subscribe_me">
-            <div class="subscribe_service"><a href="{{ site.feed }}" style="background: url({{ site.url }}/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></div>
-            <div class="subscribe_service"><a href="http://www.bloglines.com/sub/{{ site.feed }}"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></div>
-            <div class="subscribe_service"><a href="http://fusion.google.com/add?feedurl={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></div>
-            <div class="subscribe_service"><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></div>
-          </div>
+          <li><a href="{{ site.feed }}" style="background: url({{ site.url }}/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></li>
+          <li><a href="http://www.bloglines.com/sub/{{ site.feed }}"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></li>
+          <li><a href="http://fusion.google.com/add?feedurl={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></li>
+          <li><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xml_escape }}"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></li>
         </ul>
       </div>
       {% endif %}
