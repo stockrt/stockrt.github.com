@@ -34,7 +34,7 @@
   <div id="header">
       <h1><span>
         <a href="{{ site.url }}">{{ site.title }}</a>
-        <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/rss-small.png"/></a>
+        <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/rss.png"/></a>
       </span></h1>
     <h2>{{ site.description }}</h2>
   </div>
@@ -111,10 +111,35 @@
       <div class="sidebar-node">
         <h3>Subscribe</h3>
         <ul>
+{% comment %}
           <li><a href="{{ site.feed }}" target="_blank" style="background: url({{ site.url }}/images/rss-small.png) center left no-repeat; padding-left: 18px;">RSS Feed</a></li>
           <li><a href="http://www.bloglines.com/sub/{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/addbloglines.gif" alt="Subscribe to Bloglines"/></a></li>
           <li><a href="http://fusion.google.com/add?feedurl={{ site.feed | xml_escape }}" target="_blank"><img src="{{ site.url }}/images/addgoogle.gif" alt="Subscribe to Google"/></a></li>
           <li><a href="http://add.my.yahoo.com/rss?url={{ site.feed | xml_escape }}" target="_blank"><img src="{{ site.url }}/images/addmyyahoo.gif" alt="Subscribe to MyYahoo!"/></a></li>
+{% endcomment %}
+
+<div>
+<form action="http://www.feedmyinbox.com/feeds/subscribe"
+style="border:0px solid #ccc;padding:3px;text-align:left;"
+target="popupwindow" method="post"
+onsubmit="window.open('http://www.feedmyinbox.com/feeds/subscribe',
+'popupwindow', 'scrollbars=yes,width=550,height=520');return
+true">
+<p>Enter your email address:</p>
+<p><input style="width:140px" name="data[Account][email]" type="text"/></p>
+<input value="{{ site.feed }}" name="data[Feed][url]" type="hidden"/>
+<input value="" name="data[subject]" type="hidden"/>
+<input value="Subscribe" type="submit"/></form>
+</div>
+
+<li>
+<a href="{{ site.feed }}" rel="nofollow"><img src="{{ site.url }}/images/sbuttons/rss.png" alt="RSS Feed" border="0"></a>
+<a href="http://fusion.google.com/add?feedurl={{ site.feed }}" rel="nofollow"><img src="{{ site.url }}/images/sbuttons/google.png" alt="Add to Google" border="0"></a>
+<a href="http://add.my.yahoo.com/rss?url={{ site.feed }}" rel="nofollow"><img src="{{ site.url }}/images/sbuttons/yahoo.png" alt="Add to MyYahoo" border="0"></a>
+<a href="http://www.bloglines.com/sub/{{ site.feed }}" rel="nofollow"><img src="{{ site.url }}/images/sbuttons/bloglines.png" alt="Add to Bloglines" border="0"></a>
+<a href="http://www.netvibes.com/subscribe.php?url={{ site.feed }}" rel="nofollow"><img src="{{ site.url }}/images/sbuttons/netvibes.png" alt="Add to Netvibes" border="0"></a>
+<a href="http://www.feedblitz.com/f/f.fbz?track={{ site.feed }}" rel="nofollow"><img src="{{ site.url }}/images/sbuttons/email.png" alt="Add to Feedblitz" border="0"></a>
+</li>
         </ul>
       </div>
       {% endif %}
