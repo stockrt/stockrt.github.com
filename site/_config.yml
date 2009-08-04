@@ -60,6 +60,16 @@ disqus: |
     //]]>
     </script>
 
+disqus_thread: |
+    <div id="disqus_thread"></div>
+    <script type="text/javascript" src="http://disqus.com/forums/weekendcodes/embed.js"></script>
+    <noscript><a href="http://weekendcodes.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+
+# Fix this permalink if you do not use title directory as permalink as I do.
+# You may need to remove /index.html bellow if you are seeing a wrong (zero)
+# comment count number.
+#disqus_view_comments: #disqus_thread
+disqus_view_comments: /index.html#disqus_thread
 
 sharethis: |
     <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
