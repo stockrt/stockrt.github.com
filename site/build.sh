@@ -12,6 +12,7 @@ for E in $FROM_SITE
 do
     echo "About to delete: ../$E"
 done
+echo "About to delete: ../p ../page[0-9]* ../20??"
 echo "About to delete: ../*.sh"
 echo "About to move: ../atom.html to ../atom.xml"
 echo "Continue? (enter)"
@@ -21,9 +22,9 @@ for E in $FROM_SITE
 do
     rm -rf ../$E
 done
-rm -rf ../p ../page[0-9]*
+rm -rf ../p ../page[0-9]* ../20??
 
 jekyll ../
 
-mv ../atom.html ../atom.xml
 rm -f ../*.sh
+mv ../atom.html ../atom.xml

@@ -7,12 +7,13 @@ then
 fi
 
 D=$(date +"%Y-%m-%d")
-To=$1
+To="$1"
 Tl=$(echo $To | sed 's/ /-/g' | tr '[A-Z]' '[a-z]')
+P="_posts/${D}-${Tl}.markdown"
 
-if [[ -e "_posts/${D}-${Tl}.markdown" ]]
+if [[ -e "$P" ]]
 then
-    echo "ERR: Post \"_posts/${D}-${Tl}.markdown\" already exists"
+    echo "Already exists: \"$P\" _not_ created"
     exit 1
 fi
 
@@ -21,5 +22,5 @@ layout: post
 title: $To
 tags: [github, pt-br]
 ---
-your text here" >> "_posts/${D}-${Tl}.markdown"
-echo "Post \"_posts/${D}-${Tl}.markdown\" created"
+your text here" >> "$P"
+echo "Created: \"$P\""
