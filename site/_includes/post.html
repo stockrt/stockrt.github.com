@@ -22,9 +22,9 @@
   <ul class="meta">
     {% if post.tags != empty %}
       <li>Tags:
-      {% for tag in post.tags %}
-        <a href="{{ site.url }}/tags/#{{ tag | xml_escape }}">{{ tag | xml_escape }}</a>
-      {% endfor %}
+        {% for tag in post.tags %}
+          <a href="{{ site.url }}/tags/#{{ tag | xml_escape }}">{{ tag | xml_escape }}</a>
+        {% endfor %}
       </li>
     {% endif %}
 
@@ -34,26 +34,19 @@
     </li>
 
     <li>Share:
-{% comment %}
-      <a href="http://slashdot.org/slashdot-it.pl?op=basic&url={{ site.url }}{{ post.url }}&title={{ post.title }}">slashdot it</a>
-      <a href="http://digg.com/submit?url={{ site.url }}{{ post.url }}&title={{ post.title }}">digg this</a>
-      <a href="http://del.icio.us/post?url={{ site.url }}{{ post.url }}&title={{ post.title }}">del.icio.us</a>
-      <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ post.url }}&title={{ post.title }}">stumbleupon</a>
-    </li>
-{% endcomment %}
-<span class="sbookmark">
-<script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;buttonText="></script>
-<a href="http://del.icio.us/post?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
-<a href="http://digg.com/submit?phase=2&url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
-<a href="http://www.sphinn.com/submit.php?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
-<a href="http://www.furl.net/storeIt.jsp?u={{ site.url }}{{ post.url }}&t={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
-<a href="http://ma.gnolia.com/bookmarklet/add?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
-<a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/stumbleupon.png" alt="Stumbleupon" title="Stumbleupon" border="0"></a>
-<a href="http://reddit.com/submit?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
-<a href="http://www.spurl.net/spurl.php?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
-<a href="http://www.google.com/bookmarks/mark?op=edit&bkmk={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google2.png" alt="Save to Google Bookmarks" title="Save to Google Bookmarks" border="0"></a>
-<a href="http://slashdot.org/slashdot-it.pl?op=basic&url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
-</span>
+      <span class="sbookmark">
+        <a href="http://del.icio.us/post?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://www.furl.net/storeIt.jsp?u={{ site.url }}{{ post.url }}&t={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
+        <a href="http://ma.gnolia.com/bookmarklet/add?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/stumbleupon.png" alt="Stumbleupon" title="Stumbleupon" border="0"></a>
+        <a href="http://reddit.com/submit?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk={{ site.url }}{{ post.url }}&title={{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+      </span>
+      <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;buttonText="></script>
     </li>
   </ul>
 </div>

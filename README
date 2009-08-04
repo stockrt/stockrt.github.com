@@ -23,7 +23,7 @@ To build your own, do the following:
     mv stockrt.github.com/site mysite/
     cd mysite/site
 
-    ./new_post.sh "a new post"
+    ./new_post.sh "A new post"
     vi _posts/$(date +"%Y-%m-%d")-a-new-post.markdown
     ./build.sh
 

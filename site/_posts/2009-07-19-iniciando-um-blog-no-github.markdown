@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Iniciando um blog no GitHub
 tags: [github, pt-br]
 ---
 Use jekyll, facilita a sua vida.
@@ -14,7 +15,7 @@ Jekyll é muito legal, vale a pena dar uma olhada. Com esse modelo de geração
 estática é possível se fazer posts com apenas alguns passos:
 
     cd yournickname.github.com/site
-    ./new_post.sh "nome do post"
+    ./new_post.sh "Nome do post"
     vi _posts/$(date +"%Y-%m-%d")-nome-do-post.markdown
     ./build.sh; cd ..
     git add .
