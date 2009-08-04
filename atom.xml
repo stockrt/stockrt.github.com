@@ -3,7 +3,7 @@
   <title>Weekend codes</title>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-03T02:10:45-03:00</updated>
+  <updated>2009-08-03T22:45:49-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -17,7 +17,7 @@
 
   
     <entry>
-      <title>Como Converter Datas E Timestamps No Linux Usando O Comando Date</title>
+      <title>Como converter datas e timestamps no linux usando o comando date</title>
       <link href="http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date"/>
       <updated>2009-08-02T00:00:00-03:00</updated>
       <id>http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date</id>
@@ -49,7 +49,7 @@ Fri Jul 31 12:00:01 2009&lt;/code&gt;&lt;/pre&gt;</content>
     </entry>
   
     <entry>
-      <title>Iniciando Um Blog No Github</title>
+      <title>Iniciando um blog no GitHub</title>
       <link href="http://stockrt.github.com/p/iniciando-um-blog-no-github"/>
       <updated>2009-07-19T00:00:00-03:00</updated>
       <id>http://stockrt.github.com/p/iniciando-um-blog-no-github</id>
@@ -60,7 +60,7 @@ Fri Jul 31 12:00:01 2009&lt;/code&gt;&lt;/pre&gt;</content>
 &lt;p&gt;Jekyll é muito legal, vale a pena dar uma olhada. Com esse modelo de geração estática é possível se fazer posts com apenas alguns passos:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;cd yournickname.github.com/site
-./new_post.sh &amp;quot;nome do post&amp;quot;
+./new_post.sh &amp;quot;Nome do post&amp;quot;
 vi _posts/$(date +&amp;quot;%Y-%m-%d&amp;quot;)-nome-do-post.markdown
 ./build.sh; cd ..
 git add .
