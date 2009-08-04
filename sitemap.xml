@@ -6,52 +6,22 @@
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://stockrt.github.com/</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/2009/</loc>
-  <lastmod>2009-08-02T05:17:39Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/2009/07/</loc>
-  <lastmod>2009-08-02T05:17:39Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/2009/07/19/</loc>
-  <lastmod>2009-08-02T05:17:39Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/2009/07/19/iniciando-um-blog-no-github.html</loc>
-  <lastmod>2009-08-02T05:17:39Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/2009/08/</loc>
-  <lastmod>2009-08-02T05:17:39Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/2009/08/02/</loc>
-  <lastmod>2009-08-02T05:17:39Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://stockrt.github.com/2009/08/02/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date.html</loc>
-  <lastmod>2009-08-02T05:17:39Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/README</loc>
-  <lastmod>2009-08-02T06:18:39Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/TODO</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/atom.xml</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -61,37 +31,162 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/images/</loc>
-  <lastmod>2009-07-20T00:46:59Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/addbloglines.gif</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/addgoogle.gif</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/addmyyahoo.gif</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/images/background.gif</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/images/gravatar.gif</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/images/header_shadow.gif</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/rss.gif</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/images/rss.png</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/aol.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/bloglines.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/delicious.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/digg.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/email.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/feedblitz.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/furl.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/google.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/google2.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/magnolia.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/netvibes.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/newsgator.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/pageflakes.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/reddit.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/rss.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/slashdot.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/sphinn.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/spurl.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/stumbleupon.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/images/sbuttons/yahoo.png</loc>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/images/spinner.gif</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/index.html</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -116,27 +211,27 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/p/</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date/</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date/index.html</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/p/iniciando-um-blog-no-github/</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/p/iniciando-um-blog-no-github/index.html</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -161,42 +256,52 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/site/</loc>
-  <lastmod>2009-08-02T07:28:52Z</lastmod>
+  <lastmod>2009-08-04T10:57:58Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/README</loc>
+  <lastmod>2009-08-03T17:34:12Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/TODO</loc>
+  <lastmod>2009-08-04T10:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_config.yml</loc>
-  <lastmod>2009-08-02T07:28:52Z</lastmod>
+  <lastmod>2009-08-04T04:40:45Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_includes/</loc>
-  <lastmod>2009-08-02T04:46:50Z</lastmod>
+  <lastmod>2009-08-04T04:24:25Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_includes/page.html</loc>
-  <lastmod>2009-08-02T04:46:50Z</lastmod>
+  <lastmod>2009-08-04T04:23:24Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_includes/post.html</loc>
-  <lastmod>2009-08-02T04:45:21Z</lastmod>
+  <lastmod>2009-08-04T04:24:25Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_includes/postlist.html</loc>
-  <lastmod>2009-07-08T03:18:48Z</lastmod>
+  <lastmod>2009-08-04T01:37:52Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_layouts/</loc>
-  <lastmod>2009-08-02T05:20:21Z</lastmod>
+  <lastmod>2009-08-04T04:21:01Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_layouts/default.html</loc>
-  <lastmod>2009-08-02T05:20:21Z</lastmod>
+  <lastmod>2009-08-04T04:21:01Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -206,32 +311,47 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_posts/</loc>
-  <lastmod>2009-08-02T07:03:46Z</lastmod>
+  <lastmod>2009-08-04T10:51:27Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_posts/2009-07-19-iniciando-um-blog-no-github.markdown</loc>
-  <lastmod>2009-08-02T07:03:46Z</lastmod>
+  <lastmod>2009-08-03T17:35:46Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/_posts/2009-08-02-como-converter-datas-e-timestamps-no-linux-usando-o-comando-date.markdown</loc>
-  <lastmod>2009-08-02T06:15:57Z</lastmod>
+  <lastmod>2009-08-03T16:51:39Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/atom.xml</loc>
-  <lastmod>2009-07-20T00:52:11Z</lastmod>
+  <lastmod>2009-08-03T01:21:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/build.sh</loc>
-  <lastmod>2009-08-02T05:29:06Z</lastmod>
+  <lastmod>2009-08-04T10:53:24Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/images/</loc>
-  <lastmod>2009-07-07T14:50:46Z</lastmod>
+  <lastmod>2009-08-03T04:01:32Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/addbloglines.gif</loc>
+  <lastmod>2008-08-19T12:28:45Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/addgoogle.gif</loc>
+  <lastmod>2008-08-19T12:28:45Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/addmyyahoo.gif</loc>
+  <lastmod>2008-08-19T12:28:45Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -250,8 +370,118 @@
   <priority>0.5000</priority>
  </url>
  <url>
+  <loc>http://stockrt.github.com/site/images/rss.gif</loc>
+  <lastmod>2006-07-29T00:14:44Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
   <loc>http://stockrt.github.com/site/images/rss.png</loc>
   <lastmod>2009-07-07T14:50:45Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/</loc>
+  <lastmod>2009-08-04T01:11:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/aol.png</loc>
+  <lastmod>2009-08-04T01:08:03Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/bloglines.png</loc>
+  <lastmod>2007-05-23T03:46:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/delicious.png</loc>
+  <lastmod>2007-05-23T02:40:31Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/digg.png</loc>
+  <lastmod>2007-05-23T02:40:34Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/email.png</loc>
+  <lastmod>2007-05-23T03:46:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/feedblitz.png</loc>
+  <lastmod>2009-08-03T03:49:57Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/furl.png</loc>
+  <lastmod>2007-05-23T02:40:38Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/google.png</loc>
+  <lastmod>2007-05-23T03:46:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/google2.png</loc>
+  <lastmod>2007-05-23T03:49:09Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/magnolia.png</loc>
+  <lastmod>2007-05-23T02:40:44Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/netvibes.png</loc>
+  <lastmod>2007-05-23T03:46:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/newsgator.png</loc>
+  <lastmod>2009-08-04T01:01:05Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/pageflakes.png</loc>
+  <lastmod>2009-08-04T01:10:54Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/reddit.png</loc>
+  <lastmod>2007-05-23T02:40:52Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/rss.png</loc>
+  <lastmod>2009-08-03T03:22:25Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/slashdot.png</loc>
+  <lastmod>2009-08-03T03:48:40Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/sphinn.png</loc>
+  <lastmod>2007-07-20T15:09:35Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/spurl.png</loc>
+  <lastmod>2007-05-23T02:41:04Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/stumbleupon.png</loc>
+  <lastmod>2007-05-23T02:41:00Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/site/images/sbuttons/yahoo.png</loc>
+  <lastmod>2007-05-23T03:46:39Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -261,37 +491,37 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/site/index.html</loc>
-  <lastmod>2009-08-02T04:53:44Z</lastmod>
+  <lastmod>2009-08-04T04:36:07Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/new_post.sh</loc>
-  <lastmod>2009-08-02T06:32:31Z</lastmod>
+  <lastmod>2009-08-04T10:50:50Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/stylesheets/</loc>
-  <lastmod>2009-07-09T02:53:45Z</lastmod>
+  <lastmod>2009-08-03T00:35:12Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/stylesheets/application.css</loc>
-  <lastmod>2009-07-09T02:53:42Z</lastmod>
+  <lastmod>2009-08-03T00:16:07Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/stylesheets/content.css</loc>
-  <lastmod>2009-07-09T01:36:14Z</lastmod>
+  <lastmod>2009-08-02T21:48:01Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/stylesheets/layout.css</loc>
-  <lastmod>2009-07-09T02:17:10Z</lastmod>
+  <lastmod>2009-08-03T00:35:12Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/site/stylesheets/local.css</loc>
-  <lastmod>2009-07-07T22:18:43Z</lastmod>
+  <lastmod>2009-08-02T21:41:24Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -311,42 +541,42 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/stylesheets/</loc>
-  <lastmod>2009-07-20T00:46:59Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/stylesheets/application.css</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/stylesheets/content.css</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/stylesheets/layout.css</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/stylesheets/local.css</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/stylesheets/syntax.css</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/tags/</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://stockrt.github.com/tags/index.html</loc>
-  <lastmod>2009-08-02T07:56:51Z</lastmod>
+  <lastmod>2009-08-04T11:00:05Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
