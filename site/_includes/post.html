@@ -49,7 +49,11 @@
     </li>
   </ul>
 
-  <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
+  <!-- sharethis -->
+  {% if site.sharethis != empty %}
+    {{ site.sharethis }}
+  {% endif %}
 
+  <!-- disqus_thread -->
   <a href="{{ site.url }}{{ post.url }}#disqus_thread">View Comments</a>
 </div>
