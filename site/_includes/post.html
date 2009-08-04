@@ -54,6 +54,8 @@
     {{ site.sharethis }}
   {% endif %}
 
-  <!-- disqus_thread -->
-  <a href="{{ site.url }}{{ post.url }}/index.html#disqus_thread">View Comments</a>
+  <!-- disqus_view_comments -->
+  {% if site.disqus_view_comments != empty %}
+    <a href="{{ site.url }}{{ post.url }}{{ site.disqus_view_comments }}">View Comments</a>
+  {% endif %}
 </div>

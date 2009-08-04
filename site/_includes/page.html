@@ -54,8 +54,13 @@
     {{ site.sharethis }}
   {% endif %}
 
-  <!-- disqus_thread -->
-  <a href="{{ site.url }}{{ page.url }}/index.html#disqus_thread">View Comments</a>
+  <!-- disqus_view_comments -->
+  {% if site.disqus_view_comments != empty %}
+    <a href="{{ site.url }}{{ page.url }}{{ site.disqus_view_comments }}">View Comments</a>
+  {% endif %}
 
-  <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/weekendcodes/embed.js"></script><noscript><a href="http://weekendcodes.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+  <!-- disqus_thread -->
+  {% if site.disqus_thread != empty %}
+    {{ site.disqus_thread }}
+  {% endif %}
 </div>
