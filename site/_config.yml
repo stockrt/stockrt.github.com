@@ -4,78 +4,79 @@ rdiscount: true
 permalink: /p/:title
 paginate: 10
 
+##
+## Blog definitions
+##
+
+# Required
 # Blog title and description
 title: Weekend codes
 description: Codes and random stuff I am up to share with you
 
-# Absolute base URL for this site without trailing slash
+# Required
+# Absolute base URL for this site _without_ trailing slash
 url: http://stockrt.github.com
 
-# Absolute URL of feed
+# Required
+# Absolute URL of the feed
 # You may want to change this URL to point to a feedburner feed
 #feed: http://stockrt.github.com/atom.xml
 feed: http://feeds.feedburner.com/weekendcodes
 
-# Author element in atom feed. Optional.
-# If email is supplied, name is required.
+# Optional
+# Author element in atom feed
+# If email is supplied, name is needed
 author:
     name: Rogério Schneider
     email: stockrt@gmail.com
 
-google_analytics: |
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-    var pageTracker = _gat._getTracker("UA-5567404-4");
-    pageTracker._trackPageview();
-    } catch(err) {}
-    </script>
+##
+## Search and Tracking elements
+##
 
-google_cse: |
-    <div id="cse" style="width:100%;">Loading</div>
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script type="text/javascript">
-      google.load('search', '1');
-      google.setOnLoadCallback(function(){
-        new google.search.CustomSearchControl().draw('cse');
-      }, true);
-    </script>
+# Optional
+google_cse:
+    enable: true
+    # id is Optional
+    id: 000162502351056619788:rgh3bxf1v7e
 
-disqus: |
-    <script type="text/javascript">
-    //<![CDATA[
-    (function() {
-        var links = document.getElementsByTagName('a');
-        var query = '?';
-        for(var i = 0; i < links.length; i++) {
-            if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-            }
-        }
-        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/weekendcodes/get_num_replies.js' + query + '"></' + 'script>');
-    })();
-    //]]>
-    </script>
+# Optional
+google_analytics:
+    enable: true
+    # tracker_id is Required
+    tracker_id: UA-5567404-4
 
-disqus_thread: <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/weekendcodes/embed.js"></script><noscript><a href="http://weekendcodes.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+##
+## Social elements
+##
 
-# Fix this permalink if you do not use title directory as permalink as I do.
-# You may need to remove the '/' bellow if you are seeing a wrong (zero)
-# comment count number.
-#disqus_view_comments: #disqus_thread
-disqus_view_comments: /#disqus_thread
+# Optional
+disqus:
+    enable: true
+    # shortname is Required
+    shortname: weekendcodes
+    # permalink_is_a_directory is Required.
+    # If you point your permalink to a directory (that, of course, contains an
+    # auto-generated index.html inside) you should set this to true, if not,
+    # set to false.
+    #permalink_is_a_directory: false
+    permalink_is_a_directory: true
 
+# Optional
 sharethis: <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
 
+##
+## Sidebar elements
+##
+
+# Optional
 links:
     - name: Projects
       url: http://stockrt.github.com/projects
     - name: Directory listing at home
       url: http://stockrtweb.homelinux.com
 
+# Optional
 blogroll:
     - name: Petryx (Marlon Petry)
       url: http://petryx.blogrs.com.br
@@ -90,10 +91,3 @@ blogroll:
 # http://github.com/mojombo/jekyll
 # http://daringfireball.net/projects/markdown/syntax
 # http://www.yaml.org
-
-# TODO:
-# http://tracker.icerocket.com/project.create.php
-# http://sharethis.com/ na config
-# disqus comments
-# rss/mail links
-# ads

@@ -24,7 +24,7 @@ do
 done
 rm -rf ../p ../page[0-9]* ../20??
 
-jekyll ../
+jekyll ../ || exit 1
 
 rm -f ../*.sh
 mv ../atom.html ../atom.xml

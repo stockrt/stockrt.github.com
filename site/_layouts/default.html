@@ -23,9 +23,7 @@
   {% endif %}
 
   <!-- feed -->
-  {% if site.feed != empty %}
-    <link href="{{ site.feed }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml"/>
-  {% endif %}
+  <link href="{{ site.feed }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml"/>
 
   <!-- style -->
   <link rel="stylesheet" href="{{ site.url }}/stylesheets/application.css" type="text/css"/>
@@ -36,9 +34,7 @@
   <div id="header">
       <h1><span>
         <a href="{{ site.url }}">{{ site.title }}</a>
-        {% if site.feed != empty %}
-          <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/rss.png" alt="RSS Feed" title="RSS Feed" border="0"></a>
-        {% endif %}
+        <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/rss.png" alt="Feed" title="Feed" border="0"></a>
       </span></h1>
     <h2>{{ site.description }}</h2>
   </div>
@@ -51,37 +47,54 @@
     <!-- sidebar -->
     <div id="sidebar">
       <!-- search -->
-      {% if site.google_cse != empty %}
-        <div class="sidebar-node">
-          <!-- Google Custom Search Element -->
-          <h3>Search (CSE)</h3>
-          {{ site.google_cse }}
-        </div>
+      {% if site.google_cse %}
+        {% if site.google_cse.enable %}
+          <div class="sidebar-node">
+            <!-- Google Custom Search Element -->
+            <h3>Search (CSE)</h3>
+            <div id="cse" style="width:100%;">Loading</div>
+            <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+            <script type="text/javascript">
+              google.load('search', '1');
+              google.setOnLoadCallback(function(){
+                {% if site.google_cse.id %}
+                  new google.search.CustomSearchControl('{{ site.google_cse.id }}').draw('cse');
+                {% else %}
+                  new google.search.CustomSearchControl().draw('cse');
+                {% endif %}
+              }, true);
+            </script>
+          </div>
+        {% endif %}
       {% endif %}
 
       <!-- links -->
-      {% if site.links.size > 0 %}
-        <div class="sidebar-node">
-          <h3>Links</h3>
-          <ul>
-            {% for link in site.links %}
-              <li><a href="{{ link.url }}">{{ link.name }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
+      {% if site.links %}
+        {% if site.links.size > 0 %}
+          <div class="sidebar-node">
+            <h3>Links</h3>
+            <ul>
+              {% for link in site.links %}
+                <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
       {% endif %}
 
       <!-- tags -->
-      {% if site.tags.size > 0 %}
-        <div class="sidebar-node">
-          <h3>Tags</h3>
-          <ul>
-            {% for tag in site.tags %}
-              {% assign t = tag.first %}
-              <li><a href="{{ site.url }}/tags/#{{ t | xml_escape }}">{{ t | xml_escape }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
+      {% if site.tags %}
+        {% if site.tags.size > 0 %}
+          <div class="sidebar-node">
+            <h3>Tags</h3>
+            <ul>
+              {% for tag in site.tags %}
+                {% assign t = tag.first %}
+                <li><a href="{{ site.url }}/tags/#{{ t | xml_escape }}">{{ t | xml_escape }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
       {% endif %}
 
 {% comment %}
@@ -99,44 +112,44 @@
 {% endcomment %}
 
       <!-- blogroll -->
-      {% if site.blogroll.size > 0 %}
-        <div class="sidebar-node">
-          <h3>Blogroll</h3>
-          <ul>
-            {% for blog in site.blogroll %}
-              <li><a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
+      {% if site.blogroll %}
+        {% if site.blogroll.size > 0 %}
+          <div class="sidebar-node">
+            <h3>Blogroll</h3>
+            <ul>
+              {% for blog in site.blogroll %}
+                <li><a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
       {% endif %}
 
       <!-- feed -->
-      {% if site.feed != empty %}
-        <div class="sidebar-node">
-          <h3>Subscribe</h3>
-          <ul>
-            <li>
-              <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/rss.png" alt="RSS Feed" title="RSS Feed" border="0"></a>
-              <a href="http://fusion.google.com/add?feedurl={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google.png" alt="Add to Google" title="Add to Google" border="0"></a>
-              <a href="http://add.my.yahoo.com/rss?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoo.png" alt="Add to MyYahoo" title="Add to MyYahoo" border="0"></a>
-              <a href="http://www.bloglines.com/sub/{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/bloglines.png" alt="Add to Bloglines" title="Add to Bloglines" border="0"></a>
-              <a href="http://www.netvibes.com/subscribe.php?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/netvibes.png" alt="Add to Netvibes" title="Add to Netvibes" border="0"></a>
-              <a href="http://www.feedblitz.com/f/f.fbz?track={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/feedblitz.png" alt="Add to Feedblitz" title="Add to Feedblitz" border="0"></a>
-              <a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/newsgator.png" alt="Add to Newsgator" title="Add to Newsgator" border="0"></a>
-              <a href="http://feeds.my.aol.com/add.jsp?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/aol.png" alt="Add to MyAOL" title="Add to MyAOL" border="0"></a>
-              <a href="http://www.pageflakes.com/subscribe.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/pageflakes.png" alt="Add to Pageflakes" title="Add to Pageflakes" border="0"></a>
-            </li>
-            <div>
-              <form action="http://www.feedmyinbox.com/feeds/verify/" method="post" id="fmi" target="fmi" onsubmit="window.open('http://www.feedmyinbox.com/', 'fmi', 'scrollbars=yes,width=500,height=490');return true;">
-                <p>Subscribe by mail:</p>
-                <input type="text" value="" name="email"/>
-                <input type="hidden" value="{{ site.feed }}" name="feed"/>
-                <input type="submit" value="Submit"/>
-              </form>
-            </div>
-          </ul>
-        </div>
-      {% endif %}
+     <div class="sidebar-node">
+       <h3>Subscribe</h3>
+       <ul>
+         <li>
+           <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/rss.png" alt="RSS Feed" title="RSS Feed" border="0"></a>
+           <a href="http://fusion.google.com/add?feedurl={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google.png" alt="Add to Google" title="Add to Google" border="0"></a>
+           <a href="http://add.my.yahoo.com/rss?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoo.png" alt="Add to MyYahoo" title="Add to MyYahoo" border="0"></a>
+           <a href="http://www.bloglines.com/sub/{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/bloglines.png" alt="Add to Bloglines" title="Add to Bloglines" border="0"></a>
+           <a href="http://www.netvibes.com/subscribe.php?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/netvibes.png" alt="Add to Netvibes" title="Add to Netvibes" border="0"></a>
+           <a href="http://www.feedblitz.com/f/f.fbz?track={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/feedblitz.png" alt="Add to Feedblitz" title="Add to Feedblitz" border="0"></a>
+           <a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/newsgator.png" alt="Add to Newsgator" title="Add to Newsgator" border="0"></a>
+           <a href="http://feeds.my.aol.com/add.jsp?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/aol.png" alt="Add to MyAOL" title="Add to MyAOL" border="0"></a>
+           <a href="http://www.pageflakes.com/subscribe.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/pageflakes.png" alt="Add to Pageflakes" title="Add to Pageflakes" border="0"></a>
+         </li>
+         <div>
+           <form action="http://www.feedmyinbox.com/feeds/verify/" method="post" id="fmi" target="fmi" onsubmit="window.open('http://www.feedmyinbox.com/', 'fmi', 'scrollbars=yes,width=500,height=490');return true;">
+             <p>Subscribe by mail:</p>
+             <input type="text" value="" name="email"/>
+             <input type="hidden" value="{{ site.feed }}" name="feed"/>
+             <input type="submit" value="Submit"/>
+           </form>
+         </div>
+       </ul>
+     </div>
 
     </div>
     <br style="clear:both;"/>
@@ -156,14 +169,40 @@
   </div>
 </div>
 
-<!-- analytics -->
-{% if site.google_analytics != empty %}
-  {{ site.google_analytics }}
+<!-- google_analytics -->
+{% if site.google_analytics %}
+  {% if site.google_analytics.enable %}
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("{{ site.google_analytics.tracker_id }}");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  {% endif %}
 {% endif %}
 
 <!-- disqus -->
-{% if site.disqus != empty %}
-  {{ site.disqus }}
+{% if site.disqus %}
+  {% if site.disqus.enable %}
+    <script type="text/javascript">
+      //<![CDATA[
+      (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+          for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+              query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+          }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{{ site.disqus.shortname }}/get_num_replies.js' + query + '"></' + 'script>');
+      })();
+      //]]>
+    </script>
+  {% endif %}
 {% endif %}
 </body>
 </html>

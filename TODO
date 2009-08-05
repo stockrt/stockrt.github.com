@@ -26,3 +26,21 @@ addthis.com
 
 sharethis
 <p> js </p>
+
+thread fica antes ou depois do previous/next?
+
+enable em subscribe types (mail? other? feed?)
+
+posted by (site.author.name?)
+
+configuravel?         {% for post in site.related_posts limit:3 %}
+
+
+# TODO:
+# http://tracker.icerocket.com/project.create.php
+# http://sharethis.com/ na config
+# disqus comments
+# rss/mail links
+# ads
+
+nomes de page.html e post.html, melhor mudar?

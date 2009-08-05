@@ -20,19 +20,19 @@
   </div>
 
   <ul class="meta">
-    {% if page.tags != empty %}
-      <li>Tags:
-        {% for tag in page.tags %}
-          <a href="{{ site.url }}/tags/#{{ tag | xml_escape }}">{{ tag | xml_escape }}</a>
-        {% endfor %}
-      </li>
+    {% if page.tags %}
+      {% if page.tags.size > 0 %}
+        <li>Tags:
+          {% for tag in page.tags %}
+            <a href="{{ site.url }}/tags/#{{ tag | xml_escape }}">{{ tag | xml_escape }}</a>
+          {% endfor %}
+        </li>
+      {% endif %}
     {% endif %}
 
     <li>Meta:
       <a href="{{ site.url }}{{ page.url }}" rel="bookmark">permalink</a>
-      {% if site.feed != empty %}
-        <a href="{{ site.feed }}">atom</a>
-      {% endif %}
+      <a href="{{ site.feed }}">atom</a>
     </li>
 
     <li>Share:
@@ -52,17 +52,23 @@
   </ul>
 
   <!-- sharethis -->
-  {% if site.sharethis != empty %}
-    {{ site.sharethis }}
+  {% if site.sharethis %}
+    <p>{{ site.sharethis }}</p>
   {% endif %}
 
-  <!-- disqus_view_comments -->
-  {% if site.disqus_view_comments != empty %}
-    <a href="{{ site.url }}{{ page.url }}{{ site.disqus_view_comments }}">View Comments</a>
-  {% endif %}
-
-  <!-- disqus_thread -->
-  {% if site.disqus_thread != empty %}
-    {{ site.disqus_thread }}
+  <!-- disqus -->
+  {% if site.disqus %}
+    {% if site.disqus.enable %}
+      <!-- disqus_view_comments -->
+      {% if site.disqus.permalink_is_a_directory %}
+        <a href="{{ site.url }}{{ page.url }}/#disqus_thread">View Comments</a>
+      {% else %}
+        <a href="{{ site.url }}{{ page.url }}#disqus_thread">View Comments</a>
+      {% endif %}
+      <!-- disqus_thread -->
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="http://disqus.com/forums/{{ site.disqus.shortname }}/embed.js"></script>
+      <noscript><a href="http://{{ site.disqus.shortname }}.disqus.com/?url=ref">View the discussion thread</a></noscript>
+    {% endif %}
   {% endif %}
 </div>

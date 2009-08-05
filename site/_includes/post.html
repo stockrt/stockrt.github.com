@@ -20,19 +20,19 @@
   </div>
 
   <ul class="meta">
-    {% if post.tags != empty %}
-      <li>Tags:
-        {% for tag in post.tags %}
-          <a href="{{ site.url }}/tags/#{{ tag | xml_escape }}">{{ tag | xml_escape }}</a>
-        {% endfor %}
-      </li>
+    {% if post.tags %}
+      {% if post.tags.size > 0 %}
+        <li>Tags:
+          {% for tag in post.tags %}
+            <a href="{{ site.url }}/tags/#{{ tag | xml_escape }}">{{ tag | xml_escape }}</a>
+          {% endfor %}
+        </li>
+      {% endif %}
     {% endif %}
 
     <li>Meta:
       <a href="{{ site.url }}{{ post.url }}" rel="bookmark">permalink</a>
-      {% if site.feed != empty %}
-        <a href="{{ site.feed }}">atom</a>
-      {% endif %}
+      <a href="{{ site.feed }}">atom</a>
     </li>
 
     <li>Share:
@@ -52,12 +52,19 @@
   </ul>
 
   <!-- sharethis -->
-  {% if site.sharethis != empty %}
-    {{ site.sharethis }}
+  {% if site.sharethis %}
+    <p>{{ site.sharethis }}</p>
   {% endif %}
 
-  <!-- disqus_view_comments -->
-  {% if site.disqus_view_comments != empty %}
-    <a href="{{ site.url }}{{ post.url }}{{ site.disqus_view_comments }}">View Comments</a>
+  <!-- disqus -->
+  {% if site.disqus %}
+    {% if site.disqus.enable %}
+      <!-- disqus_view_comments -->
+      {% if site.disqus.permalink_is_a_directory %}
+        <a href="{{ site.url }}{{ post.url }}/#disqus_thread">View Comments</a>
+      {% else %}
+        <a href="{{ site.url }}{{ post.url }}#disqus_thread">View Comments</a>
+      {% endif %}
+    {% endif %}
   {% endif %}
 </div>
