@@ -1,16 +1,6 @@
 http://feeds.feedburner.com/weekendcodes?format=xml
 
-alinhamento do sharethis
-
 posted by
-
-revisar if empty/size e if (usar padrao)
-
-revisar if feed, se eh preciso mesmo
-
-revisar includes, mudar nomes
-
-revisar assigns
 
 revisar codigos de config para serem o menor possivel
 
@@ -22,42 +12,16 @@ http://blogsearch.google.com/ping?url=stockrt.github.com&btnG=Submit+Blog&hl=en
 
 http://sites.google.com/site/stockrt/
 
-addthis.com
-
 thread fica antes ou depois do previous/next?
-
-enable em subscribe types (mail? other? feed?)
 
 posted by (site.author.name?)
 
 configuravel?         {% for post in site.related_posts limit:3 %}
 
-
 # TODO:
 # http://tracker.icerocket.com/project.create.php
-# http://sharethis.com/ na config
-# disqus comments
-# rss/mail links
 # ads
 
 nomes de page.html e post.html, melhor mudar?
 
 random articles ao lado
-
-
-
-
-
-toolbox
-<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style">
-<a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=stockrt" class="addthis_button_compact">Share</a>
-</div>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
-<!-- AddThis Button END -->
-
-subscribe
-<!-- AddThis Button BEGIN -->
-<a href="http://www.addthis.com/feed.php?pub=stockrt&amp;h1=http%3A%2F%2Ffeeds.feedburner.com%2Fweekendcodes&amp;t1=" onclick="return addthis_open(this, 'feed', 'http://feeds.feedburner.com/weekendcodes')" alt="Subscribe using any feed reader!" target="_blank"><img src="http://s7.addthis.com/static/btn/sm-feed-en.gif" width="83" height="16" alt="Subscribe" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
-<!-- AddThis Button END -->
-
