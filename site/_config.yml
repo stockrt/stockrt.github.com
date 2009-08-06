@@ -66,11 +66,11 @@ disqus:
 sharethis: <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
 
 # Optional
-addthis_toolbox: |
-    <div class="addthis_toolbox addthis_default_style">
-    <a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=stockrt" class="addthis_button_compact">Share</a>
-    </div>
-    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+#addthis_toolbox: |
+#    <div class="addthis_toolbox addthis_default_style">
+#    <a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=stockrt" class="addthis_button_compact">Share</a>
+#    </div>
+#    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
 
 # Optional
 addthis_subscribe: <a href="http://www.addthis.com/feed.php?pub=stockrt&amp;h1=http%3A%2F%2Ffeeds.feedburner.com%2Fweekendcodes&amp;t1=" onclick="return addthis_open(this, 'feed', 'http://feeds.feedburner.com/weekendcodes')" alt="Subscribe using any feed reader!" target="_blank"><img src="http://s7.addthis.com/static/btn/sm-feed-en.gif" width="83" height="16" alt="Subscribe" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
