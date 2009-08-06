@@ -47,6 +47,12 @@
         <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
         <a href="http://www.spurl.net/spurl.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
         <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <!-- addthis_toolbox -->
+        {% if site.addthis %}
+          {% if site.addthis.toolbox %}
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub={{ site.addthis.username }}" onmouseover="return addthis_open(this, '', '{{ site.url }}{{ page.url }}', '{{ page.title }}')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
+          {% endif %}
+        {% endif %}
       </span>
     </li>
   </ul>
@@ -54,11 +60,6 @@
   <!-- sharethis -->
   {% if site.sharethis %}
     {{ site.sharethis }}
-  {% endif %}
-
-  <!-- addthis_toolbox -->
-  {% if site.addthis_toolbox %}
-    {{ site.addthis_toolbox }}
   {% endif %}
 
   <!-- disqus -->

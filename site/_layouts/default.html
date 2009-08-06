@@ -142,8 +142,7 @@
            <!-- addthis_subscribe -->
            {% if site.addthis %}
              {% if site.addthis.subscribe %}
-               <a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&amp;h1={{ site.feed }}&amp;t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
-<!--<a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&amp;h1={{ site.feed }}&amp;t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" alt="Add with AddThis" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" width="16" height="16" alt="Add with AddThis" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>-->
+               <a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&h1={{ site.feed }}&t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
              {% endif %}
            {% endif %}
          </li>
