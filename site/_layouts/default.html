@@ -139,6 +139,10 @@
            <a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/newsgator.png" alt="Add to Newsgator" title="Add to Newsgator" border="0"></a>
            <a href="http://feeds.my.aol.com/add.jsp?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/aol.png" alt="Add to MyAOL" title="Add to MyAOL" border="0"></a>
            <a href="http://www.pageflakes.com/subscribe.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/pageflakes.png" alt="Add to Pageflakes" title="Add to Pageflakes" border="0"></a>
+           <!-- addthis_subscribe -->
+           {% if site.addthis_subscribe %}
+             {{ site.addthis_subscribe }}
+           {% endif %}
          </li>
          <div>
            <form action="http://www.feedmyinbox.com/feeds/verify/" method="post" id="fmi" target="fmi" onsubmit="window.open('http://www.feedmyinbox.com/', 'fmi', 'scrollbars=yes,width=500,height=490');return true;">
@@ -148,10 +152,6 @@
              <input type="submit" value="Submit"/>
            </form>
          </div>
-         <!-- addthis_subscribe -->
-         {% if site.addthis_subscribe %}
-           {{ site.addthis_subscribe }}
-         {% endif %}
        </ul>
      </div>
 
