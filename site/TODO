@@ -24,9 +24,6 @@ http://sites.google.com/site/stockrt/
 
 addthis.com
 
-sharethis
-<p> js </p>
-
 thread fica antes ou depois do previous/next?
 
 enable em subscribe types (mail? other? feed?)
@@ -44,3 +41,5 @@ configuravel?         {% for post in site.related_posts limit:3 %}
 # ads
 
 nomes de page.html e post.html, melhor mudar?
+
+random articles ao lado

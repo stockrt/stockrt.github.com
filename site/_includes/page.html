@@ -53,7 +53,12 @@
 
   <!-- sharethis -->
   {% if site.sharethis %}
-    <p>{{ site.sharethis }}</p>
+    {{ site.sharethis }}
+  {% endif %}
+
+  <!-- addthis -->
+  {% if site.addthis %}
+    {{ site.addthis }}
   {% endif %}
 
   <!-- disqus -->
