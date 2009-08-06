@@ -140,8 +140,11 @@
            <a href="http://feeds.my.aol.com/add.jsp?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/aol.png" alt="Add to MyAOL" title="Add to MyAOL" border="0"></a>
            <a href="http://www.pageflakes.com/subscribe.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/pageflakes.png" alt="Add to Pageflakes" title="Add to Pageflakes" border="0"></a>
            <!-- addthis_subscribe -->
-           {% if site.addthis_subscribe %}
-             {{ site.addthis_subscribe }}
+           {% if site.addthis %}
+             {% if site.addthis.subscribe %}
+               <a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&amp;h1={{ site.feed }}&amp;t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
+<!--<a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&amp;h1={{ site.feed }}&amp;t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" alt="Add with AddThis" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" width="16" height="16" alt="Add with AddThis" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>-->
+             {% endif %}
            {% endif %}
          </li>
          <div>
