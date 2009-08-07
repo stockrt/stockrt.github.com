@@ -39,3 +39,11 @@ nomes - mudar para .org?
 made with - colocar link para o meu projeto no github com o gerador
 
 cache time regulavel?
+
+arr_tags:
+- foo
+- bar
+- baz
+categories: foo bar baz
+
+espacos antes do next..
