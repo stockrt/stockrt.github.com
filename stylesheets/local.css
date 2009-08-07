@@ -18,23 +18,3 @@
 #ribbon a:hover { background: transparent; }
 
 @media print { #ribbon { display: none; } }
-
-/*--------------------------------------------------------------
- ShareThis
- --------------------------------------------------------------*/
-
-#stbuttontext {
-  border-top: 1px solid #ccc;
-  font-size: 90%;
-}
-
-#stbuttontext a:link,
-#stbuttontext a:visited {
-  color: #000;
-}
-
-#stbuttontext a:hover,
-#stbuttontext a:active {
-  color: #fff;
-  background: #000;
-}

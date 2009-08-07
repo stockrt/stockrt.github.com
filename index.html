@@ -22,8 +22,24 @@
   <!-- style -->
   <link rel="stylesheet" href="http://stockrt.github.com/stylesheets/application.css" type="text/css"/>
 
-  <!-- cache_reload -->
+  <!-- cache_invalidate_reload -->
   <script src="http://stockrt.github.com/js/querystring.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    rl = function(now) {
+      var loc = window.location.href.replace(/\?.*/, "");
+      window.location.href = loc+"?cache="+now;
+    }
+    var qs = new Querystring();
+    var ts = Number(qs.get("cache"));
+    var now = Number(new Date().getTime());
+    if (ts) {
+      var d = (ts + 30 * 1000) - now;
+      if (d < 0)
+        rl(now);
+    }
+    else
+      rl(now);
+  </script>
 </head>
 
 <body>
@@ -112,6 +128,8 @@ Fri Jul 31 12:00:01 2009</code></pre>
         <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="Stumbleupon" title="Stumbleupon" border="0"></a>
         <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
         <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Como converter datas e timestamps no linux usando o comando date&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&t=Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo MyWeb" title="Yahoo MyWeb" border="0"></a>
         <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
         <!-- addthis_toolbox -->
         
@@ -127,6 +145,9 @@ Fri Jul 31 12:00:01 2009</code></pre>
   
     <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
   
+
+  <script src="http://stockrt.github.com/js/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites(Como converter datas e timestamps no linux usando o comando date, http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date)">Favorites</a>
 
   <!-- disqus -->
   
@@ -208,6 +229,8 @@ git push origin master</code></pre>
         <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/iniciando-um-blog-no-github&title=Iniciando um blog no GitHub" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="Stumbleupon" title="Stumbleupon" border="0"></a>
         <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/iniciando-um-blog-no-github&title=Iniciando um blog no GitHub" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
         <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/iniciando-um-blog-no-github&title=Iniciando um blog no GitHub" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/iniciando-um-blog-no-github&title=Iniciando um blog no GitHub&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/iniciando-um-blog-no-github&t=Iniciando um blog no GitHub" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo MyWeb" title="Yahoo MyWeb" border="0"></a>
         <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/iniciando-um-blog-no-github&title=Iniciando um blog no GitHub" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
         <!-- addthis_toolbox -->
         
@@ -223,6 +246,9 @@ git push origin master</code></pre>
   
     <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
   
+
+  <script src="http://stockrt.github.com/js/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites(Iniciando um blog no GitHub, http://stockrt.github.com/p/iniciando-um-blog-no-github)">Favorites</a>
 
   <!-- disqus -->
   

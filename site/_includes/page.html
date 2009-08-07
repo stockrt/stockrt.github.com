@@ -46,6 +46,8 @@
         <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/stumbleupon.png" alt="Stumbleupon" title="Stumbleupon" border="0"></a>
         <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
         <a href="http://www.spurl.net/spurl.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url={{ site.url }}{{ page.url }}&title={{ page.title }}&popup=no" target="_blank"><img src="{{ site.url }}/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u={{ site.url }}{{ page.url }}&t={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoomyweb.png" alt="Yahoo MyWeb" title="Yahoo MyWeb" border="0"></a>
         <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
         <!-- addthis_toolbox -->
         {% if site.addthis %}
@@ -61,6 +63,9 @@
   {% if site.sharethis %}
     {{ site.sharethis }}
   {% endif %}
+
+  <script src="{{ site.url }}/js/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites({{ page.title }}, {{ site.url }}{{ page.url }})">Favorites</a>
 
   <!-- disqus -->
   {% if site.disqus %}
