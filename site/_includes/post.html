@@ -50,7 +50,7 @@
         <!-- addthis_toolbox -->
         {% if site.addthis %}
           {% if site.addthis.toolbox %}
-            <a href="http://www.addthis.com/bookmark.php?v=250&pub={{ site.addthis.username }}" onmouseover="return addthis_open(this, '', '{{ site.url }}{{ post.url }}', '{{ post.title }}')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub={{ site.addthis.username }}" onmouseover="return addthis_open(this, '', '{{ site.url }}{{ post.url }}', '{{ post.title }}')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
           {% endif %}
         {% endif %}
       </span>
