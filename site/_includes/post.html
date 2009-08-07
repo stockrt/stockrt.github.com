@@ -65,7 +65,7 @@
   {% endif %}
 
   <script src="{{ site.url }}/js/favorites.js" type="text/javascript"></script>
-  <a href="javascript:addToFavorites({{ post.title }}, {{ site.url }}{{ post.url }})">Favorites</a>
+  <a href="javascript:addToFavorites('{{ post.title }}', '{{ site.url }}{{ post.url }}')">Favorites</a>
 
   <!-- disqus -->
   {% if site.disqus %}
