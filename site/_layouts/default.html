@@ -28,24 +28,13 @@
   <!-- style -->
   <link rel="stylesheet" href="{{ site.url }}/stylesheets/application.css" type="text/css"/>
 
-  <!-- cache_invalidate_reload -->
-  <script src="{{ site.url }}/js/querystring.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    rl = function(now) {
-      var loc = window.location.href.replace(/\?.*/, "");
-      window.location.href = loc+"?cache="+now;
-    }
-    var qs = new Querystring();
-    var ts = Number(qs.get("cache"));
-    var now = Number(new Date().getTime());
-    if (ts) {
-      var d = (ts + 30 * 1000) - now;
-      if (d < 0)
-        rl(now);
-    }
-    else
-      rl(now);
-  </script>
+  <!-- cache_invalidation -->
+  {% if site.cache_invalidation %}
+    {% if site.cache_invalidation.enable %}
+      <script src="{{ site.url }}/js/querystring.js" type="text/javascript"></script>
+      <script src="{{ site.url }}/js/cache_invalidation.js" type="text/javascript"></script>
+    {% endif %}
+  {% endif %}
 </head>
 
 <body>

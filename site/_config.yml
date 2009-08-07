@@ -24,23 +24,34 @@ url: http://stockrt.github.com
 feed: http://feeds.feedburner.com/weekendcodes
 
 # Optional
-# Author element in atom feed
+# Author element in atom feed and meta
 # If email is supplied, name is needed
 author:
     name: Rogério Schneider
     email: stockrt@gmail.com
+
+# Optional
+# Helps to bypass Expires and Cache-Control in the Browser cache
+# ttl minimum value is 60
+cache_invalidation:
+    enable: true
+    # ttl is Required
+    ttl: 300
 
 ##
 ## Search and Tracking elements
 ##
 
 # Optional
+# http://www.google.com/cse
 google_cse:
     enable: true
     # id is Optional
+    # You can get one here: http://www.google.com/cse
     id: 000162502351056619788:rgh3bxf1v7e
 
 # Optional
+# http://www.google.com/analytics
 google_analytics:
     enable: true
     # tracker_id is Required
@@ -51,6 +62,7 @@ google_analytics:
 ##
 
 # Optional
+# http://disqus.com
 disqus:
     enable: true
     # shortname is Required
@@ -63,10 +75,13 @@ disqus:
     permalink_is_a_directory: true
 
 # Optional
+# http://sharethis.com
 sharethis: <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
 
 # Optional
+# http://www.addthis.com
 addthis:
+    # username is Required
     username: stockrt
     subscribe: true
     toolbox: true

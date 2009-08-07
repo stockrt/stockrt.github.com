@@ -6,6 +6,13 @@ then
     exit 1
 fi
 
+WD=$(basename $(pwd))
+if [[ "$WD" != "site" ]]
+then
+    echo "You must be in the \"site\" directory to run $0"
+    exit 1
+fi
+
 D=$(date +"%Y-%m-%d")
 To="$1"
 Tl=$(echo $To | sed 's/ /-/g' | tr '[A-Z]' '[a-z]')
