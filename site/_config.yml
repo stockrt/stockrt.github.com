@@ -27,6 +27,7 @@ feed: http://feeds.feedburner.com/weekendcodes
 # Author element in atom feed and meta
 # If email is supplied, name is needed
 author:
+    postedby: false
     name: Rogério Schneider
     email: stockrt@gmail.com
 

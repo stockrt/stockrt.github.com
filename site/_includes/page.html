@@ -3,14 +3,18 @@
     <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
   </h2>
 
-  {% if page.author %}
-    <div class="vcard">
-      Posted by <span class="fn">{{ page.author }}</span>
-    </div>
-  {% else if site.author %}
-    <div class="vcard">
-      Posted by <span class="fn">{{ site.author.name }}</span>
-    </div>
+  {% if site.author %}
+    {% if site.author.postedby %}
+      {% if page.author %}
+        <div class="vcard">
+          Posted by <span class="fn">{{ page.author }}</span>
+        </div>
+      {% else %}
+        <div class="vcard">
+          Posted by <span class="fn">{{ site.author.name }}</span>
+        </div>
+      {% endif %}
+    {% endif %}
   {% endif %}
 
   <abbr class="published" title="{{ page.date | date_to_xmlschema }}">
