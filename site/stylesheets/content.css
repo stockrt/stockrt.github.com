@@ -76,8 +76,8 @@
 }
 
 #content p {
-  line-height: 18px;
-  margin: 0 0 1.2em;
+  line-height: 20px;
+  margin: 0 0 0.5em;
 }
 
 #content ul,
@@ -143,8 +143,7 @@
 #content .hentry .published {
   float: left;
   color: #a9a9a9;
-  font-size: 10px;
-  font: normal 16px/14px helvetica, arial, verdana, sans-serif;
+  font: normal 12px/10px helvetica, arial, verdana, sans-serif;
   letter-spacing: -1px;
   margin: 1px 0 0.6em 2px;
 }
