@@ -14,7 +14,6 @@ do
 done
 echo "About to delete: ../p ../page[0-9]* ../20??"
 echo "About to delete: ../*.sh"
-echo "About to move: ../atom.html to ../atom.xml"
 echo "Continue? (enter)"
 read x
 
@@ -27,4 +26,3 @@ rm -rf ../p ../page[0-9]* ../20??
 jekyll ../ || exit 1
 
 rm -f ../*.sh
-mv ../atom.html ../atom.xml
