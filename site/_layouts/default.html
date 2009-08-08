@@ -55,38 +55,6 @@
     <!-- sidebar -->
     <div id="sidebar">
 
-      <!-- feed -->
-      <div class="sidebar-node">
-        <h3>Subscribe</h3>
-        <ul>
-          <li>
-            <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/rss.png" alt="Feed" title="Feed" border="0"></a>
-            <a href="http://fusion.google.com/add?feedurl={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google.png" alt="Add to Google" title="Add to Google" border="0"></a>
-            <a href="http://add.my.yahoo.com/rss?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoo.png" alt="Add to MyYahoo" title="Add to MyYahoo" border="0"></a>
-            <a href="http://www.bloglines.com/sub/{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/bloglines.png" alt="Add to Bloglines" title="Add to Bloglines" border="0"></a>
-            <a href="http://www.netvibes.com/subscribe.php?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/netvibes.png" alt="Add to Netvibes" title="Add to Netvibes" border="0"></a>
-            <a href="http://www.feedblitz.com/f/f.fbz?track={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/feedblitz.png" alt="Add to Feedblitz" title="Add to Feedblitz" border="0"></a>
-            <a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/newsgator.png" alt="Add to Newsgator" title="Add to Newsgator" border="0"></a>
-            <a href="http://feeds.my.aol.com/add.jsp?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/aol.png" alt="Add to MyAOL" title="Add to MyAOL" border="0"></a>
-            <a href="http://www.pageflakes.com/subscribe.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/pageflakes.png" alt="Add to Pageflakes" title="Add to Pageflakes" border="0"></a>
-            <!-- addthis_subscribe -->
-            {% if site.addthis %}
-              {% if site.addthis.subscribe %}
-                <a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&h1={{ site.feed }}&t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" title="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
-              {% endif %}
-            {% endif %}
-          </li>
-          <div>
-            <form action="http://www.feedmyinbox.com/feeds/verify/" method="post" id="fmi" target="fmi" onsubmit="window.open('http://www.feedmyinbox.com/', 'fmi', 'scrollbars=yes,width=500,height=490');return true;">
-              <p>Subscribe by mail:</p>
-              <input type="text" value="" name="email"/>
-              <input type="hidden" value="{{ site.feed }}" name="feed"/>
-              <input type="submit" value="Submit"/>
-            </form>
-          </div>
-        </ul>
-      </div>
-
       <!-- links -->
       {% if site.links %}
         {% if site.links.size > 0 %}
@@ -165,6 +133,38 @@
           </div>
         {% endif %}
       {% endif %}
+
+      <!-- feed -->
+      <div class="sidebar-node">
+        <h3>Subscribe</h3>
+        <ul>
+          <li>
+            <a href="{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/rss.png" alt="Feed" title="Feed" border="0"></a>
+            <a href="http://fusion.google.com/add?feedurl={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google.png" alt="Add to Google" title="Add to Google" border="0"></a>
+            <a href="http://add.my.yahoo.com/rss?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoo.png" alt="Add to MyYahoo" title="Add to MyYahoo" border="0"></a>
+            <a href="http://www.bloglines.com/sub/{{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/bloglines.png" alt="Add to Bloglines" title="Add to Bloglines" border="0"></a>
+            <a href="http://www.netvibes.com/subscribe.php?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/netvibes.png" alt="Add to Netvibes" title="Add to Netvibes" border="0"></a>
+            <a href="http://www.feedblitz.com/f/f.fbz?track={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/feedblitz.png" alt="Add to Feedblitz" title="Add to Feedblitz" border="0"></a>
+            <a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/newsgator.png" alt="Add to Newsgator" title="Add to Newsgator" border="0"></a>
+            <a href="http://feeds.my.aol.com/add.jsp?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/aol.png" alt="Add to MyAOL" title="Add to MyAOL" border="0"></a>
+            <a href="http://www.pageflakes.com/subscribe.aspx?url={{ site.feed }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/pageflakes.png" alt="Add to Pageflakes" title="Add to Pageflakes" border="0"></a>
+            <!-- addthis_subscribe -->
+            {% if site.addthis %}
+              {% if site.addthis.subscribe %}
+                <a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&h1={{ site.feed }}&t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" title="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
+              {% endif %}
+            {% endif %}
+          </li>
+          <div>
+            <form action="http://www.feedmyinbox.com/feeds/verify/" method="post" id="fmi" target="fmi" onsubmit="window.open('http://www.feedmyinbox.com/', 'fmi', 'scrollbars=yes,width=500,height=490');return true;">
+              <p>Subscribe by mail:</p>
+              <input type="text" value="" name="email"/>
+              <input type="hidden" value="{{ site.feed }}" name="feed"/>
+              <input type="submit" value="Submit"/>
+            </form>
+          </div>
+        </ul>
+      </div>
 
     </div>
     <br style="clear:both;"/>
