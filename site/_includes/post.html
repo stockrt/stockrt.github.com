@@ -7,6 +7,10 @@
     <div class="vcard">
       Posted by <span class="fn">{{ post.author }}</span>
     </div>
+  {% else if site.author %}
+    <div class="vcard">
+      Posted by <span class="fn">{{ site.author.name }}</span>
+    </div>
   {% endif %}
 
   <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
