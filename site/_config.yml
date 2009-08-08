@@ -106,6 +106,10 @@ blogroll:
       url: http://nardol.org
     - name: Ahã... programando...! (Leonir Zimmermann)
       url: http://ahaprogramando.wordpress.com
+    - name: Akita on Rails (Fábio Akita)
+      url: http://akitaonrails.com
+    - name: Nome do Jogo (Carlos Brando)
+      url: http://www.nomedojogo.com
 
 # Reference:
 # http://github.com/vilcans/scribbish-jekyll
