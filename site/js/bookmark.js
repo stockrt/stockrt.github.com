@@ -1,4 +1,5 @@
-function addToFavorites(title, url) {
+// Add page to the browser's bookmark
+function bookmark(title, url) {
     if (document.all)
         window.external.AddFavorite(url, title);
     else if (window.sidebar)
