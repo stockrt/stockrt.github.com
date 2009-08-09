@@ -29,11 +29,6 @@
       <script src="http://stockrt.github.com/js/cache_invalidation.js" type="text/javascript"></script>
     
   
-
-  <!-- random_posts -->
-  
-    
-  
 </head>
 
 <body>
@@ -196,6 +191,26 @@ Fri Jul 31 12:00:01 2009</code></pre>
     <!-- sidebar -->
     <div id="sidebar">
 
+      <!-- search -->
+      
+        
+          <div class="sidebar-node">
+            <!-- Google Custom Search Element -->
+            <h3>Search (CSE)</h3>
+            <div id="cse" style="width:100%;">Loading</div>
+            <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+            <script type="text/javascript">
+              google.load('search', '1');
+              google.setOnLoadCallback(function(){
+                
+                  new google.search.CustomSearchControl('000162502351056619788:rgh3bxf1v7e').draw('cse');
+                
+              }, true);
+            </script>
+          </div>
+        
+      
+
       <!-- links -->
       
         
@@ -257,26 +272,6 @@ Fri Jul 31 12:00:01 2009</code></pre>
         
       
 
-      <!-- search -->
-      
-        
-          <div class="sidebar-node">
-            <!-- Google Custom Search Element -->
-            <h3>Search (CSE)</h3>
-            <div id="cse" style="width:100%;">Loading</div>
-            <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-            <script type="text/javascript">
-              google.load('search', '1');
-              google.setOnLoadCallback(function(){
-                
-                  new google.search.CustomSearchControl('000162502351056619788:rgh3bxf1v7e').draw('cse');
-                
-              }, true);
-            </script>
-          </div>
-        
-      
-
       <!-- feed -->
       <div class="sidebar-node">
         <h3>Subscribe</h3>
@@ -316,7 +311,7 @@ Fri Jul 31 12:00:01 2009</code></pre>
             <div id="github-badge"></div>
             <script type="text/javascript" charset="utf-8">
               GITHUB_USERNAME = "stockrt";
-              GITHUB_LIST_LENGTH = 10;
+              GITHUB_LIST_LENGTH = 8;
               GITHUB_HEAD = "div";
               GITHUB_THEME = "white";
               GITHUB_TITLE = "My Projects";
@@ -324,11 +319,6 @@ Fri Jul 31 12:00:01 2009</code></pre>
             </script>
             <script src="http://drnicjavascript.rubyforge.org/github_badge/dist/github-badge-launcher.js" type="text/javascript"></script>
           </div>
-        
-      
-
-      <!-- random_posts -->
-      
         
       
 
