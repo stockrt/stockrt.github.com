@@ -55,12 +55,11 @@
         <a href="http://reddit.com/submit?url={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
         <a href="http://www.spurl.net/spurl.php?url={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
         <a href="http://www.netvouz.com/action/submitBookmark?url={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}&popup=no" target="_blank"><img src="{{ site.url }}/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
-        <!--        <a href="http://www.netvouz.com/action/submitBookmark?url={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}&popup=no" target="_blank"><img src="{{ site.url }}/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>-->
         <a href="http://designfloat.com/submit.php?url={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
         <a href="http://dzone.com/links/add.html?url={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
         <a href="http://scriptandstyle.com/submit?url={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
-        <a href="http://twitter.com/home?status={{ site.title }}: {{ post.title }}: {{ site.url }}{{ post.url }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
         <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u={{ site.url }}{{ post.url }}&t={{ site.title }} - {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoomyweb.png" alt="Yahoo MyWeb" title="Yahoo MyWeb" border="0"></a>
+        <a href="http://twitter.com/home?status={{ site.title }}: {{ post.title }}: {{ site.url }}{{ post.url }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
         <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk={{ site.url }}{{ post.url }}&title={{ site.title }} - {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
         <!-- addthis_toolbox -->
         {% if site.addthis %}
@@ -77,9 +76,9 @@
     {{ site.sharethis }}
   {% endif %}
 
-  <!-- bookmark -->
-  <script src="{{ site.url }}/js/bookmark.js" type="text/javascript"></script>
-  <a href="javascript:bookmark('{{ site.title }} - {{ post.title }}', '{{ site.url }}{{ post.url }}')">Bookmark</a>
+  <!-- favorites -->
+  <script src="{{ site.url }}/js/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('{{ site.title }} - {{ post.title }}', '{{ site.url }}{{ post.url }}')" title="Add to Favorites">Favorites</a>
 
   <!-- disqus -->
   {% if site.disqus %}

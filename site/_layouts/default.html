@@ -37,7 +37,11 @@
   {% endif %}
 
   <!-- random_posts -->
-  <script src="{{ site.url }}/js/jquery.js" type="text/javascript"></script>
+  {% if site.random_posts %}
+    {% if site.random_posts.enable %}
+      <script src="{{ site.url }}/js/jquery.js" type="text/javascript"></script>
+    {% endif %}
+  {% endif %}
 </head>
 
 <body>
@@ -170,33 +174,47 @@
       </div>
 
       <!-- github_badge -->
-      <div class="sidebar-node">
-        <div id="github-badge"></div>
-        <script type="text/javascript" charset="utf-8">
-          GITHUB_USERNAME = "drnic";
-          GITHUB_LIST_LENGTH = 10;
-          GITHUB_HEAD = "div"; // e.g. change to "h2" for wordpress sidebars
-          GITHUB_THEME = "white"; // try 'black'
-          GITHUB_TITLE = "My projects"
-          GITHUB_SHOW_ALL = "Show all"
-        </script>
-        <script src="http://drnicjavascript.rubyforge.org/github_badge/dist/github-badge-launcher.js" type="text/javascript"></script>
-      </div>
+      {% if site.github_badge %}
+        {% if site.github_badge.enable %}
+          <div class="sidebar-node">
+            <div id="github-badge"></div>
+            <script type="text/javascript" charset="utf-8">
+              GITHUB_USERNAME = "{{ site.github_badge.username }}";
+              GITHUB_LIST_LENGTH = {{ site.github_badge.length }};
+              GITHUB_HEAD = "{{ site.github_badge.head }}";
+              GITHUB_THEME = "{{ site.github_badge.theme }}";
+              GITHUB_TITLE = "{{ site.github_badge.title }}";
+              GITHUB_SHOW_ALL = "{{ site.github_badge.showall }}";
+            </script>
+            <script src="http://drnicjavascript.rubyforge.org/github_badge/dist/github-badge-launcher.js" type="text/javascript"></script>
+          </div>
+        {% endif %}
+      {% endif %}
 
       <!-- random_posts -->
-      <div class="sidebar-node">
-        <h3>Random Posts</h3>
-        <ul>
-          <div id="random_posts"></div>
-          <script type="text/javascript">
-            var json_posts = {"posts": {% for post in site.posts %} [{"u": "{{ site.url }}{{ post.url }}", "t": "{{ post.title }}"} {% if not forloop.last %}, {% endif %}{% endfor %}]};
-            $(document).ready(function() {
-              var randomItems = json_posts.posts;
-              var rndNum = Math.floor(Math.random() * randomItems.length);
-              $('#random_posts').append('<li><a href=" + randomItems[rndNum].url + "> + randomItems[rndNum].title + </a></li>');
-            });
-          </script>
-      </div>
+      {% if site.random_posts %}
+        {% if site.random_posts.enable %}
+          <div class="sidebar-node">
+            <h3>Random Posts</h3>
+            <ul>
+              <div id="random_posts"></div>
+              <script type="text/javascript">
+                var json_posts = {"posts": [{% for post in site.posts %} {"url": "{{ site.url }}{{ post.url }}", "title": "{{ post.title }}"}, {% endfor %}]};
+                $(document).ready(function() {
+                  var randomItems = json_posts.posts;
+                  var rndNum = Math.floor(Math.random() * (randomItems.length - 1));
+                  for (i=0;i<={{ site.random_posts.length }};i++) {
+                    $('#random_posts').append('<li><a href="' + randomItems[rndNum].url + '">' + randomItems[rndNum].title + '</a></li>');
+                    //alert(randomItems.length);
+                    if (i >= randomItems.length - 1)
+                      break;
+                  }
+                });
+              </script>
+            </ul>
+          </div>
+        {% endif %}
+      {% endif %}
 
     </div>
     <br style="clear:both;"/>

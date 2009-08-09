@@ -39,6 +39,27 @@ cache_invalidation:
     # ttl is Required
     ttl: 300
 
+# Optional
+# A listing of your GitHub projects
+# http://drnic.github.com/github-badges
+github_badge:
+    enable: true
+    username: stockrt
+    length: 10
+    head: div
+    #head: h2
+    theme: white
+    #theme: black
+    title: My Projects
+    showall: Show all
+
+# TODO length
+# Optional
+# Random posts listing
+random_posts:
+    enable: false
+    length: 10
+
 ##
 ## Search and Tracking elements
 ##
