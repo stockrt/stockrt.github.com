@@ -29,6 +29,9 @@
       <script src="http://stockrt.github.com/js/cache_invalidation.js" type="text/javascript"></script>
     
   
+
+  <!-- random_posts -->
+  <script src="http://stockrt.github.com/js/jquery.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -216,6 +219,21 @@
           GITHUB_SHOW_ALL = "Show all"
         </script>
         <script src="http://drnicjavascript.rubyforge.org/github_badge/dist/github-badge-launcher.js" type="text/javascript"></script>
+      </div>
+
+      <!-- random_posts -->
+      <div class="sidebar-node">
+        <h3>Random Posts</h3>
+        <ul>
+          <div id="random_posts"></div>
+          <script type="text/javascript">
+            var json_posts = {"posts":  [{"u": "http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date", "t": "Como converter datas e timestamps no linux usando o comando date"} Liquid error: Unknown operator forloop [{"u": "http://stockrt.github.com/p/iniciando-um-blog-no-github", "t": "Iniciando um blog no GitHub"} Liquid error: Unknown operator forloop]};
+            $(document).ready(function() {
+              var randomItems = json_posts.posts;
+              var rndNum = Math.floor(Math.random() * randomItems.length);
+              $('#random_posts').append('<li><a href=" + randomItems[rndNum].url + "> + randomItems[rndNum].title + </a></li>');
+            });
+          </script>
       </div>
 
     </div>
