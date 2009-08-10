@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Weekend codes</title>
-  <description>Codes and random stuff I am up to share with you</description>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-09T23:12:49-03:00</updated>
+  <updated>2009-08-09T23:16:45-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
