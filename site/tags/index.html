@@ -1,14 +1,10 @@
 ---
 layout: default
 ---
-<div id="page">
-  <div id="content">
-    <h1>Tags</h1>
-    {% for tag in site.tags %}
-      {% assign t = tag.first %}
-      <p><a id="{{ t | xml_escape }}" href="#{{ t | xml_escape }}"><h2>{{ t }}</h2></a></p>
-      {% assign posts = tag.last %}
-      {% include postlist.html %}
-    {% endfor %}
-  </div>
-</div>
+<h1>Tags</h1>
+{% for tag in site.tags %}
+  {% assign t = tag.first %}
+  <p><a id="{{ t | xml_escape }}" href="#{{ t | xml_escape }}"><h2>{{ t }}</h2></a></p>
+  {% assign posts = tag.last %}
+  {% include postlist.html %}
+{% endfor %}
