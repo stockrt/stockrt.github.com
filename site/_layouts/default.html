@@ -219,6 +219,17 @@
   {% endif %}
 {% endif %}
 
+<!-- icerocket -->
+{% if site.icerocket %}
+  {% if site.icerocket.enable %}
+    <script type="text/javascript">
+      var bt_counter_type=1;
+      var bt_project_id={{ site.icerocket.project_id }};
+    </script>
+    <script type="text/javascript" src="http://tracker.icerocket.com/services/collector.js"></script>
+  {% endif %}
+{% endif %}
+
 <!-- disqus -->
 {% if site.disqus %}
   {% if site.disqus.enable %}
