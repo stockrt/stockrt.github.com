@@ -1,20 +1,14 @@
-http://feeds.feedburner.com/weekendcodes?format=xml
-
 lista de posts geral (limitada) com snippet no title :)
 
 limitar tamanho do feed (incentiva o clique)
+
+colocar link(s) de share no feed?
 
 limitar tamanho do post na capa (more)
 
 rss ou atom? ou os dois?
 
-http://blogsearch.google.com/ping?url=stockrt.github.com&btnG=Submit+Blog&hl=en
-
-http://sites.google.com/site/stockrt/
-
 thread fica antes ou depois do previous/next?
-
-configuravel?         {% for post in site.related_posts limit:3 %}
 
 # TODO:
 # http://tracker.icerocket.com/project.create.php
@@ -29,3 +23,8 @@ nomes - mudar para .org?
 tag cloud
 
 keywords?
+
+http://blogsearch.google.com/ping?url=stockrt.github.com&btnG=Submit+Blog&hl=en
+http://sites.google.com/site/stockrt/
+http://feeds.feedburner.com/weekendcodes?format=xml
+

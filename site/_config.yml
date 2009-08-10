@@ -31,6 +31,10 @@ author:
     name: Rogério Schneider
     email: stockrt@gmail.com
 
+# Required
+# Limit for related posts listing
+related_posts_limit: 5
+
 # Optional
 # Helps to bypass Expires and Cache-Control in the Browser cache
 # ttl minimum value is 60
