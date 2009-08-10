@@ -6,12 +6,11 @@ colocar link(s) de share no feed?
 
 limitar tamanho do post na capa (more)
 
-rss ou atom? ou os dois?
+rss ou atom? ou os dois? /feed/rss /feed/atom - pegar modelos
 
 thread fica antes ou depois do previous/next?
 
 # TODO:
-# http://tracker.icerocket.com/project.create.php
 # ads
 
 cor das tags
@@ -27,3 +26,8 @@ keywords?
 http://blogsearch.google.com/ping?url=stockrt.github.com&btnG=Submit+Blog&hl=en
 http://sites.google.com/site/stockrt/
 http://feeds.feedburner.com/weekendcodes?format=xml
+
+http://validator.w3.org/feed/check.cgi?url=http://stockrt.github.com/atom.xml
+
+http://static.userland.com/gems/backend/rssTwoExample2.xml
+http://www.rssboard.org/files/sample-rss-2.xml
