@@ -1,10 +1,10 @@
-lista de posts geral (limitada) com snippet no title :)
-
 limitar tamanho do post na capa (more)
 
 nomes - mudar para .org?
 
 tag cloud
+
+revisar _escapes
 
 keywords?
 
@@ -12,3 +12,5 @@ http://blogsearch.google.com/ping?url=stockrt.github.com&btnG=Submit+Blog&hl=en
 http://sites.google.com/site/stockrt/
 http://feeds.feedburner.com/weekendcodes?format=xml
 http://validator.w3.org/feed/check.cgi?url=http://stockrt.github.com/atom.xml
+
+about page

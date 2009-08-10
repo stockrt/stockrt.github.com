@@ -184,6 +184,21 @@
         {% endif %}
       {% endif %}
 
+      <!-- more_posts -->
+      {% if site.more_posts %}
+        {% if site.more_posts.enable %}
+          <br/>
+          <div class="sidebar-node">
+            <h3>More Posts</h3>
+            <ul>
+              {% for p in site.posts limit:site.more_posts.limit %}
+                <li><a href="{{ site.url }}{{ p.url }}">&raquo; {{ p.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endif %}
+
     </div>
     <br style="clear:both;"/>
   </div>

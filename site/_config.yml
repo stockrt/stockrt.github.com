@@ -9,7 +9,7 @@ paginate: 10
 ##
 
 # Required
-# Blog title and description
+# Blog title and description/subtitle
 title: Weekend codes
 description: Codes and random stuff I am up to share with you
 
@@ -30,6 +30,12 @@ author:
     postedby: false
     name: Rogério Schneider
     email: stockrt@gmail.com
+
+# Optional
+# Limit the more posts listing in the sidebar
+more_posts:
+    enable: true
+    limit: 12
 
 # Required
 # Limit for related posts listing
@@ -112,7 +118,7 @@ addthis:
     toolbox: true
 
 ##
-## Sidebar elements
+## Other sidebar elements
 ##
 
 # Optional
