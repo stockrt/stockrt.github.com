@@ -5,6 +5,8 @@ layout: default
 {% for tag in site.tags %}
   {% assign t = tag.first %}
   <p><a id="{{ t | xml_escape }}" href="#{{ t | xml_escape }}"><h2>{{ t }}</h2></a></p>
+  <li><a id="{{ t | xml_escape }}" href="#{{ t | xml_escape }}"><h2>{{ t }}</h2></a>></li>
+  <a id="{{ t | xml_escape }}" href="#{{ t | xml_escape }}"><h2>{{ t }}</h2></a>>
   {% assign posts = tag.last %}
   {% include postlist.html %}
 {% endfor %}
