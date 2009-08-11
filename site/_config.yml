@@ -55,13 +55,13 @@ cache_invalidation:
 github_badge:
     enable: true
     username: stockrt
-    length: 8
-    head: div
-    #head: h2
-    theme: white
-    #theme: black
-    title: My Projects
-    showall: Show all
+#    length: 8
+#    head: div
+#    #head: h2
+#    theme: white
+#    #theme: black
+#    title: My Projects
+#    showall: Show all
 
 ##
 ## Search and Tracking elements
