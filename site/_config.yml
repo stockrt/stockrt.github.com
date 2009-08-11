@@ -51,10 +51,18 @@ cache_invalidation:
 
 # Optional
 # A listing of your GitHub projects
-# http://drnic.github.com/github-badges
+# http://github.com/subtleGradient/mootools-github-badge
 github_badge:
     enable: true
     username: stockrt
+
+# Commented out
+# Optional
+# A listing of your GitHub projects
+# http://drnic.github.com/github-badges
+#github_badge:
+#    enable: true
+#    username: stockrt
 #    length: 8
 #    head: div
 #    #head: h2
