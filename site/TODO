@@ -14,3 +14,14 @@ http://feeds.feedburner.com/weekendcodes?format=xml
 http://validator.w3.org/feed/check.cgi?url=http://stockrt.github.com/atom.xml
 
 about page
+
+        <link rel="alternate" type="application/rss+xml" title="Feed RSS
+        TerraWiki"
+        href="http://wiki.corp.terra.com.br/mediawiki/index.php?title=Especial:Mudan%C3%A7as_recentes&amp;feed=rss"
+        />
+                <link rel="alternate" type="application/atom+xml" title="Feed
+                Atom TerraWiki"
+                href="http://wiki.corp.terra.com.br/mediawiki/index.php?title=Especial:Mudan%C3%A7as_recentes&amp;feed=atom"
+                />
+
+
