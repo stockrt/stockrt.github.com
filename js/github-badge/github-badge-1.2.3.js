@@ -1,6 +1,31 @@
+/*  GitHub Badge, version 1.2.3
+ *  (c) 2008 Dr Nic Williams
+ *
+ *  GitHub Badge is freely distributable under
+ *  the terms of an MIT-style license.
+ *  For details, see the web site: http://github.com/drnic/github-badges/tree/master
+ *
+ *--------------------------------------------------------------------------*/
+
+var GithubBadge = {
+  Version: '1.2.3'
+};
+
+(function($){
+  $.color = $.color || {};
+
+  // Arguments:
+  // color: supported format - 'rgb(nnn, nnn, nnn)'
+  $.color.almostBlack = function(color) {
+    var colorParts = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\s*\)/);
+    if (!colorParts) return false;
+    var combo = parseInt(colorParts[1])/255 * parseInt(colorParts[2])/255 * parseInt(colorParts[3])/255;
+    return combo < 0.3;
+  };
+})(jQuery);
 var GitHubBadge = GitHubBadge || {};
 GitHubBadge.buildUserBadge = function(username) {
-  (function($){ 
+  (function($){
     var title = ("GITHUB_TITLE" in window && GITHUB_TITLE) || 'My projects';
     $('#github-badge')
       .empty()
@@ -37,12 +62,12 @@ GitHubBadge.loadUserInfo = function(data) {
       list.append(template, this);
     });
     var showLimit = window.GITHUB_LIST_LENGTH || 10;
-    
+
 		var showAllName = ("GITHUB_SHOW_ALL" in window && GITHUB_SHOW_ALL) || 'Show all';
     var showMore = $("<div><a href='#' class='more'>" + showAllName + " (" + orderedRepos.length + ")</a></div>")
       .find('a')
-      .click(function(event) { 
-        $('#github-badge .body li').show(); 
+      .click(function(event) {
+        $('#github-badge .body li').show();
         $('#github-badge .more').hide();
         return false;
       });
@@ -56,9 +81,9 @@ GitHubBadge.loadUserInfo = function(data) {
       .end()
     .filter(':gt(' + (showLimit - 1) + ')').hide() // hide extras
     if ($('#github-badge .body li').is(':hidden'))
-      $('#github-badge .body').append(showMore); 
+      $('#github-badge .body').append(showMore);
 
-  })(jQuery); 
+  })(jQuery);
 };
 
 GitHubBadge.compareReposProperty = function(repo1, repo2, property) {
@@ -80,7 +105,7 @@ GitHubBadge.requestUserInfo = function(username) {
   $.fn.buildBody = function() {
     return this.append($("<div class='body'>loading...</div>"));
   };
-  
+
   $.fn.buildHeader = function(title, username) {
     var head = ("GITHUB_HEAD" in window) ? GITHUB_HEAD : "div";
     var template = $.template(
@@ -100,4 +125,4 @@ GitHubBadge.requestUserInfo = function(username) {
       + "</fieldset>"
       ));
   };
-})(jQuery); 
+})(jQuery);
