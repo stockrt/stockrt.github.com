@@ -77,8 +77,18 @@ SubtleTemplate.GitHubBadge.Basic = new Class({
 	
 	Extends: SubtleTemplate.GitHubBadge.Fade,
 	
+	basePath: function(){
+		var scripts = document.getElementsByTagName("script");
+		for (var i=0; i < scripts.length; i++){
+			if (scripts[i].src && scripts[i].src.match(/mootools-github-badge\.js(\?.*)?/)){
+				return scripts[i].src.replace(/mootools-github-badge\.js(\?.*)?/, '');
+			}
+		}
+	},
+	
 	options:{
 		theme:'white',
+		basepath: this.basePath(),
 		// list_length:10 // TODO: implement list_length
 	},
 	
@@ -91,7 +101,7 @@ SubtleTemplate.GitHubBadge.Basic = new Class({
 					</ul>\
 				</div>\
 				<style type="text/css" media="screen">\
-					@import "http://drnicjavascript.rubyforge.org/github_badge/dist/ext/stylesheets/'+ this.options.theme +'badge.css";\
+					@import "' + this.options.basepath + 'ext/stylesheets/' + this.options.theme + 'badge.css";\
 					#github-badge li .description {display:none}\
 					#github-badge li {cursor:pointer}\
 					#github-badge li.show-description .description {display:block}\

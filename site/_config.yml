@@ -2,7 +2,7 @@
 pygments: true
 rdiscount: true
 permalink: /p/:title
-paginate: 10
+paginate: 5
 
 ##
 ## Blog definitions
@@ -35,7 +35,7 @@ author:
 # Limit the more posts listing in the sidebar
 more_posts:
     enable: true
-    limit: 12
+    limit: 16
 
 # Required
 # Limit for related posts listing
