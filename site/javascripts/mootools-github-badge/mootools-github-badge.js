@@ -88,7 +88,6 @@ SubtleTemplate.GitHubBadge.Basic = new Class({
 	
 	options:{
 		theme:'white',
-		basepath: this.basePath(),
 		// list_length:10 // TODO: implement list_length
 	},
 	
@@ -101,7 +100,7 @@ SubtleTemplate.GitHubBadge.Basic = new Class({
 					</ul>\
 				</div>\
 				<style type="text/css" media="screen">\
-					@import "' + this.options.basepath + 'ext/stylesheets/' + this.options.theme + 'badge.css";\
+					@import "' + this.basePath() + 'ext/stylesheets/' + this.options.theme + 'badge.css";\
 					#github-badge li .description {display:none}\
 					#github-badge li {cursor:pointer}\
 					#github-badge li.show-description .description {display:block}\
