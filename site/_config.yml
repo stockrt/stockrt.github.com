@@ -53,7 +53,7 @@ cache_invalidation:
 # A listing of your GitHub projects
 # http://github.com/subtleGradient/mootools-github-badge
 github_badge:
-    enable: true
+    enable: false
     username: stockrt
 
 # Commented out
