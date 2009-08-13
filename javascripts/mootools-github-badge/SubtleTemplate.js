@@ -1,6 +1,6 @@
 /*
 Script: SubtleTemplate.js
-MooTools - My Object Oriented JavaScript Tools.
+	MooTools - My Object Oriented JavaScript Tools.
 
 License:
 	MIT-style license.
@@ -10,6 +10,7 @@ Copyright:
 
 */
 var SubtleTemplate = new Class({
+	
 	Implements: Options,
 	
 	options:{

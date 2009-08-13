@@ -1,4 +1,5 @@
 SubtleTemplate.GitHubBadge = new Class({
+	
 	Implements: [Options, Events],
 	
 	options:{
