@@ -88,19 +88,21 @@ SubtleTemplate.GitHubBadge.Basic = new Class({
 	
 	options:{
 		theme:'white',
+		basepath:'',
 		// list_length:10 // TODO: implement list_length
 	},
 	
 	toElement: function(){
 		if (!this.element){
 			if (this.options.theme == 'white') this.options.theme = '';
+			if (this.options.basepath == '') this.options.basepath = this.basePath();
 			$(this.options.element).set('html','\
 				<div class="repos">\
 					<ul id="repo_listing">\
 					</ul>\
 				</div>\
 				<style type="text/css" media="screen">\
-					@import "' + this.basePath() + 'ext/stylesheets/' + this.options.theme + 'badge.css";\
+					@import "' + this.options.basepath + 'ext/stylesheets/' + this.options.theme + 'badge.css";\
 					#github-badge li .description {display:none}\
 					#github-badge li {cursor:pointer}\
 					#github-badge li.show-description .description {display:block}\
