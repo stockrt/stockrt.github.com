@@ -70,7 +70,7 @@ github_badge:
     #theme: black
     title: My Projects
     showall: Show all
-    showfork: 0
+    showfork: 1
 
 ##
 ## Search and Tracking elements
