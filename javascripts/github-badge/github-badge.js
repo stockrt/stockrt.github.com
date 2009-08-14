@@ -58,8 +58,11 @@ GitHubBadge.loadUserInfo = function(data) {
       };
       return data.user.repositories.indexOf(repo2) - data.user.repositories.indexOf(repo1);
     })
+    var showFork = window.GITHUB_LIST_FORK || 0;
     $.each(orderedRepos, function(index) {
-      list.append(template, this);
+      if (showFork) list.append(template, this);
+      else if (!orderedRepos[index].fork) list.append(template, this);
+//      else if (!this.fork) list.append(template, this);
     });
     var showLimit = window.GITHUB_LIST_LENGTH || 10;
 
