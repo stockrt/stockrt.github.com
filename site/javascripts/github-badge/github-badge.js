@@ -59,7 +59,7 @@ GitHubBadge.loadUserInfo = function(data) {
       };
       return data.user.repositories.indexOf(repo2) - data.user.repositories.indexOf(repo1);
     })
-    var showFork = window.GITHUB_LIST_FORK || 0;
+    var showFork = window.GITHUB_SHOW_FORK || 0;
     $.each(orderedRepos, function(index) {
       if (showFork){
         list.append(template, this);
