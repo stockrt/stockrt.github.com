@@ -35,7 +35,7 @@ author:
 # Limit the more posts listing in the sidebar
 more_posts:
     enable: true
-    limit: 16
+    limit: 12
 
 # Required
 # Limit for related posts listing
@@ -49,27 +49,27 @@ cache_invalidation:
     # ttl is Required
     ttl: 300
 
-# Optional
-# A listing of your GitHub projects
-# http://github.com/subtleGradient/mootools-github-badge
-github_badge:
-    enable: true
-    username: stockrt
-
-# Commented out
-# Optional
-# A listing of your GitHub projects
-# http://drnic.github.com/github-badges
+## Commented out
+## Optional
+## A listing of your GitHub projects
+## http://github.com/subtleGradient/mootools-github-badge
 #github_badge:
 #    enable: true
 #    username: stockrt
-#    length: 8
-#    head: div
-#    #head: h2
-#    theme: white
-#    #theme: black
-#    title: My Projects
-#    showall: Show all
+
+# Optional
+# A listing of your GitHub projects
+# http://drnic.github.com/github-badges
+github_badge:
+    enable: true
+    username: stockrt
+    length: 8
+    head: div
+    #head: h2
+    theme: white
+    #theme: black
+    title: My Projects
+    showall: Show all
 
 ##
 ## Search and Tracking elements
