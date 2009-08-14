@@ -50,7 +50,6 @@ GitHubBadge.loadUserInfo = function(data) {
       .empty()
       .append(list);
     list = list.find('ul');
-    var orderedReposLength = 0;
     orderedRepos = data.user.repositories.sort(function(repo1, repo2) {
       var properties = ['network', 'watched'];
       for (var i=0; i < properties.length; i++) {
@@ -60,6 +59,7 @@ GitHubBadge.loadUserInfo = function(data) {
       return data.user.repositories.indexOf(repo2) - data.user.repositories.indexOf(repo1);
     })
     var showFork = window.GITHUB_SHOW_FORK || 0;
+    var orderedReposLength = 0;
     $.each(orderedRepos, function(index) {
       if (showFork){
         list.append(template, this);
