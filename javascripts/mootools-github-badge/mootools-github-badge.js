@@ -88,7 +88,7 @@ SubtleTemplate.GitHubBadge.Basic = new Class({
 	
 	options:{
 		theme:'white',
-		basepath:'',
+		basepath:''
 		// list_length:10 // TODO: implement list_length
 	},
 	
