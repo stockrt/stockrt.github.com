@@ -61,8 +61,9 @@ GitHubBadge.loadUserInfo = function(data) {
     var showFork = window.GITHUB_LIST_FORK || 0;
     $.each(orderedRepos, function(index) {
       if (showFork) list.append(template, this);
-      else if (!orderedRepos[index].fork) list.append(template, this);
-//      else if (!this.fork) list.append(template, this);
+      else if (!this.fork) list.append(template, this);
+      else delete this;
+//      else if (!orderedRepos[index].fork) list.append(template, this);
     });
     var showLimit = window.GITHUB_LIST_LENGTH || 10;
 
