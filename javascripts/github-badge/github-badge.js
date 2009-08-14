@@ -50,6 +50,7 @@ GitHubBadge.loadUserInfo = function(data) {
       .empty()
       .append(list);
     list = list.find('ul');
+    var orderedReposLength = 0;
     orderedRepos = data.user.repositories.sort(function(repo1, repo2) {
       var properties = ['network', 'watched'];
       for (var i=0; i < properties.length; i++) {
@@ -60,15 +61,19 @@ GitHubBadge.loadUserInfo = function(data) {
     })
     var showFork = window.GITHUB_LIST_FORK || 0;
     $.each(orderedRepos, function(index) {
-      if (showFork) list.append(template, this);
-      else if (!this.fork) list.append(template, this);
-      else delete orderedRepos[index];
-//      else if (!orderedRepos[index].fork) list.append(template, this);
+      if (showFork){
+        list.append(template, this);
+        orderedReposLength++;
+      }
+      else if (!this.fork){
+        list.append(template, this);
+        orderedReposLength++;
+      }
     });
     var showLimit = window.GITHUB_LIST_LENGTH || 10;
 
 		var showAllName = ("GITHUB_SHOW_ALL" in window && GITHUB_SHOW_ALL) || 'Show all';
-    var showMore = $("<div><a href='#' class='more'>" + showAllName + " (" + orderedRepos.length + ")</a></div>")
+    var showMore = $("<div><a href='#' class='more'>" + showAllName + " (" + orderedReposLength + ")</a></div>")
       .find('a')
       .click(function(event) {
         $('#github-badge .body li').show();
