@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-14T01:54:38-03:00</updated>
+  <updated>2009-08-15T02:34:44-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -18,6 +18,63 @@
     
   
 
+  
+    <entry>
+      <title>Listing GitHub projects in your blog</title>
+      <link href="http://stockrt.github.com/p/listing-github-projects-in-your-blog"/>
+      <updated>2009-08-15T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/listing-github-projects-in-your-blog</id>
+      <content type="html">&lt;p&gt;So I needed to list my GitHub projects in a fancy way in my blog, in the sidebar, all dynamically done. So, I searched a little around and found how. There are two major badges to do it, here I will describe them:&lt;/p&gt;
+
+&lt;h2 id='dr_nics_githubbadges'&gt;Dr Nic&amp;#8217;s github-badges&lt;/h2&gt;
+
+&lt;p&gt;This is my choice. &lt;a href='http://drnic.github.com/github-badges'&gt;drnic&amp;#8217;s github-badges&lt;/a&gt; is flexible on configuration and also have some code of myself in it. Here is how to configure it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;github-badge&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+  GITHUB_USERNAME=&amp;quot;stockrt&amp;quot;;
+&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;http://drnic.github.com/github-badges/dist/github-badge-launcher.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is the complete list of options available:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GITHUB_USERNAME = &amp;quot;stockrt&amp;quot;;
+GITHUB_LIST_LENGTH = 10;
+GITHUB_HEAD = &amp;quot;div&amp;quot;; // e.g. change to &amp;quot;h2&amp;quot; for wordpress sidebars
+GITHUB_THEME = &amp;quot;white&amp;quot;; // try &amp;#39;black&amp;#39;
+GITHUB_TITLE = &amp;quot;My projects&amp;quot;;
+GITHUB_SHOW_ALL = &amp;quot;Show all&amp;quot;;
+GITHUB_SHOW_FORK = 1;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='subtlegradients_mootoolsgithubbadge'&gt;subtleGradient&amp;#8217;s mootools-github-badge:&lt;/h2&gt;
+
+&lt;p&gt;This is also pretty neat, &lt;a href='http://github.com/subtleGradient/mootools-github-badge'&gt;subtleGradient&amp;#8217;s mootools-github-badge&lt;/a&gt; has a great visual effect when it is building the project&amp;#8217;s list, using a delayed composal. See this &lt;a href='http://subtlegradient.github.com/mootools-github-badge'&gt;running example&lt;/a&gt;. Here is how to configure it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;github-badge&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script src=&amp;quot;http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;http://projects.subtlegradient.com/mootools-subtle-templates/Source/Plugins/SubtleTemplate.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;http://subtlegradient.github.com/mootools-github-badge/mootools-github-badge.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+  new SubtleTemplate.GitHubBadge.Basic({ username:&amp;#39;stockrt&amp;#39; });
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='using_jekyll_and_scribbish_from_stockrts_site_source'&gt;Using jekyll and scribbish from &lt;a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'&gt;stockrt&amp;#8217;s site source&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;If you are using my template to generated a &lt;a href='http://stockrt.github.com/p/iniciando-um-blog-no-github'&gt;scribbish styled static site with jekyll&lt;/a&gt;, all you need to do to activate the use of drnic&amp;#8217;s github-badge is to configure this parameters in config.yml:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;github_badge:
+    enable: true
+    username: stockrt
+    length: 8
+    head: div
+    #head: h2
+    theme: white
+    #theme: black
+    title: My Projects
+    showall: Show all
+    showfork: 0
+    #showfork: 1&lt;/code&gt;&lt;/pre&gt;</content>
+    </entry>
   
     <entry>
       <title>Como converter datas e timestamps no linux usando o comando date</title>

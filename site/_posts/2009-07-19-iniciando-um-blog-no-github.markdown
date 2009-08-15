@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Iniciando um blog no GitHub
-tags: [github, pt-br]
+tags: [github, pt-BR]
 ---
 Use jekyll, facilita a sua vida.
 

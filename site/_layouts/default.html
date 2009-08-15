@@ -170,16 +170,6 @@
       {% if site.github_badge %}
         {% if site.github_badge.enable %}
           <div class="sidebar-node">
-{% comment %}
-            <h3>My Projects (<a href="http://github.com/{{ site.github_badge.username }}" target="_blank">{{ site.github_badge.username }}</a>)</h3>
-            <div id="github-badge"></div>
-            <script src="{{ site.url }}/javascripts/mootools-github-badge/mootools.js" type="text/javascript"> </script>
-            <script src="{{ site.url }}/javascripts/mootools-github-badge/SubtleTemplate.js" type="text/javascript"> </script>
-            <script src="{{ site.url }}/javascripts/mootools-github-badge/mootools-github-badge.js" type="text/javascript"> </script>
-            <script type="text/javascript" charset="utf-8">
-              new SubtleTemplate.GitHubBadge.Basic({ username:'{{ site.github_badge.username }}' });
-            </script>
-{% endcomment %}
             <div id="github-badge"></div>
             <script type="text/javascript" charset="utf-8">
               GITHUB_USERNAME = "{{ site.github_badge.username }}";

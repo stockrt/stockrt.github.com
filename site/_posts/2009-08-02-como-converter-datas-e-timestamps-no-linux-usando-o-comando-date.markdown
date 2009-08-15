@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como converter datas e timestamps no linux usando o comando date
-tags: [linux, pt-br]
+tags: [linux, pt-BR]
 ---
 Se você chegou até aqui, anote esta dica.
 
