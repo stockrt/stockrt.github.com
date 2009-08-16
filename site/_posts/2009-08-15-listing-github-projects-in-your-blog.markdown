@@ -3,7 +3,7 @@ layout: post
 title: Listing GitHub projects in your blog
 tags: [github, en-US]
 ---
-So I needed to list my GitHub projects in a fancy way in my blog, in the
+So I needed to list my GitHub projects in a fancy way inside my blog, in the
 sidebar, all dynamically done. So, I searched a little around and found how.
 There are two major badges to do it, here I will describe them:
 
@@ -44,7 +44,7 @@ Here is how to configure it:
 
 ## Using jekyll and scribbish from [stockrt's site source](http://github.com/stockrt/stockrt.github.com/tree/master/site)
 If you are using my template to generated a [scribbish styled static site with
-jekyll](http://stockrt.github.com/p/iniciando-um-blog-no-github), all you need
+jekyll (pt-BR)](http://stockrt.github.com/p/iniciando-um-blog-no-github), all you need
 to do to activate the use of drnic's github-badge is to configure this
 parameters in config.yml:
 
@@ -60,3 +60,6 @@ parameters in config.yml:
         showall: Show all
         showfork: 0
         #showfork: 1
+
+All said, I must warn you that these two badges do not really behave well on
+IE 6, but who still uses it today? Better upgrade to Firefox, folks!

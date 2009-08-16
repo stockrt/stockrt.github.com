@@ -142,6 +142,10 @@ blogroll:
       url: http://akitaonrails.com
     - name: Nome do Jogo (Carlos Brando)
       url: http://www.nomedojogo.com
+    - name: High Scalability | Building bigger, faster, more reliable websites.
+      url: http://highscalability.com
+    - name: Joel on Software
+      url: http://www.joelonsoftware.com
 
 # Reference:
 # http://github.com/vilcans/scribbish-jekyll
@@ -149,3 +153,7 @@ blogroll:
 # http://github.com/mojombo/jekyll
 # http://daringfireball.net/projects/markdown/syntax
 # http://www.yaml.org
+# http://www.liquidmarkup.org
+
+# Jekyll:
+# gem install mojombo-jekyll

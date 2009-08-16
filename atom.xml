@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-16T00:43:51-03:00</updated>
+  <updated>2009-08-16T04:53:34-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -20,11 +20,131 @@
 
   
     <entry>
+      <title>Emulating a Browser in Python with mechanize</title>
+      <link href="http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize"/>
+      <updated>2009-08-16T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize</id>
+      <content type="html">&lt;p&gt;It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts. Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import mechanize
+import cookielib
+
+# Browser
+br = mechanize.Browser()
+
+# Cookie Jar
+cj = cookielib.LWPCookieJar()
+br.set_cookiejar(cj)
+
+# Browser options
+br.set_handle_equiv(True)
+br.set_handle_gzip(True)
+br.set_handle_redirect(True)
+br.set_handle_referer(True)
+br.set_handle_robots(False)
+
+# Follows refresh 0 but not hangs on refresh &amp;gt; 0
+br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
+
+# Want debugging messages?
+#br.set_debug_http(True)
+#br.set_debug_redirects(True)
+#br.set_debug_responses(True)
+
+# User-Agent (this is cheating, ok?)
+br.addheaders = [(&amp;#39;User-agent&amp;#39;, &amp;#39;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1&amp;#39;)]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you have this &lt;em&gt;br&lt;/em&gt; object, this is your browser instance. With it its possible to open a page, to inspect or interact with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Open some site, let&amp;#39;s pick a random one, the first that pops in mind:
+r = br.open(&amp;#39;http://google.com&amp;#39;)
+html = r.read()
+
+# Show the source
+print html
+# or
+print br.response().read()
+
+# Show the html title
+print br.title()
+
+# Show the response headers
+print r.info()
+# or
+print br.response().info()
+
+# Show the available forms
+for f in br.forms():
+    print f
+
+# Select the first (index zero) form
+br.select_form(nr=0)
+
+# Let&amp;#39;s search
+br.form[&amp;#39;q&amp;#39;]=&amp;#39;weekend codes&amp;#39;
+br.submit()
+print br.response().read()
+
+# Looking at some results in link format
+for l in br.links(url_regex=&amp;#39;stockrt&amp;#39;):
+    print l&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you are about to access a password protected site (http basic auth):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# If the protected site didn&amp;#39;t receive the authentication data you would
+# end up with a 410 error in your face
+br.add_password(&amp;#39;http://safe-site.domain&amp;#39;, &amp;#39;username&amp;#39;, &amp;#39;password&amp;#39;)
+br.open(&amp;#39;http://safe-site.domain&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to the Cookie Jar we&amp;#8217;ve added before, you do not have to bother about session handling for authenticated sites, as in when you are accessing a service that requires a POST (form submit) of user and password. Usually they ask your browser to store a session cookie and expects your browser to contain that same cookie when re-accessing the page. All this, storing and re-sending the session cookies, is done by the Cookie Jar, neat!&lt;/p&gt;
+
+&lt;p&gt;You can also manage with browsing history:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Testing presence of link (if the link is not found you would have to
+# handle a LinkNotFoundError exception)
+br.find_link(text=&amp;#39;Weekend codes&amp;#39;)
+
+# Actually clicking the link
+req = br.click_link(text=&amp;#39;Weekend codes&amp;#39;)
+br.open(req)
+print br.response().read()
+print br.geturl()
+
+# Back
+br.back()
+print br.response().read()
+print br.geturl()&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Downloading a file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;f = br.retrieve(&amp;#39;http://www.google.com.br/intl/pt-BR_br/images/logo.gif&amp;#39;)[0]
+print f
+fh = open(f)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setting a proxy for your http navigation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; br.set_proxies({&amp;quot;http&amp;quot;: &amp;quot;joe:password@myproxy.example.com:3128&amp;quot;})&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But, if you just want to quickly open a webpage, without the fancy features above, just issue that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Simple open?
+import urllib2
+print urllib2.urlopen(&amp;#39;http://stockrt.github.com&amp;#39;).read()
+
+# With password?
+import urllib
+opener = urllib.FancyURLopener()
+print opener.open(&amp;#39;http://user:password@stockrt.github.com&amp;#39;).read()&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See more in &lt;a href='http://wwwsearch.sourceforge.net/mechanize'&gt;Python mechanize site&lt;/a&gt; and &lt;a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'&gt;docs&lt;/a&gt;&lt;/p&gt;</content>
+    </entry>
+  
+    <entry>
       <title>Listing GitHub projects in your blog</title>
       <link href="http://stockrt.github.com/p/listing-github-projects-in-your-blog"/>
       <updated>2009-08-15T00:00:00-03:00</updated>
       <id>http://stockrt.github.com/p/listing-github-projects-in-your-blog</id>
-      <content type="html">&lt;p&gt;So I needed to list my GitHub projects in a fancy way in my blog, in the sidebar, all dynamically done. So, I searched a little around and found how. There are two major badges to do it, here I will describe them:&lt;/p&gt;
+      <content type="html">&lt;p&gt;So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done. So, I searched a little around and found how. There are two major badges to do it, here I will describe them:&lt;/p&gt;
 
 &lt;h2 id='dr_nics_githubbadges'&gt;Dr Nic&amp;#8217;s github-badges&lt;/h2&gt;
 
@@ -60,7 +180,7 @@ GITHUB_SHOW_FORK = 1;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id='using_jekyll_and_scribbish_from_stockrts_site_source'&gt;Using jekyll and scribbish from &lt;a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'&gt;stockrt&amp;#8217;s site source&lt;/a&gt;&lt;/h2&gt;
 
-&lt;p&gt;If you are using my template to generated a &lt;a href='http://stockrt.github.com/p/iniciando-um-blog-no-github'&gt;scribbish styled static site with jekyll&lt;/a&gt;, all you need to do to activate the use of drnic&amp;#8217;s github-badge is to configure this parameters in config.yml:&lt;/p&gt;
+&lt;p&gt;If you are using my template to generated a &lt;a href='http://stockrt.github.com/p/iniciando-um-blog-no-github'&gt;scribbish styled static site with jekyll (pt-BR)&lt;/a&gt;, all you need to do to activate the use of drnic&amp;#8217;s github-badge is to configure this parameters in config.yml:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;github_badge:
     enable: true
@@ -73,7 +193,9 @@ GITHUB_SHOW_FORK = 1;&lt;/code&gt;&lt;/pre&gt;
     title: My Projects
     showall: Show all
     showfork: 0
-    #showfork: 1&lt;/code&gt;&lt;/pre&gt;</content>
+    #showfork: 1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All said, I must warn you that these two badges do not really behave well on IE 6, but who still uses it today? Better upgrade to Firefox, folks!&lt;/p&gt;</content>
     </entry>
   
     <entry>

@@ -191,7 +191,7 @@
           <div class="sidebar-node">
             <h3>More Posts</h3>
             <ul>
-              {% for p in site.posts limit:site.more_posts.limit %}
+              {% for p in site.posts limit: site.more_posts.limit %}
                 <li><a href="{{ site.url }}{{ p.url }}">&raquo; {{ p.title }}</a></li>
               {% endfor %}
             </ul>
