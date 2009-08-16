@@ -31,6 +31,9 @@ author:
     name: Rogério Schneider
     email: stockrt@gmail.com
 
+# Lateral image
+image: http://stockrt.github.com/images/misc/pordosolnoguaiba_lat.jpg
+
 # Optional
 # Limit the more posts listing in the sidebar
 more_posts:
