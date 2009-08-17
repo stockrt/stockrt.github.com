@@ -10,13 +10,15 @@ layout: default
     {% assign p = page.previous %}
     {% if p %}
       <li><span>Previous: {{ p.date | date_to_string }}</span> &raquo;
-      <a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+        <a href="{{ site.url }}{{ p.url }}" title="{{ p.content | strip_html | truncatewords: 20 }}">{{ p.title }}</a>
+      </li>
     {% endif %}
 
     {% assign p = page.next %}
     {% if p %}
       <li><span>Next: {{ p.date | date_to_string }}</span> &raquo;
-      <a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+        <a href="{{ site.url }}{{ p.url }}" title="{{ p.content | strip_html | truncatewords: 20 }}">{{ p.title }}</a>
+      </li>
     {% endif %}
   </ul>
 </div>
@@ -28,7 +30,8 @@ layout: default
       <ul class="posts">
         {% for post in site.related_posts limit: site.related_posts_limit %}
           <li><span>{{ post.date | date_to_string }}</span> &raquo;
-          <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+            <a href="{{ site.url }}{{ post.url }}" title="{{ post.content | strip_html | truncatewords: 20 }}">{{ post.title }}</a>
+          </li>
         {% endfor %}
       </ul>
     </div>

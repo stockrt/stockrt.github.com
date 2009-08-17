@@ -199,7 +199,7 @@
             <h3>More Posts</h3>
             <ul>
               {% for p in site.posts limit: site.more_posts.limit %}
-                <li><a href="{{ site.url }}{{ p.url }}">&raquo; {{ p.title }}</a></li>
+                <li><a href="{{ site.url }}{{ p.url }}" title="{{ p.content | strip_html | truncatewords: 20 }}">&raquo; {{ p.title }}</a></li>
               {% endfor %}
             </ul>
           </div>
