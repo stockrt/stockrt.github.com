@@ -10,3 +10,8 @@ http://feeds.feedburner.com/weekendcodes?format=xml
 http://validator.w3.org/feed/check.cgi?url=http://stockrt.github.com/atom.xml
 
 http://bristot.eti.br/
+
+{{ page.excerpt | textilize }}
+http://wiki.github.com/mojombo/jekyll/template-data
+
+paginator

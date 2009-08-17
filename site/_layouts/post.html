@@ -16,7 +16,7 @@ layout: default
 
     {% assign p = page.next %}
     {% if p %}
-      <li><span>Next: {{ p.date | date_to_string }}</span> &raquo;
+      <li><span>    Next: {{ p.date | date_to_string }}</span> &raquo;
         <a href="{{ site.url }}{{ p.url }}" title="{{ p.content | strip_html | truncatewords: 20 }}">{{ p.title }}</a>
       </li>
     {% endif %}
