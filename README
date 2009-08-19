@@ -13,7 +13,6 @@ You can find my blog/site templates here:
 http://github.com/stockrt/stockrt.github.com/tree/master/site
 
 To build your own, do the following:
-
     gem source -a http://gems.github.com
     gem source -a http://gems.rubyforge.org
     gem install mojombo-jekyll
@@ -46,5 +45,4 @@ http://www.yaml.org
 http://www.liquidmarkup.org
 
 Jekyll:
-
     gem install mojombo-jekyll
