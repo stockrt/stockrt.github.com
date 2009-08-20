@@ -3,8 +3,27 @@ layout: default
 ---
 <div id="home">
   <ul class="posts">
-    {% for post in site.posts %}
-      {% include post.html %}
-    {% endfor %}
+    {% if paginator %}
+      {% for post in paginator.posts %}
+        {% include post.html %}
+      {% endfor %}
+      {% if paginator.next_page %}
+        <a href="{{ site.url }}/page{{ paginator.next_page }}">&laquo; Previous Entries</a>
+        {% if paginator.previous_page %}
+          &nbsp;&nbsp;&nbsp;
+        {% endif %}
+      {% endif %}
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a href="{{ site.url }}">Next Entries &raquo;</a>
+        {% else %}
+          <a href="{{ site.url }}/page{{ paginator.previous_page }}">Next Entries &raquo;</a>
+        {% endif %}
+      {% endif %}
+    {% else %}
+      {% for post in site.posts %}
+        {% include post.html %}
+      {% endfor %}
+    {% endif %}
   </ul>
 </div>
