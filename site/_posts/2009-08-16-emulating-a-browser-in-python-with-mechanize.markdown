@@ -113,7 +113,7 @@ Setting a proxy for your http navigation:
 
      br.set_proxies({"http": "joe:password@myproxy.example.com:3128"})
 
-But, if you just want to quickly open a webpage, without the fancy features
+But, if you just want to quickly open an webpage, without the fancy features
 above, just issue that:
 
     # Simple open?
