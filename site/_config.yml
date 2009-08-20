@@ -149,6 +149,8 @@ blogroll:
       url: http://highscalability.com
     - name: Joel on Software
       url: http://www.joelonsoftware.com
+    - name: igvita (Ilya Grigorik)
+      url: http://www.igvita.com
 
 # Reference:
 # http://github.com/vilcans/scribbish-jekyll

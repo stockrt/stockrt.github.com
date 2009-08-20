@@ -15,3 +15,5 @@ revisar js includes (disqus, google) em todas as paginas
   nao esta duplicando ou inserindo onde nao devia?
   index.html e posts, rever todos os htmls gerados e procurar por include ou
   duplicado ou sem necessidade - talvez remover de default.html?
+
+http://www.igvita.com/lifestream/
