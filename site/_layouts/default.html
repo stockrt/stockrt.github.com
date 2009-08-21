@@ -159,7 +159,8 @@
             <!-- addthis_subscribe -->
             {% if site.addthis %}
               {% if site.addthis.subscribe %}
-                <a href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&h1={{ site.feed }}&t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" title="Add with AddThis" border="0"></a><script type="text/javascript" src="http://s7.addthis.com/javascripts/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
+                <a class="addthis_button" href="http://www.addthis.com/feed.php?pub={{ site.addthis.username }}&h1={{ site.feed }}&t1=" onclick="return addthis_open(this, 'feed', '{{ site.feed }}')" target="_blank"><img src="{{ site.url }}/images/sbuttons/addthis.png" alt="Add with AddThis" title="Add with AddThis" border="0"></a>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub={{ site.addthis.username }}"></script>
               {% endif %}
             {% endif %}
           </li>
