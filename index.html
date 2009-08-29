@@ -1,0 +1,997 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  
+    <title>Weekend codes</title>
+  
+
+  
+    <meta name="author" content="Rogério Schneider"/>
+  
+
+  
+    <meta name="description" content="Codes and random stuff I am up to share with you"/>
+  
+
+  <!-- feed -->
+  <link href="http://feeds.feedburner.com/weekendcodes" rel="alternate" title="Weekend codes" type="application/atom+xml"/>
+
+  <!-- style -->
+  <link rel="stylesheet" href="http://stockrt.github.com/stylesheets/application.css" type="text/css"/>
+
+  <!-- cache_invalidation -->
+  
+    
+      <script src="http://stockrt.github.com/javascripts/querystring.js" type="text/javascript"></script>
+      <script src="http://stockrt.github.com/javascripts/cache_invalidation.js" type="text/javascript"></script>
+    
+  
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+      <h1><span>
+        <a href="http://stockrt.github.com">Weekend codes</a>
+        <a href="http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/feed.png" alt="Feed" title="Feed" border="0"></a>
+      </span></h1>
+    <h2>Codes and random stuff I am up to share with you</h2>
+  </div>
+
+  <div id="page">
+    <div id="content">
+      <div id="home">
+  <ul class="posts">
+    
+      
+        <div class="hentry" id="/p/sed-quick-tips">
+  <h2 class="entry-title">
+    <a href="http://stockrt.github.com/p/sed-quick-tips">sed quick tips</a>
+  </h2>
+
+  
+    
+  
+
+  <abbr class="published" title="2009-08-28T00:00:00-03:00">
+    28 Aug 2009
+  </abbr>
+
+  <br class="clear"/>
+
+  <div class="entry-content">
+    <h2 id='the_basic_one_substitution'>The basic one, substitution</h2>
+
+<p>You already know this one:</p>
+
+<pre><code>sed -i &#39;s/old text/new text/g&#39; file.txt</code></pre>
+
+<h2 id='deleting_all_lines_containing_an_specific_text'>Deleting all lines containing an specific text</h2>
+
+<pre><code>sed -i -e &#39;/this line will disapear/d&#39; file.txt</code></pre>
+
+<h2 id='deleting_blank_lines'>Deleting blank lines</h2>
+
+<pre><code>sed -i -e &#39;/^$/d&#39; file.txt</code></pre>
+
+<h2 id='filtering_text_between_delimiters'>Filtering text between delimiters</h2>
+
+<p>All matching text into the first defined group &#8220;()&#8221; will be printed:</p>
+
+<pre><code>curl -s -L http://www.terra.com.br | sed -n -e &#39;s#.*\(http://.*\.\(js\|css\)\).*#\1#p&#39;</code></pre>
+
+<h2 id='printing_only_from_a_given_line_number_to_another'>Printing only from a given line number to another</h2>
+
+<p>Prints from line 20 to line 30:</p>
+
+<pre><code>sed -n 20,30p file.txt</code></pre>
+  </div>
+
+  <ul class="meta">
+    
+      
+        <li>Tags:
+          
+            <a href="http://stockrt.github.com/tags/#linux">linux</a>
+          
+            <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
+          
+        </li>
+      
+    
+
+    <li>Meta:
+      <a href="http://stockrt.github.com/p/sed-quick-tips" rel="bookmark">permalink</a>
+      <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
+    </li>
+
+    <li>Share:
+      <span class="sbookmark">
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/sed-quick-tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/sed-quick-tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://www.furl.net/storeIt.jsp?u=http://stockrt.github.com/p/sed-quick-tips&t=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
+        <a href="http://ma.gnolia.com/bookmarklet/add?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://designfloat.com/submit.php?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/sed-quick-tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
+        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/sed-quick-tips&submitUrl=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/sed-quick-tips&t=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: sed quick tips: http://stockrt.github.com/p/sed-quick-tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/sed-quick-tips&title=Weekend codes - sed quick tips" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <!-- addthis_toolbox -->
+        
+          
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/sed-quick-tips', 'sed quick tips')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+          
+        
+      </span>
+    </li>
+  </ul>
+
+  <!-- sharethis -->
+  
+    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
+  
+
+  <!-- favorites -->
+  <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('Weekend codes - sed quick tips', 'http://stockrt.github.com/p/sed-quick-tips')" title="Add to Favorites">Favorites</a>
+
+  <!-- disqus -->
+  
+    
+      <!-- disqus_view_comments -->
+      
+        <a href="http://stockrt.github.com/p/sed-quick-tips/#disqus_thread">View Comments</a>
+      
+    
+  
+</div>
+
+      
+        <div class="hentry" id="/p/sunset-in-porto-alegre">
+  <h2 class="entry-title">
+    <a href="http://stockrt.github.com/p/sunset-in-porto-alegre">Sunset in Porto Alegre</a>
+  </h2>
+
+  
+    
+  
+
+  <abbr class="published" title="2009-08-16T00:00:00-03:00">
+    16 Aug 2009
+  </abbr>
+
+  <br class="clear"/>
+
+  <div class="entry-content">
+    <p>Beautiful sunset in the capital city of Rio Grande do Sul, Brazil.</p>
+
+<p><img src='http://stockrt.github.com/images/misc/pordosolnoguaiba.jpg' alt='' /></p>
+
+<p>My wife and I decided to take some of our spare time to appreciate that. Do you think it was worth?</p>
+  </div>
+
+  <ul class="meta">
+    
+      
+        <li>Tags:
+          
+            <a href="http://stockrt.github.com/tags/#misc">misc</a>
+          
+            <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
+          
+        </li>
+      
+    
+
+    <li>Meta:
+      <a href="http://stockrt.github.com/p/sunset-in-porto-alegre" rel="bookmark">permalink</a>
+      <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
+    </li>
+
+    <li>Share:
+      <span class="sbookmark">
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://www.furl.net/storeIt.jsp?u=http://stockrt.github.com/p/sunset-in-porto-alegre&t=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
+        <a href="http://ma.gnolia.com/bookmarklet/add?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://designfloat.com/submit.php?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
+        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/sunset-in-porto-alegre&submitUrl=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/sunset-in-porto-alegre&t=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: Sunset in Porto Alegre: http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes - Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <!-- addthis_toolbox -->
+        
+          
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/sunset-in-porto-alegre', 'Sunset in Porto Alegre')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+          
+        
+      </span>
+    </li>
+  </ul>
+
+  <!-- sharethis -->
+  
+    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
+  
+
+  <!-- favorites -->
+  <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('Weekend codes - Sunset in Porto Alegre', 'http://stockrt.github.com/p/sunset-in-porto-alegre')" title="Add to Favorites">Favorites</a>
+
+  <!-- disqus -->
+  
+    
+      <!-- disqus_view_comments -->
+      
+        <a href="http://stockrt.github.com/p/sunset-in-porto-alegre/#disqus_thread">View Comments</a>
+      
+    
+  
+</div>
+
+      
+        <div class="hentry" id="/p/emulating-a-browser-in-python-with-mechanize">
+  <h2 class="entry-title">
+    <a href="http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize">Emulating a Browser in Python with mechanize</a>
+  </h2>
+
+  
+    
+  
+
+  <abbr class="published" title="2009-08-16T00:00:00-03:00">
+    16 Aug 2009
+  </abbr>
+
+  <br class="clear"/>
+
+  <div class="entry-content">
+    <p>It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts. Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:</p>
+
+<pre><code>import mechanize
+import cookielib
+
+# Browser
+br = mechanize.Browser()
+
+# Cookie Jar
+cj = cookielib.LWPCookieJar()
+br.set_cookiejar(cj)
+
+# Browser options
+br.set_handle_equiv(True)
+br.set_handle_gzip(True)
+br.set_handle_redirect(True)
+br.set_handle_referer(True)
+br.set_handle_robots(False)
+
+# Follows refresh 0 but not hangs on refresh &gt; 0
+br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
+
+# Want debugging messages?
+#br.set_debug_http(True)
+#br.set_debug_redirects(True)
+#br.set_debug_responses(True)
+
+# User-Agent (this is cheating, ok?)
+br.addheaders = [(&#39;User-agent&#39;, &#39;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1&#39;)]</code></pre>
+
+<p>Now you have this <em>br</em> object, this is your browser instance. With it its possible to open a page, to inspect or interact with:</p>
+
+<pre><code># Open some site, let&#39;s pick a random one, the first that pops in mind:
+r = br.open(&#39;http://google.com&#39;)
+html = r.read()
+
+# Show the source
+print html
+# or
+print br.response().read()
+
+# Show the html title
+print br.title()
+
+# Show the response headers
+print r.info()
+# or
+print br.response().info()
+
+# Show the available forms
+for f in br.forms():
+    print f
+
+# Select the first (index zero) form
+br.select_form(nr=0)
+
+# Let&#39;s search
+br.form[&#39;q&#39;]=&#39;weekend codes&#39;
+br.submit()
+print br.response().read()
+
+# Looking at some results in link format
+for l in br.links(url_regex=&#39;stockrt&#39;):
+    print l</code></pre>
+
+<p>If you are about to access a password protected site (http basic auth):</p>
+
+<pre><code># If the protected site didn&#39;t receive the authentication data you would
+# end up with a 410 error in your face
+br.add_password(&#39;http://safe-site.domain&#39;, &#39;username&#39;, &#39;password&#39;)
+br.open(&#39;http://safe-site.domain&#39;)</code></pre>
+
+<p>Thanks to the Cookie Jar we&#8217;ve added before, you do not have to bother about session handling for authenticated sites, as in when you are accessing a service that requires a POST (form submit) of user and password. Usually they ask your browser to store a session cookie and expects your browser to contain that same cookie when re-accessing the page. All this, storing and re-sending the session cookies, is done by the Cookie Jar, neat!</p>
+
+<p>You can also manage with browsing history:</p>
+
+<pre><code># Testing presence of link (if the link is not found you would have to
+# handle a LinkNotFoundError exception)
+br.find_link(text=&#39;Weekend codes&#39;)
+
+# Actually clicking the link
+req = br.click_link(text=&#39;Weekend codes&#39;)
+br.open(req)
+print br.response().read()
+print br.geturl()
+
+# Back
+br.back()
+print br.response().read()
+print br.geturl()</code></pre>
+
+<p>Downloading a file:</p>
+
+<pre><code>f = br.retrieve(&#39;http://www.google.com.br/intl/pt-BR_br/images/logo.gif&#39;)[0]
+print f
+fh = open(f)</code></pre>
+
+<p>Setting a proxy for your http navigation:</p>
+
+<pre><code> br.set_proxies({&quot;http&quot;: &quot;joe:password@myproxy.example.com:3128&quot;})</code></pre>
+
+<p>But, if you just want to quickly open an webpage, without the fancy features above, just issue that:</p>
+
+<pre><code># Simple open?
+import urllib2
+print urllib2.urlopen(&#39;http://stockrt.github.com&#39;).read()
+
+# With password?
+import urllib
+opener = urllib.FancyURLopener()
+print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</code></pre>
+
+<p>See more in <a href='http://wwwsearch.sourceforge.net/mechanize'>Python mechanize site</a> and <a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'>docs</a></p>
+  </div>
+
+  <ul class="meta">
+    
+      
+        <li>Tags:
+          
+            <a href="http://stockrt.github.com/tags/#python">python</a>
+          
+            <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
+          
+        </li>
+      
+    
+
+    <li>Meta:
+      <a href="http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize" rel="bookmark">permalink</a>
+      <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
+    </li>
+
+    <li>Share:
+      <span class="sbookmark">
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://www.furl.net/storeIt.jsp?u=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&t=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
+        <a href="http://ma.gnolia.com/bookmarklet/add?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://designfloat.com/submit.php?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
+        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&submitUrl=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&t=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: Emulating a Browser in Python with mechanize: http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize&title=Weekend codes - Emulating a Browser in Python with mechanize" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <!-- addthis_toolbox -->
+        
+          
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize', 'Emulating a Browser in Python with mechanize')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+          
+        
+      </span>
+    </li>
+  </ul>
+
+  <!-- sharethis -->
+  
+    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
+  
+
+  <!-- favorites -->
+  <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('Weekend codes - Emulating a Browser in Python with mechanize', 'http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize')" title="Add to Favorites">Favorites</a>
+
+  <!-- disqus -->
+  
+    
+      <!-- disqus_view_comments -->
+      
+        <a href="http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize/#disqus_thread">View Comments</a>
+      
+    
+  
+</div>
+
+      
+        <div class="hentry" id="/p/listing-github-projects-in-your-blog">
+  <h2 class="entry-title">
+    <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog">Listing GitHub projects in your blog</a>
+  </h2>
+
+  
+    
+  
+
+  <abbr class="published" title="2009-08-15T00:00:00-03:00">
+    15 Aug 2009
+  </abbr>
+
+  <br class="clear"/>
+
+  <div class="entry-content">
+    <p>So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done. So, I searched a little around and found how. There are two major badges to do it, here I will describe them:</p>
+
+<h2 id='dr_nics_githubbadges'>Dr Nic&#8217;s github-badges</h2>
+
+<p>This is my choice. <a href='http://drnic.github.com/github-badges'>drnic&#8217;s github-badges</a> is flexible on configuration and also have some code of myself in it. Here is how to configure it:</p>
+
+<pre><code>&lt;div id=&quot;github-badge&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+  GITHUB_USERNAME=&quot;stockrt&quot;;
+&lt;/script&gt;
+&lt;script src=&quot;http://drnic.github.com/github-badges/dist/github-badge-launcher.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+
+<p>This is the complete list of options available:</p>
+
+<pre><code>GITHUB_USERNAME = &quot;stockrt&quot;;
+GITHUB_LIST_LENGTH = 10;
+GITHUB_HEAD = &quot;div&quot;; // e.g. change to &quot;h2&quot; for wordpress sidebars
+GITHUB_THEME = &quot;white&quot;; // try &#39;black&#39;
+GITHUB_TITLE = &quot;My projects&quot;;
+GITHUB_SHOW_ALL = &quot;Show all&quot;;
+GITHUB_SHOW_FORK = 1;</code></pre>
+
+<h2 id='subtlegradients_mootoolsgithubbadge'>subtleGradient&#8217;s mootools-github-badge:</h2>
+
+<p>This is also pretty neat, <a href='http://github.com/subtleGradient/mootools-github-badge'>subtleGradient&#8217;s mootools-github-badge</a> has a great visual effect when it is building the project&#8217;s list, using a delayed composal. See this <a href='http://subtlegradient.github.com/mootools-github-badge'>running example</a>. Here is how to configure it:</p>
+
+<pre><code>&lt;div id=&quot;github-badge&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
+&lt;script src=&quot;http://projects.subtlegradient.com/mootools-subtle-templates/Source/Plugins/SubtleTemplate.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
+&lt;script src=&quot;http://subtlegradient.github.com/mootools-github-badge/mootools-github-badge.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+  new SubtleTemplate.GitHubBadge.Basic({ username:&#39;stockrt&#39; });
+&lt;/script&gt;</code></pre>
+
+<h2 id='using_jekyll_and_scribbish_from_stockrts_site_source'>Using jekyll and scribbish from <a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'>stockrt&#8217;s site source</a></h2>
+
+<p>If you are using my template to generated a <a href='http://stockrt.github.com/p/iniciando-um-blog-no-github'>scribbish styled static site with jekyll (pt-BR)</a>, all you need to do to activate the use of drnic&#8217;s github-badge is to configure this parameters in config.yml:</p>
+
+<pre><code>github_badge:
+    enable: true
+    username: stockrt
+    length: 8
+    head: div
+    #head: h2
+    theme: white
+    #theme: black
+    title: My Projects
+    showall: Show all
+    showfork: 0
+    #showfork: 1</code></pre>
+
+<p>All said, I must warn you that these two badges do not really behave well on IE 6, but who still uses it today? Better upgrade to Firefox, folks!</p>
+  </div>
+
+  <ul class="meta">
+    
+      
+        <li>Tags:
+          
+            <a href="http://stockrt.github.com/tags/#github">github</a>
+          
+            <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
+          
+        </li>
+      
+    
+
+    <li>Meta:
+      <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" rel="bookmark">permalink</a>
+      <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
+    </li>
+
+    <li>Share:
+      <span class="sbookmark">
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://www.furl.net/storeIt.jsp?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog&t=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
+        <a href="http://ma.gnolia.com/bookmarklet/add?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://designfloat.com/submit.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
+        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog&submitUrl=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog&t=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: Listing GitHub projects in your blog: http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <!-- addthis_toolbox -->
+        
+          
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/listing-github-projects-in-your-blog', 'Listing GitHub projects in your blog')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+          
+        
+      </span>
+    </li>
+  </ul>
+
+  <!-- sharethis -->
+  
+    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
+  
+
+  <!-- favorites -->
+  <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('Weekend codes - Listing GitHub projects in your blog', 'http://stockrt.github.com/p/listing-github-projects-in-your-blog')" title="Add to Favorites">Favorites</a>
+
+  <!-- disqus -->
+  
+    
+      <!-- disqus_view_comments -->
+      
+        <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog/#disqus_thread">View Comments</a>
+      
+    
+  
+</div>
+
+      
+        <div class="hentry" id="/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date">
+  <h2 class="entry-title">
+    <a href="http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date">Como converter datas e timestamps no linux usando o comando date</a>
+  </h2>
+
+  
+    
+  
+
+  <abbr class="published" title="2009-08-02T00:00:00-03:00">
+    02 Aug 2009
+  </abbr>
+
+  <br class="clear"/>
+
+  <div class="entry-content">
+    <p>Se você chegou até aqui, anote esta dica.</p>
+
+<p>Uma hora ou outra a gente sempre chega neste problema: Converter datas com timestamp, seja de timestamp para string ou o contrário.</p>
+
+<p>Pois ai vai a dica para converter datas no Linux:</p>
+
+<h3 id='string_da_data_atual'>String da data atual</h3>
+
+<pre><code>$ date
+Sun Aug  2 03:13:19 2009</code></pre>
+
+<h3 id='timestamp_seconds_from_the_epoch_da_data_atual'>Timestamp (seconds from the Epoch) da data atual</h3>
+
+<pre><code>$ date +&quot;%s&quot;
+1249193599</code></pre>
+
+<h3 id='timestamp_de_uma_determinada_string_de_data'>Timestamp de uma determinada string de data</h3>
+
+<pre><code>$ date -d &#39;2009-07-31 12:00:01&#39; +&quot;%s&quot;
+1249052401</code></pre>
+
+<h3 id='string_de_data_a_partir_de_um_determinado_timestamp'>String de data a partir de um determinado timestamp</h3>
+
+<pre><code>$ python -c &quot;import time; print time.ctime(1249052401)&quot;
+Fri Jul 31 12:00:01 2009</code></pre>
+  </div>
+
+  <ul class="meta">
+    
+      
+        <li>Tags:
+          
+            <a href="http://stockrt.github.com/tags/#linux">linux</a>
+          
+            <a href="http://stockrt.github.com/tags/#pt-BR">pt-BR</a>
+          
+        </li>
+      
+    
+
+    <li>Meta:
+      <a href="http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date" rel="bookmark">permalink</a>
+      <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
+    </li>
+
+    <li>Share:
+      <span class="sbookmark">
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://www.furl.net/storeIt.jsp?u=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&t=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
+        <a href="http://ma.gnolia.com/bookmarklet/add?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://designfloat.com/submit.php?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
+        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&submitUrl=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&t=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: Como converter datas e timestamps no linux usando o comando date: http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date&title=Weekend codes - Como converter datas e timestamps no linux usando o comando date" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <!-- addthis_toolbox -->
+        
+          
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date', 'Como converter datas e timestamps no linux usando o comando date')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+          
+        
+      </span>
+    </li>
+  </ul>
+
+  <!-- sharethis -->
+  
+    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
+  
+
+  <!-- favorites -->
+  <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('Weekend codes - Como converter datas e timestamps no linux usando o comando date', 'http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date')" title="Add to Favorites">Favorites</a>
+
+  <!-- disqus -->
+  
+    
+      <!-- disqus_view_comments -->
+      
+        <a href="http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date/#disqus_thread">View Comments</a>
+      
+    
+  
+</div>
+
+      
+      
+        <a href="http://stockrt.github.com/page2">&laquo; Previous Entries</a>
+        
+      
+      
+    
+  </ul>
+</div>
+
+    </div>
+
+    <!-- sidebar -->
+    <div id="sidebar">
+
+      <!-- image -->
+      
+        <div class="sidebar-node">
+          <img src="http://stockrt.github.com/images/misc/pordosolnoguaiba_lat.jpg" border="0">
+        </div>
+        <br/>
+      
+
+      <!-- search -->
+      
+        
+          <div class="sidebar-node">
+            <!-- Google Custom Search Element -->
+            <h3>Search (CSE)</h3>
+            <div id="cse" style="width:100%;">Loading</div>
+            <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+            <script type="text/javascript">
+              google.load('search', '1');
+              google.setOnLoadCallback(function(){
+                
+                  new google.search.CustomSearchControl('000162502351056619788:rgh3bxf1v7e').draw('cse');
+                
+              }, true);
+            </script>
+          </div>
+        
+      
+
+      <!-- links -->
+      
+        
+          <div class="sidebar-node">
+            <h3>Links</h3>
+            <ul>
+              
+                <li><a href="http://stockrt.github.com/projects">Projects</a></li>
+              
+                <li><a href="http://stockrtweb.homelinux.com">Directory listing at home</a></li>
+              
+            </ul>
+          </div>
+        
+      
+
+      <!-- tags -->
+      
+        
+          <div class="sidebar-node">
+            <h3>Tags</h3>
+            <ul>
+              
+                
+                <li><a href="http://stockrt.github.com/tags/#misc">misc</a></li>
+              
+                
+                <li><a href="http://stockrt.github.com/tags/#linux">linux</a></li>
+              
+                
+                <li><a href="http://stockrt.github.com/tags/#github">github</a></li>
+              
+                
+                <li><a href="http://stockrt.github.com/tags/#python">python</a></li>
+              
+                
+                <li><a href="http://stockrt.github.com/tags/#en-US">en-US</a></li>
+              
+                
+                <li><a href="http://stockrt.github.com/tags/#pt-BR">pt-BR</a></li>
+              
+            </ul>
+          </div>
+        
+      
+
+
+
+      <!-- blogroll -->
+      
+        
+          <div class="sidebar-node">
+            <h3>Blogroll</h3>
+            <ul>
+              
+                <li><a href="http://petryx.blogrs.com.br" target="_blank">Petryx (Marlon Petry)</a></li>
+              
+                <li><a href="http://nardol.org" target="_blank">Nardol (Pablo Lorenzzoni)</a></li>
+              
+                <li><a href="http://ahaprogramando.wordpress.com" target="_blank">Ahã... programando...! (Leonir Zimmermann)</a></li>
+              
+                <li><a href="http://akitaonrails.com" target="_blank">Akita on Rails (Fábio Akita)</a></li>
+              
+                <li><a href="http://www.nomedojogo.com" target="_blank">Nome do Jogo (Carlos Brando)</a></li>
+              
+                <li><a href="http://highscalability.com" target="_blank">High Scalability | Building bigger, faster, more reliable websites.</a></li>
+              
+                <li><a href="http://www.joelonsoftware.com" target="_blank">Joel on Software</a></li>
+              
+                <li><a href="http://www.igvita.com" target="_blank">igvita (Ilya Grigorik)</a></li>
+              
+            </ul>
+          </div>
+        
+      
+
+      <!-- feed -->
+      <div class="sidebar-node">
+        <h3>Subscribe</h3>
+        <ul>
+          <li>
+            <a href="http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/feed.png" alt="Feed" title="Feed" border="0"></a>
+            <a href="http://fusion.google.com/add?feedurl=http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google.png" alt="Add to Google" title="Add to Google" border="0"></a>
+            <a href="http://add.my.yahoo.com/rss?url=http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoo.png" alt="Add to MyYahoo" title="Add to MyYahoo" border="0"></a>
+            <a href="http://www.bloglines.com/sub/http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/bloglines.png" alt="Add to Bloglines" title="Add to Bloglines" border="0"></a>
+            <a href="http://www.netvibes.com/subscribe.php?url=http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvibes.png" alt="Add to Netvibes" title="Add to Netvibes" border="0"></a>
+            <a href="http://www.feedblitz.com/f/f.fbz?track=http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/feedblitz.png" alt="Add to Feedblitz" title="Add to Feedblitz" border="0"></a>
+            <a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/newsgator.png" alt="Add to Newsgator" title="Add to Newsgator" border="0"></a>
+            <a href="http://feeds.my.aol.com/add.jsp?url=http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/aol.png" alt="Add to MyAOL" title="Add to MyAOL" border="0"></a>
+            <a href="http://www.pageflakes.com/subscribe.aspx?url=http://feeds.feedburner.com/weekendcodes" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/pageflakes.png" alt="Add to Pageflakes" title="Add to Pageflakes" border="0"></a>
+            <!-- addthis_subscribe -->
+            
+              
+                <a href="http://www.addthis.com/feed.php?pub=stockrt&h1=http://feeds.feedburner.com/weekendcodes&t1=" onclick="return addthis_open(this, 'feed', 'http://feeds.feedburner.com/weekendcodes')" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="Add with AddThis" title="Add with AddThis" border="0"></a>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+              
+            
+          </li>
+          <div>
+            <form action="http://www.feedmyinbox.com/feeds/verify/" method="post" id="fmi" target="fmi" onsubmit="window.open('http://www.feedmyinbox.com/', 'fmi', 'scrollbars=yes,width=500,height=490');return true;">
+              <p>Subscribe by mail:</p>
+              <input type="text" value="" name="email"/>
+              <input type="hidden" value="http://feeds.feedburner.com/weekendcodes" name="feed"/>
+              <input type="submit" value="Submit"/>
+            </form>
+          </div>
+        </ul>
+      </div>
+
+      <!-- github_badge -->
+      
+        
+          <div class="sidebar-node">
+            <div id="github-badge"></div>
+            <script type="text/javascript" charset="utf-8">
+              GITHUB_USERNAME = "stockrt";
+              GITHUB_LIST_LENGTH = 8;
+              GITHUB_HEAD = "div";
+              GITHUB_THEME = "white";
+              GITHUB_TITLE = "My Projects";
+              GITHUB_SHOW_ALL = "Show all";
+              GITHUB_SHOW_FORK = 0;
+            </script>
+            <script src="http://stockrt.github.com/javascripts/github-badge/github-badge-launcher.js" type="text/javascript"></script>
+          </div>
+        
+      
+
+      <!-- more_posts -->
+      
+        
+          <div class="sidebar-node">
+            <h3>More Posts</h3>
+            <ul>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="The basic one, substitution You already know this one: sed -i &#39;s/old text/new text/g&#39; file.txt Deleting all lines containing an...">sed quick tips</a>
+                </li>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/sunset-in-porto-alegre" title="Beautiful sunset in the capital city of Rio Grande do Sul, Brazil. My wife and I decided to take some...">Sunset in Porto Alegre</a>
+                </li>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize" title="It is always useful to know how to quickly instantiate a browser in the command line or inside your python...">Emulating a Browser in Python with mechanize</a>
+                </li>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically...">Listing GitHub projects in your blog</a>
+                </li>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/como-converter-datas-e-timestamps-no-linux-usando-o-comando-date" title="Se você chegou até aqui, anote esta dica. Uma hora ou outra a gente sempre chega neste problema: Converter datas...">Como converter datas e timestamps no linux usando o comando date</a>
+                </li>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/iniciando-um-blog-no-github" title="Use jekyll, facilita a sua vida. Estou usando o GitHub para hospedar meu blog/site, mas como ele não oferece nenhuma...">Iniciando um blog no GitHub</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+      
+
+    </div>
+    <br style="clear:both;"/>
+  </div>
+
+  <!-- footer -->
+  <div id="footer">
+    <hr/>
+    <p><a href="http://stockrt.github.com">Weekend codes</a></p>
+    <ul>
+      <li>
+        made with modified <a href="http://github.com/vilcans/scribbish-jekyll" target="_blank">scribbish-jekyll</a><br/>
+        which is available <a href="http://github.com/stockrt/stockrt.github.com/tree/master/site" target="_blank">here</a><br/>
+        styled with modified <a href="http://quotedprintable.com/pages/scribbish" target="_blank">scribbish</a><br/>
+        auto generated with <a href="http://github.com/mojombo/jekyll" target="_blank">mojombo-jekyll</a><br/>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- google_analytics -->
+
+  
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-5567404-4");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  
+
+
+<!-- icerocket -->
+
+  
+    <script type="text/javascript">
+      var bt_counter_type=1;
+      var bt_project_id=29519;
+    </script>
+    <script type="text/javascript" src="http://tracker.icerocket.com/services/collector.js"></script>
+  
+
+
+<!-- disqus -->
+
+  
+    <script type="text/javascript">
+      //<![CDATA[
+      (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+          for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+              query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+          }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/weekendcodes/get_num_replies.js' + query + '"></' + 'script>');
+      })();
+      //]]>
+    </script>
+  
+
+</body>
+</html>

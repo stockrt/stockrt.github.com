@@ -1,0 +1,48 @@
+#
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+# URL:    http://stockrt.github.com
+#
+
+These are the core files I use for my blog hosted on GitHub.
+
+Since they do not provide any dynamic content generation engine (like
+wordpress or any other php/ruby/python blog) I need to generate my blog
+statically, so I use jekyll and my templates to do it.
+
+You can find my blog/site templates here:
+http://github.com/stockrt/stockrt.github.com/tree/master/site
+
+To build your own, do the following:
+    gem source -a http://gems.github.com
+    gem source -a http://gems.rubyforge.org
+    gem install mojombo-jekyll
+
+    cd /tmp
+    git clone git://github.com/stockrt/stockrt.github.com.git
+    mkdir mysite
+    mv stockrt.github.com/site mysite/
+    cd mysite/site
+
+    ./new_post.sh "A new post"
+    vi _posts/$(date +"%Y-%m-%d")-a-new-post.markdown
+    ./build.sh
+
+    # You may have some difficulty with other dependencies for jekyll, just
+    # install them as you will be asked for.
+    # See this for more help: http://wiki.github.com/mojombo/jekyll/install
+
+All you need to do is to make new posts using "./new_post.sh" and to
+configure this set of templates with your own data in the file "_config.yml",
+and then build you site with: "./build.sh".
+
+For more helpful documentation on how to build your site, see:
+http://github.com/vilcans/scribbish-jekyll
+http://quotedprintable.com/pages/scribbish
+http://github.com/mojombo/jekyll
+http://wiki.github.com/mojombo/jekyll
+http://daringfireball.net/projects/markdown/syntax
+http://www.yaml.org
+http://www.liquidmarkup.org
+
+Jekyll:
+    gem install mojombo-jekyll

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: sed: quick tips
+title: sed quick tips
 tags: [linux, en-US]
 ---
 ## The basic one, substitution
