@@ -15,7 +15,10 @@ done
 echo "About to delete: ../p ../page[0-9]* ../20??"
 echo "About to delete: ../*.sh"
 echo "Continue? (enter)"
-read x
+if [[ "$1" != "ok" ]]
+then
+    read x
+fi
 
 for E in $FROM_SITE
 do
