@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-29T00:20:03-03:00</updated>
+  <updated>2009-08-29T00:26:50-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -64,6 +64,8 @@ curl -s &amp;quot;http://www.numberempire.com/primenumbers.php?action=next&amp;a
 &lt;p&gt;Prints from line 20 to line 30:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sed -n 20,30p file.txt&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;More tips can be found &lt;a href='http://sed.sourceforge.net/sed1line.txt'&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Do you know some trick that is worth sharing? Please post it as a comment!&lt;/p&gt;</content>
     </entry>

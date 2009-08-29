@@ -28,4 +28,6 @@ Prints from line 20 to line 30:
 
     sed -n 20,30p file.txt
 
+More tips can be found [here](http://sed.sourceforge.net/sed1line.txt).
+
 Do you know some trick that is worth sharing? Please post it as a comment!
