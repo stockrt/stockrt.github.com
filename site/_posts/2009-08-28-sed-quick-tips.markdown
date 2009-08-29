@@ -25,3 +25,5 @@ All matching text into the first defined group "()" will be printed:
 Prints from line 20 to line 30:
 
     sed -n 20,30p file.txt
+
+Do you know some trick that is worth sharing? Please post it as a comment!
