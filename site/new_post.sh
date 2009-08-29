@@ -27,7 +27,8 @@ fi
 echo "---
 layout: post
 title: $To
-tags: [github, pt-BR]
+tags: [linux, en-US]
+published: true
 ---
 your text here" >> "$P"
 echo "Created: \"$P\""
