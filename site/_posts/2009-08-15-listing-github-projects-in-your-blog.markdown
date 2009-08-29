@@ -3,13 +3,15 @@ layout: post
 title: Listing GitHub projects in your blog
 tags: [github, en-US]
 ---
-So I needed to list my GitHub projects in a fancy way inside my blog, in the
+I needed to list my GitHub projects in a fancy way inside my blog, in the
 sidebar, all dynamically done. So, I searched a little around and found how.
+
 There are two major badges to do it, here I will describe them:
 
-## Dr Nic's github-badges
+### Dr Nic's github-badges
 This is my choice. [drnic's github-badges](http://drnic.github.com/github-badges)
 is flexible on configuration and also have some code of myself in it.
+
 Here is how to configure it:
 
     <div id="github-badge"></div>
@@ -28,10 +30,11 @@ This is the complete list of options available:
     GITHUB_SHOW_ALL = "Show all";
     GITHUB_SHOW_FORK = 1;
 
-## subtleGradient's mootools-github-badge:
+### subtleGradient's mootools-github-badge:
 This is also pretty neat, [subtleGradient's mootools-github-badge](http://github.com/subtleGradient/mootools-github-badge)
 has a great visual effect when it is building the project's list, using a
 delayed composal. See this [running example](http://subtlegradient.github.com/mootools-github-badge).
+
 Here is how to configure it:
 
     <div id="github-badge"></div>
@@ -42,10 +45,10 @@ Here is how to configure it:
       new SubtleTemplate.GitHubBadge.Basic({ username:'stockrt' });
     </script>
 
-## Using jekyll and scribbish from [stockrt's site source](http://github.com/stockrt/stockrt.github.com/tree/master/site)
+### Using jekyll and scribbish from [stockrt's site source](http://github.com/stockrt/stockrt.github.com/tree/master/site)
 If you are using my template to generated a [scribbish styled static site with
-jekyll (pt-BR)](http://stockrt.github.com/p/iniciando-um-blog-no-github), all you need
-to do to activate the use of drnic's github-badge is to configure this
+jekyll (pt-BR)](http://stockrt.github.com/p/iniciando-um-blog-no-github), all
+you need to do to activate the use of drnic's github-badge is to configure this
 parameters in config.yml:
 
     github_badge:

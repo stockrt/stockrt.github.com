@@ -5,6 +5,7 @@ tags: [python, en-US]
 ---
 It is always useful to know how to quickly instantiate a browser in the
 command line or inside your python scripts.
+
 Every time I need to automate any task regarding web systems I do use this
 recipe to emulate a browser in python:
 
@@ -36,8 +37,8 @@ recipe to emulate a browser in python:
     # User-Agent (this is cheating, ok?)
     br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
-Now you have this *br* object, this is your browser instance. With it its
-possible to open a page, to inspect or interact with:
+Now you have this *br* object, this is your browser instance. With this its
+possible to open a page, to inspect or to interact with:
 
     # Open some site, let's pick a random one, the first that pops in mind:
     r = br.open('http://google.com')
@@ -126,4 +127,4 @@ above, just issue that:
     print opener.open('http://user:password@stockrt.github.com').read()
 
 See more in [Python mechanize site](http://wwwsearch.sourceforge.net/mechanize)
-and [docs](http://wwwsearch.sourceforge.net/mechanize/doc.html)
+and [docs](http://wwwsearch.sourceforge.net/mechanize/doc.html).

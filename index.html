@@ -63,27 +63,29 @@
   <br class="clear"/>
 
   <div class="entry-content">
-    <h2 id='the_basic_one_substitution'>The basic one, substitution</h2>
+    <p>A little collection of sed tips.</p>
+
+<h3 id='the_basic_one_substitution'>The basic one, substitution</h3>
 
 <p>You already know this one:</p>
 
 <pre><code>sed -i &#39;s/old text/new text/g&#39; file.txt</code></pre>
 
-<h2 id='deleting_all_lines_containing_an_specific_text'>Deleting all lines containing an specific text</h2>
+<h3 id='deleting_all_lines_containing_an_specific_text'>Deleting all lines containing an specific text</h3>
 
 <pre><code>sed -i -e &#39;/this line will disapear/d&#39; file.txt</code></pre>
 
-<h2 id='deleting_blank_lines'>Deleting blank lines</h2>
+<h3 id='deleting_blank_lines'>Deleting blank lines</h3>
 
 <pre><code>sed -i -e &#39;/^$/d&#39; file.txt</code></pre>
 
-<h2 id='filtering_text_between_delimiters'>Filtering text between delimiters</h2>
+<h3 id='filtering_text_between_delimiters'>Filtering text between delimiters</h3>
 
 <p>All matching text into the first defined group &#8220;()&#8221; will be printed:</p>
 
 <pre><code>curl -s -L http://www.terra.com.br | sed -n -e &#39;s#.*\(http://.*\.\(js\|css\)\).*#\1#p&#39;</code></pre>
 
-<h2 id='printing_only_from_a_given_line_number_to_another'>Printing only from a given line number to another</h2>
+<h3 id='printing_only_from_a_given_line_number_to_another'>Printing only from a given line number to another</h3>
 
 <p>Prints from line 20 to line 30:</p>
 
@@ -185,7 +187,9 @@
 
 <p><img src='http://stockrt.github.com/images/misc/pordosolnoguaiba.jpg' alt='' /></p>
 
-<p>My wife and I decided to take some of our spare time to appreciate that. Do you think it was worth?</p>
+<p>My wife and I decided to take some of our spare time to appreciate that.</p>
+
+<p>Do you think it was worth?</p>
   </div>
 
   <ul class="meta">
@@ -277,7 +281,9 @@
   <br class="clear"/>
 
   <div class="entry-content">
-    <p>It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts. Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:</p>
+    <p>It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts.</p>
+
+<p>Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:</p>
 
 <pre><code>import mechanize
 import cookielib
@@ -307,7 +313,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 # User-Agent (this is cheating, ok?)
 br.addheaders = [(&#39;User-agent&#39;, &#39;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1&#39;)]</code></pre>
 
-<p>Now you have this <em>br</em> object, this is your browser instance. With it its possible to open a page, to inspect or interact with:</p>
+<p>Now you have this <em>br</em> object, this is your browser instance. With this its possible to open a page, to inspect or to interact with:</p>
 
 <pre><code># Open some site, let&#39;s pick a random one, the first that pops in mind:
 r = br.open(&#39;http://google.com&#39;)
@@ -389,7 +395,7 @@ import urllib
 opener = urllib.FancyURLopener()
 print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</code></pre>
 
-<p>See more in <a href='http://wwwsearch.sourceforge.net/mechanize'>Python mechanize site</a> and <a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'>docs</a></p>
+<p>See more in <a href='http://wwwsearch.sourceforge.net/mechanize'>Python mechanize site</a> and <a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'>docs</a>.</p>
   </div>
 
   <ul class="meta">
@@ -481,11 +487,15 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
   <br class="clear"/>
 
   <div class="entry-content">
-    <p>So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done. So, I searched a little around and found how. There are two major badges to do it, here I will describe them:</p>
+    <p>I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done. So, I searched a little around and found how.</p>
 
-<h2 id='dr_nics_githubbadges'>Dr Nic&#8217;s github-badges</h2>
+<p>There are two major badges to do it, here I will describe them:</p>
 
-<p>This is my choice. <a href='http://drnic.github.com/github-badges'>drnic&#8217;s github-badges</a> is flexible on configuration and also have some code of myself in it. Here is how to configure it:</p>
+<h3 id='dr_nics_githubbadges'>Dr Nic&#8217;s github-badges</h3>
+
+<p>This is my choice. <a href='http://drnic.github.com/github-badges'>drnic&#8217;s github-badges</a> is flexible on configuration and also have some code of myself in it.</p>
+
+<p>Here is how to configure it:</p>
 
 <pre><code>&lt;div id=&quot;github-badge&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
@@ -503,9 +513,11 @@ GITHUB_TITLE = &quot;My projects&quot;;
 GITHUB_SHOW_ALL = &quot;Show all&quot;;
 GITHUB_SHOW_FORK = 1;</code></pre>
 
-<h2 id='subtlegradients_mootoolsgithubbadge'>subtleGradient&#8217;s mootools-github-badge:</h2>
+<h3 id='subtlegradients_mootoolsgithubbadge'>subtleGradient&#8217;s mootools-github-badge:</h3>
 
-<p>This is also pretty neat, <a href='http://github.com/subtleGradient/mootools-github-badge'>subtleGradient&#8217;s mootools-github-badge</a> has a great visual effect when it is building the project&#8217;s list, using a delayed composal. See this <a href='http://subtlegradient.github.com/mootools-github-badge'>running example</a>. Here is how to configure it:</p>
+<p>This is also pretty neat, <a href='http://github.com/subtleGradient/mootools-github-badge'>subtleGradient&#8217;s mootools-github-badge</a> has a great visual effect when it is building the project&#8217;s list, using a delayed composal. See this <a href='http://subtlegradient.github.com/mootools-github-badge'>running example</a>.</p>
+
+<p>Here is how to configure it:</p>
 
 <pre><code>&lt;div id=&quot;github-badge&quot;&gt;&lt;/div&gt;
 &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
@@ -515,7 +527,7 @@ GITHUB_SHOW_FORK = 1;</code></pre>
   new SubtleTemplate.GitHubBadge.Basic({ username:&#39;stockrt&#39; });
 &lt;/script&gt;</code></pre>
 
-<h2 id='using_jekyll_and_scribbish_from_stockrts_site_source'>Using jekyll and scribbish from <a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'>stockrt&#8217;s site source</a></h2>
+<h3 id='using_jekyll_and_scribbish_from_stockrts_site_source'>Using jekyll and scribbish from <a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'>stockrt&#8217;s site source</a></h3>
 
 <p>If you are using my template to generated a <a href='http://stockrt.github.com/p/iniciando-um-blog-no-github'>scribbish styled static site with jekyll (pt-BR)</a>, all you need to do to activate the use of drnic&#8217;s github-badge is to configure this parameters in config.yml:</p>
 
@@ -902,7 +914,7 @@ Fri Jul 31 12:00:01 2009</code></pre>
             <ul>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="The basic one, substitution You already know this one: sed -i &#39;s/old text/new text/g&#39; file.txt Deleting all lines containing an...">sed quick tips</a>
+                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. The basic one, substitution You already know this one: sed -i &#39;s/old text/new text/g&#39;...">sed quick tips</a>
                 </li>
               
                 <li>&raquo;
@@ -914,7 +926,7 @@ Fri Jul 31 12:00:01 2009</code></pre>
                 </li>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically...">Listing GitHub projects in your blog</a>
+                  <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done....">Listing GitHub projects in your blog</a>
                 </li>
               
                 <li>&raquo;

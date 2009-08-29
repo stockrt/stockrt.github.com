@@ -60,27 +60,29 @@
   <br class="clear"/>
 
   <div class="entry-content">
-    <h2 id='the_basic_one_substitution'>The basic one, substitution</h2>
+    <p>A little collection of sed tips.</p>
+
+<h3 id='the_basic_one_substitution'>The basic one, substitution</h3>
 
 <p>You already know this one:</p>
 
 <pre><code>sed -i &#39;s/old text/new text/g&#39; file.txt</code></pre>
 
-<h2 id='deleting_all_lines_containing_an_specific_text'>Deleting all lines containing an specific text</h2>
+<h3 id='deleting_all_lines_containing_an_specific_text'>Deleting all lines containing an specific text</h3>
 
 <pre><code>sed -i -e &#39;/this line will disapear/d&#39; file.txt</code></pre>
 
-<h2 id='deleting_blank_lines'>Deleting blank lines</h2>
+<h3 id='deleting_blank_lines'>Deleting blank lines</h3>
 
 <pre><code>sed -i -e &#39;/^$/d&#39; file.txt</code></pre>
 
-<h2 id='filtering_text_between_delimiters'>Filtering text between delimiters</h2>
+<h3 id='filtering_text_between_delimiters'>Filtering text between delimiters</h3>
 
 <p>All matching text into the first defined group &#8220;()&#8221; will be printed:</p>
 
 <pre><code>curl -s -L http://www.terra.com.br | sed -n -e &#39;s#.*\(http://.*\.\(js\|css\)\).*#\1#p&#39;</code></pre>
 
-<h2 id='printing_only_from_a_given_line_number_to_another'>Printing only from a given line number to another</h2>
+<h3 id='printing_only_from_a_given_line_number_to_another'>Printing only from a given line number to another</h3>
 
 <p>Prints from line 20 to line 30:</p>
 
@@ -196,7 +198,7 @@
           </li>
         
           <li><span>15 Aug 2009</span> &raquo;
-            <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically...">Listing GitHub projects in your blog</a>
+            <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done....">Listing GitHub projects in your blog</a>
           </li>
         
           <li><span>02 Aug 2009</span> &raquo;
@@ -381,7 +383,7 @@
             <ul>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="The basic one, substitution You already know this one: sed -i &#39;s/old text/new text/g&#39; file.txt Deleting all lines containing an...">sed quick tips</a>
+                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. The basic one, substitution You already know this one: sed -i &#39;s/old text/new text/g&#39;...">sed quick tips</a>
                 </li>
               
                 <li>&raquo;
@@ -393,7 +395,7 @@
                 </li>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically...">Listing GitHub projects in your blog</a>
+                  <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done....">Listing GitHub projects in your blog</a>
                 </li>
               
                 <li>&raquo;

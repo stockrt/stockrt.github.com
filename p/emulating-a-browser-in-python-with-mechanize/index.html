@@ -60,7 +60,9 @@
   <br class="clear"/>
 
   <div class="entry-content">
-    <p>It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts. Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:</p>
+    <p>It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts.</p>
+
+<p>Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:</p>
 
 <pre><code>import mechanize
 import cookielib
@@ -90,7 +92,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 # User-Agent (this is cheating, ok?)
 br.addheaders = [(&#39;User-agent&#39;, &#39;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1&#39;)]</code></pre>
 
-<p>Now you have this <em>br</em> object, this is your browser instance. With it its possible to open a page, to inspect or interact with:</p>
+<p>Now you have this <em>br</em> object, this is your browser instance. With this its possible to open a page, to inspect or to interact with:</p>
 
 <pre><code># Open some site, let&#39;s pick a random one, the first that pops in mind:
 r = br.open(&#39;http://google.com&#39;)
@@ -172,7 +174,7 @@ import urllib
 opener = urllib.FancyURLopener()
 print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</code></pre>
 
-<p>See more in <a href='http://wwwsearch.sourceforge.net/mechanize'>Python mechanize site</a> and <a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'>docs</a></p>
+<p>See more in <a href='http://wwwsearch.sourceforge.net/mechanize'>Python mechanize site</a> and <a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'>docs</a>.</p>
   </div>
 
   <ul class="meta">
@@ -258,7 +260,7 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
     
     
       <li><span>Previous: 15 Aug 2009</span> &raquo;
-        <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically...">Listing GitHub projects in your blog</a>
+        <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done....">Listing GitHub projects in your blog</a>
       </li>
     
 
@@ -278,7 +280,7 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
       <ul class="posts">
         
           <li><span>28 Aug 2009</span> &raquo;
-            <a href="http://stockrt.github.com/p/sed-quick-tips" title="## The basic one, substitution You already know this one: sed -i 's/old text/new text/g' file.txt ## Deleting all lines...">sed quick tips</a>
+            <a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. ### The basic one, substitution You already know this one: sed -i 's/old text/new...">sed quick tips</a>
           </li>
         
           <li><span>16 Aug 2009</span> &raquo;
@@ -286,7 +288,7 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
           </li>
         
           <li><span>15 Aug 2009</span> &raquo;
-            <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically...">Listing GitHub projects in your blog</a>
+            <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done....">Listing GitHub projects in your blog</a>
           </li>
         
           <li><span>02 Aug 2009</span> &raquo;
@@ -471,7 +473,7 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
             <ul>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="## The basic one, substitution You already know this one: sed -i 's/old text/new text/g' file.txt ## Deleting all lines...">sed quick tips</a>
+                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. ### The basic one, substitution You already know this one: sed -i 's/old text/new...">sed quick tips</a>
                 </li>
               
                 <li>&raquo;
@@ -483,7 +485,7 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
                 </li>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically...">Listing GitHub projects in your blog</a>
+                  <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" title="I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done....">Listing GitHub projects in your blog</a>
                 </li>
               
                 <li>&raquo;

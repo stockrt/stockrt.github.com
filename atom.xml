@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-28T23:26:31-03:00</updated>
+  <updated>2009-08-29T00:10:23-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -24,27 +24,29 @@
       <link href="http://stockrt.github.com/p/sed-quick-tips"/>
       <updated>2009-08-28T00:00:00-03:00</updated>
       <id>http://stockrt.github.com/p/sed-quick-tips</id>
-      <content type="html">&lt;h2 id='the_basic_one_substitution'&gt;The basic one, substitution&lt;/h2&gt;
+      <content type="html">&lt;p&gt;A little collection of sed tips.&lt;/p&gt;
+
+&lt;h3 id='the_basic_one_substitution'&gt;The basic one, substitution&lt;/h3&gt;
 
 &lt;p&gt;You already know this one:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sed -i &amp;#39;s/old text/new text/g&amp;#39; file.txt&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='deleting_all_lines_containing_an_specific_text'&gt;Deleting all lines containing an specific text&lt;/h2&gt;
+&lt;h3 id='deleting_all_lines_containing_an_specific_text'&gt;Deleting all lines containing an specific text&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sed -i -e &amp;#39;/this line will disapear/d&amp;#39; file.txt&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='deleting_blank_lines'&gt;Deleting blank lines&lt;/h2&gt;
+&lt;h3 id='deleting_blank_lines'&gt;Deleting blank lines&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sed -i -e &amp;#39;/^$/d&amp;#39; file.txt&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='filtering_text_between_delimiters'&gt;Filtering text between delimiters&lt;/h2&gt;
+&lt;h3 id='filtering_text_between_delimiters'&gt;Filtering text between delimiters&lt;/h3&gt;
 
 &lt;p&gt;All matching text into the first defined group &amp;#8220;()&amp;#8221; will be printed:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;curl -s -L http://www.terra.com.br | sed -n -e &amp;#39;s#.*\(http://.*\.\(js\|css\)\).*#\1#p&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='printing_only_from_a_given_line_number_to_another'&gt;Printing only from a given line number to another&lt;/h2&gt;
+&lt;h3 id='printing_only_from_a_given_line_number_to_another'&gt;Printing only from a given line number to another&lt;/h3&gt;
 
 &lt;p&gt;Prints from line 20 to line 30:&lt;/p&gt;
 
@@ -62,7 +64,9 @@
 
 &lt;p&gt;&lt;img src='http://stockrt.github.com/images/misc/pordosolnoguaiba.jpg' alt='' /&gt;&lt;/p&gt;
 
-&lt;p&gt;My wife and I decided to take some of our spare time to appreciate that. Do you think it was worth?&lt;/p&gt;</content>
+&lt;p&gt;My wife and I decided to take some of our spare time to appreciate that.&lt;/p&gt;
+
+&lt;p&gt;Do you think it was worth?&lt;/p&gt;</content>
     </entry>
   
     <entry>
@@ -70,7 +74,9 @@
       <link href="http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize"/>
       <updated>2009-08-16T00:00:00-03:00</updated>
       <id>http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize</id>
-      <content type="html">&lt;p&gt;It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts. Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:&lt;/p&gt;
+      <content type="html">&lt;p&gt;It is always useful to know how to quickly instantiate a browser in the command line or inside your python scripts.&lt;/p&gt;
+
+&lt;p&gt;Every time I need to automate any task regarding web systems I do use this recipe to emulate a browser in python:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;import mechanize
 import cookielib
@@ -100,7 +106,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 # User-Agent (this is cheating, ok?)
 br.addheaders = [(&amp;#39;User-agent&amp;#39;, &amp;#39;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1&amp;#39;)]&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now you have this &lt;em&gt;br&lt;/em&gt; object, this is your browser instance. With it its possible to open a page, to inspect or interact with:&lt;/p&gt;
+&lt;p&gt;Now you have this &lt;em&gt;br&lt;/em&gt; object, this is your browser instance. With this its possible to open a page, to inspect or to interact with:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# Open some site, let&amp;#39;s pick a random one, the first that pops in mind:
 r = br.open(&amp;#39;http://google.com&amp;#39;)
@@ -182,7 +188,7 @@ import urllib
 opener = urllib.FancyURLopener()
 print opener.open(&amp;#39;http://user:password@stockrt.github.com&amp;#39;).read()&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;See more in &lt;a href='http://wwwsearch.sourceforge.net/mechanize'&gt;Python mechanize site&lt;/a&gt; and &lt;a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'&gt;docs&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;See more in &lt;a href='http://wwwsearch.sourceforge.net/mechanize'&gt;Python mechanize site&lt;/a&gt; and &lt;a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'&gt;docs&lt;/a&gt;.&lt;/p&gt;</content>
     </entry>
   
     <entry>
@@ -190,11 +196,15 @@ print opener.open(&amp;#39;http://user:password@stockrt.github.com&amp;#39;).rea
       <link href="http://stockrt.github.com/p/listing-github-projects-in-your-blog"/>
       <updated>2009-08-15T00:00:00-03:00</updated>
       <id>http://stockrt.github.com/p/listing-github-projects-in-your-blog</id>
-      <content type="html">&lt;p&gt;So I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done. So, I searched a little around and found how. There are two major badges to do it, here I will describe them:&lt;/p&gt;
+      <content type="html">&lt;p&gt;I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done. So, I searched a little around and found how.&lt;/p&gt;
 
-&lt;h2 id='dr_nics_githubbadges'&gt;Dr Nic&amp;#8217;s github-badges&lt;/h2&gt;
+&lt;p&gt;There are two major badges to do it, here I will describe them:&lt;/p&gt;
 
-&lt;p&gt;This is my choice. &lt;a href='http://drnic.github.com/github-badges'&gt;drnic&amp;#8217;s github-badges&lt;/a&gt; is flexible on configuration and also have some code of myself in it. Here is how to configure it:&lt;/p&gt;
+&lt;h3 id='dr_nics_githubbadges'&gt;Dr Nic&amp;#8217;s github-badges&lt;/h3&gt;
+
+&lt;p&gt;This is my choice. &lt;a href='http://drnic.github.com/github-badges'&gt;drnic&amp;#8217;s github-badges&lt;/a&gt; is flexible on configuration and also have some code of myself in it.&lt;/p&gt;
+
+&lt;p&gt;Here is how to configure it:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;github-badge&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot;&amp;gt;
@@ -212,9 +222,11 @@ GITHUB_TITLE = &amp;quot;My projects&amp;quot;;
 GITHUB_SHOW_ALL = &amp;quot;Show all&amp;quot;;
 GITHUB_SHOW_FORK = 1;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='subtlegradients_mootoolsgithubbadge'&gt;subtleGradient&amp;#8217;s mootools-github-badge:&lt;/h2&gt;
+&lt;h3 id='subtlegradients_mootoolsgithubbadge'&gt;subtleGradient&amp;#8217;s mootools-github-badge:&lt;/h3&gt;
 
-&lt;p&gt;This is also pretty neat, &lt;a href='http://github.com/subtleGradient/mootools-github-badge'&gt;subtleGradient&amp;#8217;s mootools-github-badge&lt;/a&gt; has a great visual effect when it is building the project&amp;#8217;s list, using a delayed composal. See this &lt;a href='http://subtlegradient.github.com/mootools-github-badge'&gt;running example&lt;/a&gt;. Here is how to configure it:&lt;/p&gt;
+&lt;p&gt;This is also pretty neat, &lt;a href='http://github.com/subtleGradient/mootools-github-badge'&gt;subtleGradient&amp;#8217;s mootools-github-badge&lt;/a&gt; has a great visual effect when it is building the project&amp;#8217;s list, using a delayed composal. See this &lt;a href='http://subtlegradient.github.com/mootools-github-badge'&gt;running example&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is how to configure it:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;github-badge&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
 &amp;lt;script src=&amp;quot;http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;
@@ -224,7 +236,7 @@ GITHUB_SHOW_FORK = 1;&lt;/code&gt;&lt;/pre&gt;
   new SubtleTemplate.GitHubBadge.Basic({ username:&amp;#39;stockrt&amp;#39; });
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='using_jekyll_and_scribbish_from_stockrts_site_source'&gt;Using jekyll and scribbish from &lt;a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'&gt;stockrt&amp;#8217;s site source&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id='using_jekyll_and_scribbish_from_stockrts_site_source'&gt;Using jekyll and scribbish from &lt;a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'&gt;stockrt&amp;#8217;s site source&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;If you are using my template to generated a &lt;a href='http://stockrt.github.com/p/iniciando-um-blog-no-github'&gt;scribbish styled static site with jekyll (pt-BR)&lt;/a&gt;, all you need to do to activate the use of drnic&amp;#8217;s github-badge is to configure this parameters in config.yml:&lt;/p&gt;
 
