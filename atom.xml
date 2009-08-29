@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-29T00:10:23-03:00</updated>
+  <updated>2009-08-29T00:20:03-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -18,6 +18,19 @@
     
   
 
+  
+    <entry>
+      <title>Finding the next prime number from a given number</title>
+      <link href="http://stockrt.github.com/p/finding-the-next-prime-number-from-a-given-number"/>
+      <updated>2009-08-29T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/finding-the-next-prime-number-from-a-given-number</id>
+      <content type="html">&lt;p&gt;Finding the next prime number online is useful if you do not have time to calculate it but need a good seed for your hash.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export start_number=250000
+curl -s &amp;quot;http://www.numberempire.com/primenumbers.php?action=next&amp;amp;number=${start_number}&amp;quot; | sed -n -e &amp;#39;s#.*The smallest prime greater than.*&amp;lt;font color=.*&amp;gt;\(.*\)&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;.*#\1#p&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This can be good the help you finding which number to use when &lt;a href='http://varnish.projects.linpro.no/wiki/Performance'&gt;tuning&lt;/a&gt; &lt;a href='http://varnish.projects.linpro.no'&gt;Varnish&lt;/a&gt; for better &lt;a href='http://varnish.projects.linpro.no/wiki/Performance'&gt;performance&lt;/a&gt; with the classic hash algorithm, avoiding bucket collision when having a big number of objects, making hash lookups faster.&lt;/p&gt;</content>
+    </entry>
   
     <entry>
       <title>sed quick tips</title>

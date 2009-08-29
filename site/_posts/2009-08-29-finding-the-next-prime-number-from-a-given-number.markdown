@@ -2,7 +2,6 @@
 layout: post
 title: Finding the next prime number from a given number
 tags: [linux, en-US]
-published: false
 ---
 Finding the next prime number online is useful if you do not have time to
 calculate it but need a good seed for your hash.
