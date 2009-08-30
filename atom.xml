@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-29T00:26:50-03:00</updated>
+  <updated>2009-08-30T00:20:06-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -18,6 +18,86 @@
     
   
 
+  
+    <entry>
+      <title>Browser cache invalidation with Javascript and querystring</title>
+      <link href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring"/>
+      <updated>2009-08-30T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring</id>
+      <content type="html">&lt;p&gt;Some time ago I started my blog here at github and noticed that new posts didn&amp;#8217;t come live right way I published them.&lt;/p&gt;
+
+&lt;p&gt;Quickly I spot the problem: They are sending &lt;a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'&gt;HTTP Cache Headers&lt;/a&gt; for the index.html and all pages served by github, a 24 hour cache.&lt;/p&gt;
+
+&lt;h3 id='the_problem'&gt;The problem&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ curl -I http://stockrt.github.com
+
+HTTP/1.1 200 OK
+Server: nginx/0.6.31
+Date: Sat, 22 Aug 2009 01:36:49 GMT
+Content-Type: text/html
+Content-Length: 66829
+Last-Modified: Sat, 22 Aug 2009 01:12:50 GMT
+Connection: keep-alive
+Expires: Sun, 23 Aug 2009 01:36:49 GMT
+Cache-Control: max-age=86400
+Accept-Ranges: bytes&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, to overcome this &amp;#8220;problem&amp;#8221; I made this tiny trick, and published it to others to take advantage of it, in case your are hosting your pages behind an web server with &lt;a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'&gt;Expires&lt;/a&gt; configured.&lt;/p&gt;
+
+&lt;h3 id='the_trick'&gt;The trick&lt;/h3&gt;
+
+&lt;p&gt;Go and clone &lt;a href='http://github.com/stockrt/cache_invalidation'&gt;cache_invalidation&lt;/a&gt; and start using the provided javascripts in your site, this way:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+
+&amp;lt;head&amp;gt;
+ &amp;lt;script src=&amp;quot;http://your_site/javascripts/querystring.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+ &amp;lt;script src=&amp;quot;http://your_site/javascripts/cache_invalidation.js&amp;quot; type=&amp;quot;text/javascript&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+&amp;lt;/body&amp;gt;
+
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Set the desired TTL inside de cache_invalidation.js file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// TTL: set your cache threshold here
+var ttl = 300;  // seconds&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And it is all set.&lt;/p&gt;
+
+&lt;h3 id='but_why_does_it_happen_and_how_it_works'&gt;But, why does it happen, and how it works?&lt;/h3&gt;
+
+&lt;p&gt;It does happen because their web server (&lt;a href='http://nginx.net/'&gt;the great nginx&lt;/a&gt;) is configured with what we used to call &lt;a href='http://httpd.apache.org/docs/2.2/mod/mod_expires.html'&gt;mod_expires&lt;/a&gt; in &lt;a href='http://httpd.apache.org'&gt;Apache&lt;/a&gt;. This module activates the &lt;a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'&gt;Expires&lt;/a&gt; &lt;a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'&gt;HTTP Cache Header&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you look at the response headers I got before, you would see:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Date: Sat, 22 Aug 2009 01:36:49 GMT
+Expires: Sun, 23 Aug 2009 01:36:49 GMT&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Cache-Control: max-age=86400&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bc &amp;lt;&amp;lt;&amp;lt; 86400/3600
+24&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;They are saying to my browser that it should use the local copy, for the next 24 hours, when accessing this site. More precisely, when accessing index.html of this site.&lt;/p&gt;
+
+&lt;p&gt;I think that, for a blog, this is a pretty big time to update the user&amp;#8217;s cache. This cache header means that if a reader accessed you site just before your posted something, and returned to your site after you posted, he would not see any difference. He would only notice your new post the next day.&lt;/p&gt;
+
+&lt;p&gt;But, you can bypass that, just passing any query string within the site&amp;#8217;s address to the navigation bar in your browser.&lt;/p&gt;
+
+&lt;p&gt;This tricks the browser to go in the source and to fetch the page, instead of using a local copy. It would only use a local copy if you have no query string or if you have already cached that url with that query string (say, in a second time you visit the same query string).&lt;/p&gt;
+
+&lt;p&gt;Just because the browser would cache the same query string in a second access, I made the script to vary it on each access, and also it forces a refresh when accessing a querystring that is TTL seconds older than the current time, even if it is already cached from a previous access, say, when clicking a bookmark.&lt;/p&gt;
+
+&lt;p&gt;As a front end engineer I am, I only pray to my web developer colleagues don&amp;#8217;t find this post, ever :)&lt;/p&gt;</content>
+    </entry>
   
     <entry>
       <title>Finding the next prime number from a given number</title>

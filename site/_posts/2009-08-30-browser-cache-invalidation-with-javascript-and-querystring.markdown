@@ -2,7 +2,6 @@
 layout: post
 title: Browser cache invalidation with Javascript and querystring
 tags: [cache, github, en-US]
-published: false
 ---
 Some time ago I started my blog here at github and noticed that new posts
 didn't come live right way I published them.

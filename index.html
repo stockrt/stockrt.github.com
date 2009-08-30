@@ -47,6 +47,172 @@
   <ul class="posts">
     
       
+        <div class="hentry" id="/p/browser-cache-invalidation-with-javascript-and-querystring">
+  <h2 class="entry-title">
+    <a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring">Browser cache invalidation with Javascript and querystring</a>
+  </h2>
+
+  
+    
+  
+
+  <abbr class="published" title="2009-08-30T00:00:00-03:00">
+    30 Aug 2009
+  </abbr>
+
+  <br class="clear"/>
+
+  <div class="entry-content">
+    <p>Some time ago I started my blog here at github and noticed that new posts didn&#8217;t come live right way I published them.</p>
+
+<p>Quickly I spot the problem: They are sending <a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'>HTTP Cache Headers</a> for the index.html and all pages served by github, a 24 hour cache.</p>
+
+<h3 id='the_problem'>The problem</h3>
+
+<pre><code>$ curl -I http://stockrt.github.com
+
+HTTP/1.1 200 OK
+Server: nginx/0.6.31
+Date: Sat, 22 Aug 2009 01:36:49 GMT
+Content-Type: text/html
+Content-Length: 66829
+Last-Modified: Sat, 22 Aug 2009 01:12:50 GMT
+Connection: keep-alive
+Expires: Sun, 23 Aug 2009 01:36:49 GMT
+Cache-Control: max-age=86400
+Accept-Ranges: bytes</code></pre>
+
+<p>So, to overcome this &#8220;problem&#8221; I made this tiny trick, and published it to others to take advantage of it, in case your are hosting your pages behind an web server with <a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'>Expires</a> configured.</p>
+
+<h3 id='the_trick'>The trick</h3>
+
+<p>Go and clone <a href='http://github.com/stockrt/cache_invalidation'>cache_invalidation</a> and start using the provided javascripts in your site, this way:</p>
+
+<pre><code>&lt;html&gt;
+
+&lt;head&gt;
+ &lt;script src=&quot;http://your_site/javascripts/querystring.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;http://your_site/javascripts/cache_invalidation.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+<p>Set the desired TTL inside de cache_invalidation.js file:</p>
+
+<pre><code>// TTL: set your cache threshold here
+var ttl = 300;  // seconds</code></pre>
+
+<p>And it is all set.</p>
+
+<h3 id='but_why_does_it_happen_and_how_it_works'>But, why does it happen, and how it works?</h3>
+
+<p>It does happen because their web server (<a href='http://nginx.net/'>the great nginx</a>) is configured with what we used to call <a href='http://httpd.apache.org/docs/2.2/mod/mod_expires.html'>mod_expires</a> in <a href='http://httpd.apache.org'>Apache</a>. This module activates the <a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'>Expires</a> <a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21'>HTTP Cache Header</a>.</p>
+
+<p>If you look at the response headers I got before, you would see:</p>
+
+<pre><code>Date: Sat, 22 Aug 2009 01:36:49 GMT
+Expires: Sun, 23 Aug 2009 01:36:49 GMT</code></pre>
+
+<p>and:</p>
+
+<pre><code>Cache-Control: max-age=86400</code></pre>
+
+<p>Notice that:</p>
+
+<pre><code>$ bc &lt;&lt;&lt; 86400/3600
+24</code></pre>
+
+<p>They are saying to my browser that it should use the local copy, for the next 24 hours, when accessing this site. More precisely, when accessing index.html of this site.</p>
+
+<p>I think that, for a blog, this is a pretty big time to update the user&#8217;s cache. This cache header means that if a reader accessed you site just before your posted something, and returned to your site after you posted, he would not see any difference. He would only notice your new post the next day.</p>
+
+<p>But, you can bypass that, just passing any query string within the site&#8217;s address to the navigation bar in your browser.</p>
+
+<p>This tricks the browser to go in the source and to fetch the page, instead of using a local copy. It would only use a local copy if you have no query string or if you have already cached that url with that query string (say, in a second time you visit the same query string).</p>
+
+<p>Just because the browser would cache the same query string in a second access, I made the script to vary it on each access, and also it forces a refresh when accessing a querystring that is TTL seconds older than the current time, even if it is already cached from a previous access, say, when clicking a bookmark.</p>
+
+<p>As a front end engineer I am, I only pray to my web developer colleagues don&#8217;t find this post, ever :)</p>
+  </div>
+
+  <ul class="meta">
+    
+      
+        <li>Tags:
+          
+            <a href="http://stockrt.github.com/tags/#cache">cache</a>
+          
+            <a href="http://stockrt.github.com/tags/#github">github</a>
+          
+            <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
+          
+        </li>
+      
+    
+
+    <li>Meta:
+      <a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" rel="bookmark">permalink</a>
+      <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
+    </li>
+
+    <li>Share:
+      <span class="sbookmark">
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://www.furl.net/storeIt.jsp?u=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&t=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
+        <a href="http://ma.gnolia.com/bookmarklet/add?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
+        <a href="http://designfloat.com/submit.php?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
+        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&submitUrl=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&t=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: Browser cache invalidation with Javascript and querystring: http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring&title=Weekend codes - Browser cache invalidation with Javascript and querystring" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <!-- addthis_toolbox -->
+        
+          
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring', 'Browser cache invalidation with Javascript and querystring')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
+          
+        
+      </span>
+    </li>
+  </ul>
+
+  <!-- sharethis -->
+  
+    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
+  
+
+  <!-- favorites -->
+  <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('Weekend codes - Browser cache invalidation with Javascript and querystring', 'http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring')" title="Add to Favorites">Favorites</a>
+
+  <!-- disqus -->
+  
+    
+      <!-- disqus_view_comments -->
+      
+        <a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring/#disqus_thread">View Comments</a>
+      
+    
+  
+</div>
+
+      
         <div class="hentry" id="/p/finding-the-next-prime-number-from-a-given-number">
   <h2 class="entry-title">
     <a href="http://stockrt.github.com/p/finding-the-next-prime-number-from-a-given-number">Finding the next prime number from a given number</a>
@@ -570,155 +736,6 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
 </div>
 
       
-        <div class="hentry" id="/p/listing-github-projects-in-your-blog">
-  <h2 class="entry-title">
-    <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog">Listing GitHub projects in your blog</a>
-  </h2>
-
-  
-    
-  
-
-  <abbr class="published" title="2009-08-15T00:00:00-03:00">
-    15 Aug 2009
-  </abbr>
-
-  <br class="clear"/>
-
-  <div class="entry-content">
-    <p>I needed to list my GitHub projects in a fancy way inside my blog, in the sidebar, all dynamically done. So, I searched a little around and found how.</p>
-
-<p>There are two major badges to do it, here I will describe them:</p>
-
-<h3 id='dr_nics_githubbadges'>Dr Nic&#8217;s github-badges</h3>
-
-<p>This is my choice. <a href='http://drnic.github.com/github-badges'>drnic&#8217;s github-badges</a> is flexible on configuration and also have some code of myself in it.</p>
-
-<p>Here is how to configure it:</p>
-
-<pre><code>&lt;div id=&quot;github-badge&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
-  GITHUB_USERNAME=&quot;stockrt&quot;;
-&lt;/script&gt;
-&lt;script src=&quot;http://drnic.github.com/github-badges/dist/github-badge-launcher.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
-
-<p>This is the complete list of options available:</p>
-
-<pre><code>GITHUB_USERNAME = &quot;stockrt&quot;;
-GITHUB_LIST_LENGTH = 10;
-GITHUB_HEAD = &quot;div&quot;; // e.g. change to &quot;h2&quot; for wordpress sidebars
-GITHUB_THEME = &quot;white&quot;; // try &#39;black&#39;
-GITHUB_TITLE = &quot;My projects&quot;;
-GITHUB_SHOW_ALL = &quot;Show all&quot;;
-GITHUB_SHOW_FORK = 1;</code></pre>
-
-<h3 id='subtlegradients_mootoolsgithubbadge'>subtleGradient&#8217;s mootools-github-badge:</h3>
-
-<p>This is also pretty neat, <a href='http://github.com/subtleGradient/mootools-github-badge'>subtleGradient&#8217;s mootools-github-badge</a> has a great visual effect when it is building the project&#8217;s list, using a delayed composal. See this <a href='http://subtlegradient.github.com/mootools-github-badge'>running example</a>.</p>
-
-<p>Here is how to configure it:</p>
-
-<pre><code>&lt;div id=&quot;github-badge&quot;&gt;&lt;/div&gt;
-&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
-&lt;script src=&quot;http://projects.subtlegradient.com/mootools-subtle-templates/Source/Plugins/SubtleTemplate.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
-&lt;script src=&quot;http://subtlegradient.github.com/mootools-github-badge/mootools-github-badge.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
-  new SubtleTemplate.GitHubBadge.Basic({ username:&#39;stockrt&#39; });
-&lt;/script&gt;</code></pre>
-
-<h3 id='using_jekyll_and_scribbish_from_stockrts_site_source'>Using jekyll and scribbish from <a href='http://github.com/stockrt/stockrt.github.com/tree/master/site'>stockrt&#8217;s site source</a></h3>
-
-<p>If you are using my template to generated a <a href='http://stockrt.github.com/p/iniciando-um-blog-no-github'>scribbish styled static site with jekyll (pt-BR)</a>, all you need to do to activate the use of drnic&#8217;s github-badge is to configure this parameters in config.yml:</p>
-
-<pre><code>github_badge:
-    enable: true
-    username: stockrt
-    length: 8
-    head: div
-    #head: h2
-    theme: white
-    #theme: black
-    title: My Projects
-    showall: Show all
-    showfork: 0
-    #showfork: 1</code></pre>
-
-<p>All said, I must warn you that these two badges do not really behave well on IE 6, but who still uses it today? Better upgrade to Firefox, folks!</p>
-  </div>
-
-  <ul class="meta">
-    
-      
-        <li>Tags:
-          
-            <a href="http://stockrt.github.com/tags/#github">github</a>
-          
-            <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
-          
-        </li>
-      
-    
-
-    <li>Meta:
-      <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog" rel="bookmark">permalink</a>
-      <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
-    </li>
-
-    <li>Share:
-      <span class="sbookmark">
-        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
-        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
-        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
-        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
-        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
-        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
-        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
-        <a href="http://www.linkedin.com/shareArticle?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
-        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
-        <a href="http://www.furl.net/storeIt.jsp?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog&t=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/furl.png" alt="Furl" title="Furl" border="0"></a>
-        <a href="http://ma.gnolia.com/bookmarklet/add?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/magnolia.png" alt="Magnolia" title="Magnolia" border="0"></a>
-        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
-        <a href="http://www.netvouz.com/action/submitBookmark?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog&popup=no" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/netvouz.png" alt="Netvouz" title="Netvouz" border="0"></a>
-        <a href="http://designfloat.com/submit.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/designfloat.png" alt="Design Float" title="Design Float" border="0"></a>
-        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
-        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
-        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
-        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog&submitUrl=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
-        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/listing-github-projects-in-your-blog&t=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
-        <a href="http://twitter.com/home?status=Weekend codes: Listing GitHub projects in your blog: http://stockrt.github.com/p/listing-github-projects-in-your-blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
-        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/listing-github-projects-in-your-blog&title=Weekend codes - Listing GitHub projects in your blog" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
-        <!-- addthis_toolbox -->
-        
-          
-            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/listing-github-projects-in-your-blog', 'Listing GitHub projects in your blog')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
-            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
-          
-        
-      </span>
-    </li>
-  </ul>
-
-  <!-- sharethis -->
-  
-    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=829268d1-9084-47c1-9ae8-7164387fe686&amp;type=website&amp;embeds=true"></script>
-  
-
-  <!-- favorites -->
-  <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
-  <a href="javascript:addToFavorites('Weekend codes - Listing GitHub projects in your blog', 'http://stockrt.github.com/p/listing-github-projects-in-your-blog')" title="Add to Favorites">Favorites</a>
-
-  <!-- disqus -->
-  
-    
-      <!-- disqus_view_comments -->
-      
-        <a href="http://stockrt.github.com/p/listing-github-projects-in-your-blog/#disqus_thread">View Comments</a>
-      
-    
-  
-</div>
-
-      
       
         <a href="http://stockrt.github.com/page2">&laquo; Previous Entries</a>
         
@@ -786,6 +803,9 @@ GITHUB_SHOW_FORK = 1;</code></pre>
               
                 
                 <li><a href="http://stockrt.github.com/tags/#misc">misc</a></li>
+              
+                
+                <li><a href="http://stockrt.github.com/tags/#cache">cache</a></li>
               
                 
                 <li><a href="http://stockrt.github.com/tags/#linux">linux</a></li>
@@ -895,6 +915,10 @@ GITHUB_SHOW_FORK = 1;</code></pre>
           <div class="sidebar-node">
             <h3>More Posts</h3>
             <ul>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn&#8217;t come live right way...">Browser cache invalidation with Javascript and querystring</a>
+                </li>
               
                 <li>&raquo;
                   <a href="http://stockrt.github.com/p/finding-the-next-prime-number-from-a-given-number" title="Finding the next prime number online is useful if you do not have time to calculate it but need a...">Finding the next prime number from a given number</a>
