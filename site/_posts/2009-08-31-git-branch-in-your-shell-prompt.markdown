@@ -2,7 +2,6 @@
 layout: post
 title: git branch in your shell prompt
 tags: [git, en-US]
-published: false
 ---
 Every time (every few minutes?) I was looking at my git versioned projects
 (all my projects?) I encounter myself in doubt:

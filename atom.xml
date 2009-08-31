@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-08-30T21:07:10-03:00</updated>
+  <updated>2009-08-31T00:11:54-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -18,6 +18,41 @@
     
   
 
+  
+    <entry>
+      <title>git branch in your shell prompt</title>
+      <link href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt"/>
+      <updated>2009-08-31T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/git-branch-in-your-shell-prompt</id>
+      <content type="html">&lt;p&gt;Every time (every few minutes?) I was looking at my git versioned projects (all my projects?) I encounter myself in doubt:&lt;/p&gt;
+
+&lt;p&gt;Am I at the branch I think I am?&lt;/p&gt;
+
+&lt;p&gt;And there was I, issuing a &amp;#8220;git branch&amp;#8221; command to check it&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;That is enough! I said.&lt;/p&gt;
+
+&lt;p&gt;Looking at the &lt;a href='http://github.com/guides'&gt;github guides&lt;/a&gt; I found &lt;a href='http://github.com/guides/put-your-git-branch-name-in-your-shell-prompt'&gt;this tip&lt;/a&gt; very interesting, so I decided to bettered it, and to publish as a tip here.&lt;/p&gt;
+
+&lt;p&gt;It will show in your prompt which is your current branch, when your current work directory is a git initialized one.&lt;/p&gt;
+
+&lt;p&gt;To use it, just place this line inside your ~/.bashrc or into /etc/profile.d/git-branch.sh or /etc/bashrc or even /etc/profile, the choice is yours:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# git branch
+parse_git_branch() {
+    git branch 2&amp;gt; /dev/null | sed -e &amp;#39;/^[^*]/d&amp;#39; -e &amp;#39;s/* \(.*\)/(\1) /&amp;#39;
+}
+PS1=&amp;quot;\$(parse_git_branch)$PS1&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will give you a prompt like this one:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;stockrt@jackbauer ~ $ cd Dropbox/stockrt/git/stockrt.github.com
+(master) stockrt@jackbauer ~/Dropbox/stockrt/git/stockrt.github.com $&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here you can see a &amp;#8220;normal&amp;#8221; prompt and then, when I enter one of my git versioned directories, a &amp;#8220;git branchned&amp;#8221; prompt.&lt;/p&gt;
+
+&lt;p&gt;Way cool.&lt;/p&gt;</content>
+    </entry>
   
     <entry>
       <title>Browser cache invalidation with Javascript and querystring</title>
