@@ -1,6 +1,6 @@
 
   function rl(now) {
-    var loc = window.location.href.replace(/(\/$|\?.*)/, "");
+    var loc = window.location.href.replace(/\?.*/, "");
     window.location.href = loc+"?cache="+now;
   }
   var qs = new Querystring();
