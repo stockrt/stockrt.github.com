@@ -9,11 +9,11 @@ http://sites.google.com/site/stockrt/
 http://feeds.feedburner.com/weekendcodes?format=xml
 http://validator.w3.org/feed/check.cgi?url=http://stockrt.github.com/atom.xml
 
-http://bristot.eti.br/
-
 revisar js includes (disqus, google) em todas as paginas
   nao esta duplicando ou inserindo onde nao devia?
   index.html e posts, rever todos os htmls gerados e procurar por include ou
   duplicado ou sem necessidade - talvez remover de default.html?
 
 http://www.igvita.com/lifestream/
+
+remover datas da lista dos posts
