@@ -48,7 +48,7 @@ related_posts_limit: 5
 # Helps to bypass Expires and Cache-Control in the Browser cache
 # ttl minimum value is 60
 cache_invalidation:
-    enable: true
+    enable: false
     # ttl is Required
     ttl: 300
 
@@ -151,6 +151,8 @@ blogroll:
       url: http://www.joelonsoftware.com
     - name: igvita (Ilya Grigorik)
       url: http://www.igvita.com
+    - name: catonmat - good coders code, great reuse (Peteris Krumins)
+      url: http://www.catonmat.net
 
 # Reference:
 # http://github.com/vilcans/scribbish-jekyll
