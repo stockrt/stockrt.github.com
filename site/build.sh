@@ -14,9 +14,9 @@ do
 done
 echo "About to delete: ../p ../page[0-9]* ../20??"
 echo "About to delete: ../*.sh"
-echo "Continue? (enter)"
 if [[ "$1" != "ok" ]]
 then
+    echo "Continue? (enter)"
     read x
 fi
 
