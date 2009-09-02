@@ -9,6 +9,7 @@
   }
   var qs = new Querystring();
   var ts = Number(qs.get("cache"));
+  alert(ts);
   var now = Number(new Date().getTime());
   
     var ttl = 300 * 1000;

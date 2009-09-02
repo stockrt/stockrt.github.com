@@ -12,6 +12,7 @@ layout: nil
   }
   var qs = new Querystring();
   var ts = Number(qs.get("cache"));
+  alert(ts);
   var now = Number(new Date().getTime());
   {% if site.cache_invalidation.ttl < 60 %}
     var ttl = 60 * 1000;
