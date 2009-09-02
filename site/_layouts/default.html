@@ -203,7 +203,9 @@
             <h3>Blogroll</h3>
             <ul>
               {% for blog in site.blogroll %}
-                <li><a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a></li>
+                <li>&raquo;
+                  <a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a>
+                </li>
               {% endfor %}
             </ul>
           </div>
