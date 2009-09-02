@@ -128,14 +128,16 @@
       {% endif %}
 {% endcomment %}
 
-      <!-- blogroll -->
-      {% if site.blogroll %}
-        {% if site.blogroll.size > 0 %}
+      <!-- more_posts -->
+      {% if site.more_posts %}
+        {% if site.more_posts.enable %}
           <div class="sidebar-node">
-            <h3>Blogroll</h3>
+            <h3>More Posts</h3>
             <ul>
-              {% for blog in site.blogroll %}
-                <li><a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a></li>
+              {% for p in site.posts limit: site.more_posts.limit %}
+                <li>&raquo;
+                  <a href="{{ site.url }}{{ p.url }}" title="{{ p.content | strip_html | truncatewords: 20 }}">{{ p.title }}</a>
+                </li>
               {% endfor %}
             </ul>
           </div>
@@ -194,16 +196,14 @@
         {% endif %}
       {% endif %}
 
-      <!-- more_posts -->
-      {% if site.more_posts %}
-        {% if site.more_posts.enable %}
+      <!-- blogroll -->
+      {% if site.blogroll %}
+        {% if site.blogroll.size > 0 %}
           <div class="sidebar-node">
-            <h3>More Posts</h3>
+            <h3>Blogroll</h3>
             <ul>
-              {% for p in site.posts limit: site.more_posts.limit %}
-                <li>&raquo;
-                  <a href="{{ site.url }}{{ p.url }}" title="{{ p.content | strip_html | truncatewords: 20 }}">{{ p.title }}</a>
-                </li>
+              {% for blog in site.blogroll %}
+                <li><a href="{{ blog.url }}" target="_blank">{{ blog.name }}</a></li>
               {% endfor %}
             </ul>
           </div>
