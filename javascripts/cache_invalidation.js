@@ -1,15 +1,10 @@
 
   function rl(now) {
-    alert(window.location.href);
     var loc = window.location.href.replace(/\?.*/, "");
-    alert(loc);
-    var loc = loc.replace(/\/$/, "");
-    alert(loc);
     window.location.href = loc+"?cache="+now;
   }
   var qs = new Querystring();
   var ts = Number(qs.get("cache"));
-  alert(ts);
   var now = Number(new Date().getTime());
   
     var ttl = 300 * 1000;
