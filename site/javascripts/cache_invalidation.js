@@ -4,6 +4,7 @@ layout: nil
 {% if site.cache_invalidation %}
   function rl(now) {
     var loc = window.location.href.replace(/\?.*/, "");
+    var loc = loc.replace(/\/$/, "");
     window.location.href = loc+"?cache="+now;
   }
   var qs = new Querystring();

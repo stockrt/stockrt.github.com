@@ -153,6 +153,8 @@ blogroll:
       url: http://www.igvita.com
     - name: catonmat - good coders code, great reuse (Peteris Krumins)
       url: http://www.catonmat.net
+    - name: Agile Testing (Grig Gheorghiu)
+      url: http://agiletesting.blogspot.com
 
 # Reference:
 # http://github.com/vilcans/scribbish-jekyll

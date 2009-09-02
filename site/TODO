@@ -17,3 +17,6 @@ revisar js includes (disqus, google) em todas as paginas
 http://www.igvita.com/lifestream/
 
 remover datas da lista dos posts
+
+o cache esta atrapalhando nos comments na page, eles nao aparecem quando o
+cache_invalid esta ativo
