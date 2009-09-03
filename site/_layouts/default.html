@@ -77,16 +77,8 @@
        },
         skin);
       </script>
-
-      <div id="container" style="margin-top:45px;">
-    {% else %}
-      <div id="container">
     {% endif %}
-  {% else %}
-    <div id="container">
   {% endif %}
-{% else %}
-  <div id="container">
 {% endif %}
 
 <!-- google_friend_connect login -->
@@ -118,6 +110,20 @@
       </script>
     {% endif %}
   {% endif %}
+{% endif %}
+
+{% if site.google_friend_connect %}
+  {% if site.google_friend_connect.enable %}
+    {% if site.google_friend_connect.social_bar %}
+      <div id="container" style="margin-top:45px;">
+    {% else %}
+      <div id="container">
+    {% endif %}
+  {% else %}
+    <div id="container">
+  {% endif %}
+{% else %}
+  <div id="container">
 {% endif %}
 
   <div id="header">
