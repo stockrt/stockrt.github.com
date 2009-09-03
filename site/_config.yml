@@ -156,6 +156,38 @@ blogroll:
     - name: Agile Testing (Grig Gheorghiu)
       url: http://agiletesting.blogspot.com
 
+##
+## Adsense
+##
+
+# Optional
+google_adsense_sidebar: |
+    <script type="text/javascript"><!--
+    google_ad_client = "pub-1253631753473606";
+    /* sidebar banner 160x600, criado 01/09/09 */
+    google_ad_slot = "5337967998";
+    google_ad_width = 160;
+    google_ad_height = 600;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
+# Optional
+google_adsense_footer: |
+    <script type="text/javascript"><!--
+    google_ad_client = "pub-1253631753473606";
+    /* footer 728x90, criado 01/09/09 */
+    google_ad_slot = "6156940911";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
 # Reference:
 # http://github.com/vilcans/scribbish-jekyll
 # http://quotedprintable.com/pages/scribbish
