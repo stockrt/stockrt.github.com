@@ -23,6 +23,11 @@ cache_invalid esta ativo
 
 
 
+
+
+
+Adsense CSE
+
 <form action="http://www.google.com.br/cse" id="cse-search-box">
   <div>
     <input type="hidden" name="cx" value="partner-pub-1253631753473606:dbbreij60h9" />
@@ -32,8 +37,6 @@ cache_invalid esta ativo
   </div>
 </form>
 <script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-
-
 
 <form action="http://www.google.com/cse" id="cse-search-box">
   <div>
