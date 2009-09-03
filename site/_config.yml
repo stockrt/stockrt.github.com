@@ -133,7 +133,7 @@ addthis:
 google_friend_connect:
     enable: true
     site_id: 07204917660715156851
-    social_bar: true
+    social_bar: false
     login: true
     comments: true
 
