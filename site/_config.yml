@@ -135,7 +135,7 @@ google_friend_connect:
     site_id: 07204917660715156851
     social_bar: false
     login: true
-    comments: true
+    comments: false
 
 ##
 ## Other sidebar elements
