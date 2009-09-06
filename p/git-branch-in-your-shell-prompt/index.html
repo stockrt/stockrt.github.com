@@ -232,6 +232,34 @@ PS1=&quot;\$(parse_git_branch)$PS1&quot;</code></pre>
       
     
   
+
+  <!-- google_friend_connect-recommendations -->
+  
+    
+      
+        <!-- google_friend_connect-recommendations-button -->
+        <!-- Define the div tag where the gadget will be inserted. -->
+        <div id="div-google_friend_connect-recommendations-button" style="width:100%;"></div>
+        <!-- Render the gadget into a div. -->
+        <script type="text/javascript">
+        var skin = {};
+        skin['HEIGHT'] = '21';
+        skin['BUTTON_STYLE'] = 'compact';
+        skin['BUTTON_TEXT'] = 'Recommend it!';
+        skin['BUTTON_ICON'] = 'default';
+        google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+        google.friendconnect.container.renderOpenSocialGadget(
+         { id: 'div-google_friend_connect-recommendations-button',
+           url:'http://www.google.com/friendconnect/gadgets/recommended_pages.xml',
+           height: 21,
+           site: '07204917660715156851',
+           'view-params':{"pageUrl":location.href,"pageTitle":(document.title ? document.title : location.href),"docId":"recommendedPages"}
+         },
+          skin);
+        </script>
+      
+    
+  
 </div>
 
 </ul>
@@ -545,11 +573,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       
         
           
+            <!-- google_friend_connect-recommendations-aggregator -->
             <div class="sidebar-node">
               <h3>Recommended</h3>
               <ul>
                 <!-- Define the div tag where the gadget will be inserted. -->
-                <div id="div-google_friend_connect-recommendations" style="border:1px solid #cccccc;"></div>
+                <div id="div-google_friend_connect-recommendations-aggregator" style="border:1px solid #cccccc;"></div>
                 <!-- Render the gadget into a div. -->
                 <script type="text/javascript">
                 var skin = {};
@@ -564,11 +593,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
                 skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
                 skin['CONTENT_HEADLINE_COLOR'] = '#333333';
-                skin['HEADER_TEXT'] = 'Recommended stories';
-                skin['RECOMMENDATIONS_PER_PAGE'] = '15';
+                skin['HEADER_TEXT'] = 'Recommended posts';
+                skin['RECOMMENDATIONS_PER_PAGE'] = '5';
                 google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
                 google.friendconnect.container.renderOpenSocialGadget(
-                 { id: 'div-google_friend_connect-recommendations',
+                 { id: 'div-google_friend_connect-recommendations-aggregator',
                    url:'http://www.google.com/friendconnect/gadgets/recommended_pages.xml',
                    site: '07204917660715156851',
                    'view-params':{"docId":"recommendedPages"}
