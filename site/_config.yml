@@ -178,6 +178,19 @@ blogroll:
 # All Optional
 # http://www.google.com/adsense
 
+google_adsense_topo: |
+    <script type="text/javascript"><!--
+    google_ad_client = "pub-1253631753473606";
+    /* banner topo 468x60, criado 05/09/09 */
+    google_ad_slot = "9988827078";
+    google_ad_width = 468;
+    google_ad_height = 60;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
 google_adsense_sidebar: |
     <script type="text/javascript"><!--
     google_ad_client = "pub-1253631753473606";
