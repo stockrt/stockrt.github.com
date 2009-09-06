@@ -48,8 +48,9 @@ related_posts_limit: 5
 # Optional
 # Helps to bypass Expires and Cache-Control in the Browser cache
 # ttl minimum value is 60
+# EXPERIMENTAL - Can cause problems with comments and recommendations
 cache_invalidation:
-    enable: true
+    enable: false
     # ttl is Required
     ttl: 300
 
