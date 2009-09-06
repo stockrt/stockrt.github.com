@@ -138,8 +138,8 @@ google_friend_connect:
     login: true
     comments: false
     recommendations: true
-    member_links: true
     members: true
+    member_links: true
     activities: true
     footprints: true
 
