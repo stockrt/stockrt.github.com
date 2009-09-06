@@ -133,9 +133,9 @@ addthis:
 google_friend_connect:
     enable: true
     site_id: 07204917660715156851
-    social_bar: false
+    social_bar: true
     login: true
-    comments: false
+    comments: true
 
 ##
 ## Other sidebar elements

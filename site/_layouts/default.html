@@ -46,12 +46,12 @@
   {% endif %}
 {% endif %}
 
-<!-- google_friend_connect social_bar -->
+<!-- google_friend_connect-social_bar -->
 {% if site.google_friend_connect %}
   {% if site.google_friend_connect.enable %}
     {% if site.google_friend_connect.social_bar %}
       <!-- Define the div tag where the gadget will be inserted. -->
-      <div id="div-2970167760843167978"></div>
+      <div id="div-google_friend_connect-social_bar"></div>
       <!-- Render the gadget into a div. -->
       <script type="text/javascript">
       var skin = {};
@@ -71,7 +71,7 @@
       skin['HEADER_TEXT'] = 'Comments';
       google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
       google.friendconnect.container.renderSocialBar(
-       { id: 'div-2970167760843167978',
+       { id: 'div-google_friend_connect-social_bar',
          site: '{{ site.google_friend_connect.site_id }}',
          'view-params':{"scope":"PAGE","allowAnonymousPost":"true","features":"video,comment","showWall":"true"}
        },
@@ -81,12 +81,12 @@
   {% endif %}
 {% endif %}
 
-<!-- google_friend_connect login -->
+<!-- google_friend_connect-login -->
 {% if site.google_friend_connect %}
   {% if site.google_friend_connect.enable %}
     {% if site.google_friend_connect.login %}
       <!-- Define the div tag where the gadget will be inserted. -->
-      <div id="div-8174905282497612494" style="width:282px;float:right;"></div>
+      <div id="div-google_friend_connect-login" style="width:282px;float:right;"></div>
       <!-- Render the gadget into a div. -->
       <script type="text/javascript">
       var skin = {};
@@ -104,7 +104,7 @@
       skin['ALIGNMENT'] = 'right';
       google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
       google.friendconnect.container.renderSignInGadget(
-       { id: 'div-8174905282497612494',
+       { id: 'div-google_friend_connect-login',
          site: '{{ site.google_friend_connect.site_id }}'
        },
         skin);
