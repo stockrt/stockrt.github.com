@@ -140,6 +140,7 @@ google_friend_connect:
     recommendations: true
     member_links: true
     activities: true
+    footprints: true
 
 ##
 ## Other sidebar elements
