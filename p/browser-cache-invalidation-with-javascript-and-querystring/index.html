@@ -204,6 +204,34 @@ Expires: Sun, 23 Aug 2009 01:36:49 GMT</code></pre>
 <p>As a front end engineer I am, I only pray to my web developer colleagues don&#8217;t find this post, ever :)</p>
   </div>
 
+  <!-- google_friend_connect-recommendations -->
+  
+    
+      
+        <!-- google_friend_connect-recommendations-button -->
+        <!-- Define the div tag where the gadget will be inserted. -->
+        <div id="div-google_friend_connect-recommendations-button" style="width:100%;"></div>
+        <!-- Render the gadget into a div. -->
+        <script type="text/javascript">
+        var skin = {};
+        skin['HEIGHT'] = '21';
+        skin['BUTTON_STYLE'] = 'compact';
+        skin['BUTTON_TEXT'] = 'Recommend it!';
+        skin['BUTTON_ICON'] = 'default';
+        google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+        google.friendconnect.container.renderOpenSocialGadget(
+         { id: 'div-google_friend_connect-recommendations-button',
+           url:'http://www.google.com/friendconnect/gadgets/recommended_pages.xml',
+           height: 21,
+           site: '07204917660715156851',
+           'view-params':{"pageUrl":location.href,"pageTitle":(document.title ? document.title : location.href),"docId":"recommendedPages"}
+         },
+          skin);
+        </script>
+      
+    
+  
+
   <ul class="meta">
     
       
@@ -257,34 +285,6 @@ Expires: Sun, 23 Aug 2009 01:36:49 GMT</code></pre>
       </span>
     </li>
   </ul>
-
-  <!-- google_friend_connect-recommendations -->
-  
-    
-      
-        <!-- google_friend_connect-recommendations-button -->
-        <!-- Define the div tag where the gadget will be inserted. -->
-        <div id="div-google_friend_connect-recommendations-button" style="width:100%;"></div>
-        <!-- Render the gadget into a div. -->
-        <script type="text/javascript">
-        var skin = {};
-        skin['HEIGHT'] = '21';
-        skin['BUTTON_STYLE'] = 'compact';
-        skin['BUTTON_TEXT'] = 'Recommend it!';
-        skin['BUTTON_ICON'] = 'default';
-        google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
-        google.friendconnect.container.renderOpenSocialGadget(
-         { id: 'div-google_friend_connect-recommendations-button',
-           url:'http://www.google.com/friendconnect/gadgets/recommended_pages.xml',
-           height: 21,
-           site: '07204917660715156851',
-           'view-params':{"pageUrl":location.href,"pageTitle":(document.title ? document.title : location.href),"docId":"recommendedPages"}
-         },
-          skin);
-        </script>
-      
-    
-  
 
   <!-- sharethis -->
   
