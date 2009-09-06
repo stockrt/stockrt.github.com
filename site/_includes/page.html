@@ -77,27 +77,6 @@
     </li>
   </ul>
 
-  <!-- sharethis -->
-  {% if site.sharethis %}
-    {{ site.sharethis }}
-  {% endif %}
-
-  <!-- favorites -->
-  <script src="{{ site.url }}/javascripts/favorites.js" type="text/javascript"></script>
-  <a href="javascript:addToFavorites('{{ site.title }} - {{ page.title }}', '{{ site.url }}{{ page.url }}')" title="Add to Favorites">Favorites</a>
-
-  <!-- disqus -->
-  {% if site.disqus %}
-    {% if site.disqus.enable %}
-      <!-- disqus_view_comments -->
-      {% if site.disqus.permalink_is_a_directory %}
-        <a href="{{ site.url }}{{ page.url }}/#disqus_thread">View Comments</a>
-      {% else %}
-        <a href="{{ site.url }}{{ page.url }}#disqus_thread">View Comments</a>
-      {% endif %}
-    {% endif %}
-  {% endif %}
-
   <!-- google_friend_connect-recommendations -->
   {% if site.google_friend_connect %}
     {% if site.google_friend_connect.enable %}
@@ -122,6 +101,27 @@
          },
           skin);
         </script>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  <!-- sharethis -->
+  {% if site.sharethis %}
+    {{ site.sharethis }}
+  {% endif %}
+
+  <!-- favorites -->
+  <script src="{{ site.url }}/javascripts/favorites.js" type="text/javascript"></script>
+  <a href="javascript:addToFavorites('{{ site.title }} - {{ page.title }}', '{{ site.url }}{{ page.url }}')" title="Add to Favorites">Favorites</a>
+
+  <!-- disqus -->
+  {% if site.disqus %}
+    {% if site.disqus.enable %}
+      <!-- disqus_view_comments -->
+      {% if site.disqus.permalink_is_a_directory %}
+        <a href="{{ site.url }}{{ page.url }}/#disqus_thread">View Comments</a>
+      {% else %}
+        <a href="{{ site.url }}{{ page.url }}#disqus_thread">View Comments</a>
       {% endif %}
     {% endif %}
   {% endif %}
