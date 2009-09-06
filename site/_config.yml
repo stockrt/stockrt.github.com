@@ -139,6 +139,7 @@ google_friend_connect:
     comments: false
     recommendations: true
     member_links: true
+    members: true
     activities: true
     footprints: true
 
