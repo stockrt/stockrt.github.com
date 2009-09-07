@@ -39,7 +39,7 @@ image: http://stockrt.github.com/images/misc/pordosolnoguaiba_lat.jpg
 # Limit the more posts listing in the sidebar
 more_posts:
     enable: true
-    limit: 12
+    limit: 10
 
 # Required
 # Limit for related posts listing
@@ -49,6 +49,7 @@ related_posts_limit: 5
 # Helps to bypass Expires and Cache-Control in the Browser cache
 # ttl minimum value is 60
 # EXPERIMENTAL - Can cause problems with comments and recommendations
+# http://github.com/stockrt/cache_invalidation
 cache_invalidation:
     enable: false
     # ttl is Required
@@ -128,9 +129,8 @@ addthis:
 ## Friend Connect
 ##
 
-# All Optional
+# Optional
 # http://www.google.com/friendconnect
-
 google_friend_connect:
     enable: true
     site_id: 07204917660715156851
@@ -184,10 +184,10 @@ blogroll:
 # All Optional
 # http://www.google.com/adsense
 
-google_adsense_topo: |
+google_adsense_top: |
     <script type="text/javascript"><!--
     google_ad_client = "pub-1253631753473606";
-    /* banner topo 468x60, criado 05/09/09 */
+    /* banner top 468x60, criado 05/09/09 */
     google_ad_slot = "9988827078";
     google_ad_width = 468;
     google_ad_height = 60;
@@ -200,7 +200,7 @@ google_adsense_topo: |
 google_adsense_sidebar: |
     <script type="text/javascript"><!--
     google_ad_client = "pub-1253631753473606";
-    /* sidebar banner 160x600, criado 01/09/09 */
+    /* banner sidebar 160x600, criado 01/09/09 */
     google_ad_slot = "5337967998";
     google_ad_width = 160;
     google_ad_height = 600;
@@ -213,7 +213,7 @@ google_adsense_sidebar: |
 google_adsense_footer: |
     <script type="text/javascript"><!--
     google_ad_client = "pub-1253631753473606";
-    /* footer 728x90, criado 01/09/09 */
+    /* banner footer 728x90, criado 01/09/09 */
     google_ad_slot = "6156940911";
     google_ad_width = 728;
     google_ad_height = 90;
