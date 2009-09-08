@@ -12,6 +12,7 @@ paginate: 5
 # Blog title and description/subtitle
 title: Weekend codes
 description: Codes and random stuff I am up to share with you
+keywords: linux, programming, python, http, tips, tricks, stuff
 
 # Required
 # Absolute base URL for this site _without_ trailing slash

@@ -28,6 +28,7 @@ echo "---
 layout: post
 title: $To
 tags: [linux, en-US]
+keywords: linux, shell, python
 published: true
 ---
 your text here" >> "$P"
