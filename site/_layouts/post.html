@@ -64,7 +64,7 @@ layout: default
         skin['CONTENT_HEADLINE_COLOR'] = '#333333';
         skin['DEFAULT_COMMENT_TEXT'] = '- add your comment here -';
         skin['HEADER_TEXT'] = 'Comments';
-        skin['POSTS_PER_PAGE'] = '15';
+        skin['POSTS_PER_PAGE'] = '{{ site.google_friend_connect.comments_listlimit }}';
         google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
         google.friendconnect.container.renderWallGadget(
          { id: 'div-google_friend_connect-comments',

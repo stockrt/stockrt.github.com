@@ -72,6 +72,11 @@ github_badge:
     showfork: 0
     #showfork: 1
 
+# Optional
+# Translation for your site
+# http://translate.google.com/translate_tools
+google_translate: true
+
 ##
 ## Search and Tracking elements
 ##
@@ -138,8 +143,11 @@ google_friend_connect:
     social_bar: false
     login: true
     comments: false
+    comments_listlimit: 15
     recommendations: true
+    recommendations_listlimit: 3
     members: true
+    members_rows_listlimit: 3
     member_links: true
     activities: true
     footprints: true

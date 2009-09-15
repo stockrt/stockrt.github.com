@@ -53,7 +53,7 @@
   
     
       <!-- Define the div tag where the gadget will be inserted. -->
-      <div id="div-google_friend_connect-login" style="width:282px;float:right;"></div>
+      <div id="div-google_friend_connect-login" style="width:300px;float:right;"></div>
       <!-- Render the gadget into a div. -->
       <script type="text/javascript">
       var skin = {};
@@ -348,6 +348,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         
       
 
+      <!-- google_translate -->
+      
+        <div class="sidebar-node">
+          <script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/translatemypage.xml&up_source_language=en&w=160&h=60&title=&border=&output=js"></script>
+        </div>
+      
+
       <!-- links -->
       
         
@@ -387,7 +394,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
               skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
               skin['CONTENT_HEADLINE_COLOR'] = '#333333';
               skin['HEADER_TEXT'] = 'Recommended posts';
-              skin['RECOMMENDATIONS_PER_PAGE'] = '5';
+              skin['RECOMMENDATIONS_PER_PAGE'] = '3';
               google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
               google.friendconnect.container.renderOpenSocialGadget(
                { id: 'div-google_friend_connect-recommendations-aggregator',
@@ -629,7 +636,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
               skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
               skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
               skin['CONTENT_HEADLINE_COLOR'] = '#333333';
-              skin['NUMBER_ROWS'] = '4';
+              skin['NUMBER_ROWS'] = '3';
               google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
               google.friendconnect.container.renderMembersGadget(
                { id: 'div-google_friend_connect-members',
