@@ -106,13 +106,20 @@ You can also manage with browsing history:
 
 Downloading a file:
 
+    # Download
     f = br.retrieve('http://www.google.com.br/intl/pt-BR_br/images/logo.gif')[0]
     print f
     fh = open(f)
 
 Setting a proxy for your http navigation:
 
-     br.set_proxies({"http": "joe:password@myproxy.example.com:3128"})
+    # Proxy and user/password
+    br.set_proxies({"http": "joe:password@myproxy.example.com:3128"})
+
+    # Proxy
+    br.set_proxies({"http": "myproxy.example.com:3128"})
+    # Proxy password
+    br.add_proxy_password("joe", "password")
 
 But, if you just want to quickly open an webpage, without the fancy features
 above, just issue that:
@@ -127,4 +134,8 @@ above, just issue that:
     print opener.open('http://user:password@stockrt.github.com').read()
 
 See more in [Python mechanize site](http://wwwsearch.sourceforge.net/mechanize)
-and [docs](http://wwwsearch.sourceforge.net/mechanize/doc.html).
+, [mechanize docs](http://wwwsearch.sourceforge.net/mechanize/doc.html) and
+[ClientForm docs](http://wwwsearch.sourceforge.net/ClientForm).
+
+Also, I have made this post to elucidate how to [handle html forms and sessions
+with python mechanize and BeautifulSoup](http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup)

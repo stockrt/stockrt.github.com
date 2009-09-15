@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   
-    <title>Weekend codes: Sunset in Porto Alegre</title>
+    <title>Weekend codes: handling html forms with python mechanize and BeautifulSoup</title>
   
 
   
@@ -17,7 +17,7 @@
   
 
   
-    <meta name="keywords" content="linux, programming, python, http, tips, tricks, stuff"/>
+    <meta name="keywords" content="linux, shell, python, html, parse"/>
   
 
   <!-- feed -->
@@ -117,29 +117,113 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
     <div id="content">
       <ul class="posts">
-  <div class="hentry" id="/p/sunset-in-porto-alegre">
+  <div class="hentry" id="/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup">
   <h2 class="entry-title">
-    <a href="http://stockrt.github.com/p/sunset-in-porto-alegre">Sunset in Porto Alegre</a>
+    <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup">handling html forms with python mechanize and BeautifulSoup</a>
   </h2>
 
   
     
   
 
-  <abbr class="published" title="2009-08-16T00:00:00-03:00">
-    16 Aug 2009
+  <abbr class="published" title="2009-09-14T00:00:00-03:00">
+    14 Sep 2009
   </abbr>
 
   <br class="clear"/>
 
   <div class="entry-content">
-    <p>Beautiful sunset in the capital city of Rio Grande do Sul, Brazil.</p>
+    <p>In the post about <a href='http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize'>emulating a browser in python with mechanize</a> I have showed you how to make some basic tricks in the web with python, but I have not showed how to login a site and how to handle a session, with html forms, links and cookies.</p>
 
-<p><img src='http://stockrt.github.com/images/misc/pordosolnoguaiba.jpg' alt='' /></p>
+<p>Here I will show it all for you, let&#8217;s see it.</p>
 
-<p>My wife and I decided to take some of our spare time to appreciate that.</p>
+<p>First, you must install some dependecies:</p>
 
-<p>Do you think it was worth?</p>
+<pre><code>easy_install BeautifulSoup
+easy_install html2text</code></pre>
+
+<p>Then, let the code speak:</p>
+
+<pre><code>import mechanize
+import cookielib
+from BeautifulSoup import BeautifulSoup
+import html2text
+
+# Browser
+br = mechanize.Browser()
+
+# Cookie Jar
+cj = cookielib.LWPCookieJar()
+br.set_cookiejar(cj)
+
+# Browser options
+br.set_handle_equiv(True)
+br.set_handle_gzip(True)
+br.set_handle_redirect(True)
+br.set_handle_referer(True)
+br.set_handle_robots(False)
+
+# Follows refresh 0 but not hangs on refresh &gt; 0
+br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
+
+# User-Agent (this is cheating, ok?)
+br.addheaders = [(&#39;User-agent&#39;, &#39;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1&#39;)]
+
+# The site we will navigate into, handling it&#39;s session
+br.open(&#39;http://gmail.com&#39;)
+
+# Select the first (index zero) form
+br.select_form(nr=0)
+
+# User credentials
+br.form[&#39;Email&#39;] = &#39;user&#39;
+br.form[&#39;Passwd&#39;] = &#39;password&#39;
+
+# Login
+br.submit()
+
+# Filter all links to mail messages in the inbox
+all_msg_links = [l for l in br.links(url_regex=&#39;\?v=c&amp;th=&#39;)]
+# Select the first 3 messages
+for msg_link in all_msg_links[0:3]:
+    print msg_link
+    # Open each message
+    br.follow_link(msg_link)
+    html = br.response().read()
+    soup = BeautifulSoup(html)
+    # Filter html to only show the message content
+    msg = str(soup.findAll(&#39;div&#39;, attrs={&#39;class&#39;: &#39;msg&#39;})[0])
+    # Show raw message content
+    print msg
+    # Convert html to text, easier to read but can fail if you have intl
+    # chars
+#   print html2text.html2text(msg)
+    print
+    # Go back to the Inbox
+    br.follow_link(text=&#39;Inbox&#39;)
+
+# Logout
+br.follow_link(text=&#39;Sign out&#39;)</code></pre>
+
+<p>The basic flow is:</p>
+
+<ul>
+<li>Open the site and login;</li>
+
+<li>Session is handled by cookiejar, automatically;</li>
+
+<li>We list the first 3 mail messages;</li>
+
+<li>For each mail message, we open it and read it&#8217;s contents;</li>
+
+<li>We go back to the Inbox and to the next mail message;</li>
+
+<li>All done, we can logoff;</li>
+
+<li>The first 3 mail messages will have it&#8217;s status changed to &#8220;read&#8221; if you look at it in the gmail web interface.</li>
+</ul>
+
+<p>Why gmail? It was only an example. I know we have <a href='http://libgmail.sourceforge.net'>libgmail</a> , but again, it was only an example, with login forms and a session to handle :)</p>
   </div>
 
   <!-- google_friend_connect-recommendations -->
@@ -175,7 +259,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       
         <li>Tags:
           
-            <a href="http://stockrt.github.com/tags/#misc">misc</a>
+            <a href="http://stockrt.github.com/tags/#python">python</a>
           
             <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
           
@@ -184,33 +268,33 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     
 
     <li>Meta:
-      <a href="http://stockrt.github.com/p/sunset-in-porto-alegre" rel="bookmark">permalink</a>
+      <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" rel="bookmark">permalink</a>
       <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
     </li>
 
     <li>Share:
       <span class="sbookmark">
-        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
-        <a href="http://twitter.com/home?status=Weekend codes: Sunset in Porto Alegre: http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
-        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
-        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
-        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
-        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
-        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
-        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
-        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
-        <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
-        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/sunset-in-porto-alegre&submitUrl=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
-        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/sunset-in-porto-alegre&t=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
-        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
-        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
-        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
-        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/sunset-in-porto-alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
-        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/sunset-in-porto-alegre&title=Weekend codes: Sunset in Porto Alegre" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: handling html forms with python mechanize and BeautifulSoup: http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google2.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <a href="http://digg.com/submit?phase=2&url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://buzz.yahoo.com/submit?u=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&submitUrl=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo! Buzz" title="Yahoo! Buzz" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&t=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://www.sphinn.com/submit.php?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/sphinn.png" alt="Spinn" title="Sphinn" border="0"></a>
+        <a href="http://tipd.com/submit.php?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/tipd.png" alt="Tipd" title="Tipd" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=Weekend codes: handling html forms with python mechanize and BeautifulSoup" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
         <!-- addthis_toolbox -->
         
           
-            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/sunset-in-porto-alegre', 'Weekend codes: Sunset in Porto Alegre')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup', 'Weekend codes: handling html forms with python mechanize and BeautifulSoup')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
           
         
@@ -226,14 +310,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <!-- favorites -->
   <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
   <img src="http://stockrt.github.com/images/sbuttons/favorites.png" border="0">
-  <a href="javascript:addToFavorites('Weekend codes: Sunset in Porto Alegre', 'http://stockrt.github.com/p/sunset-in-porto-alegre')" title="Add to Favorites">Favorites</a>
+  <a href="javascript:addToFavorites('Weekend codes: handling html forms with python mechanize and BeautifulSoup', 'http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup')" title="Add to Favorites">Favorites</a>
 
   <!-- disqus -->
   
     
       <!-- disqus_view_comments -->
       
-        <a href="http://stockrt.github.com/p/sunset-in-porto-alegre/#disqus_thread">View Comments</a>
+        <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup/#disqus_thread">View Comments</a>
       
     
   
@@ -241,16 +325,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 </ul>
 
-<div class="hentry" id="/p/sunset-in-porto-alegre">
+<div class="hentry" id="/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup">
   <ul class="posts">
     
     
-      <li>Previous: <a href="http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize" title="It is always useful to know how to quickly instantiate a browser in the command line or inside your python...">Emulating a Browser in Python with mechanize</a></li>
+      <li>Previous: <a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt" title="Every time (every few minutes?) I was looking at my git versioned projects (all my projects?) I encounter myself in...">git branch in your shell prompt</a></li>
     
 
     
-    
-      <li><span>Next: <a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. ### The basic one, substitution You already know this one: sed -i 's/old text/new...">sed quick tips</a></li>
     
   </ul>
 </div>
@@ -261,15 +343,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       <h2>Related Posts</h2>
       <ul class="posts">
         
-          <li><a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about [emulating a browser in python with mechanize](http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize) I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a></li>
-        
           <li><a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt" title="Every time (every few minutes?) I was looking at my git versioned projects (all my projects?) I encounter myself in...">git branch in your shell prompt</a></li>
         
-          <li><a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn't come live right way...">Browser cache invalidation with Javascript and querystring</a></li>
+          <li><a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn&#8217;t come live right way...">Browser cache invalidation with Javascript and querystring</a></li>
         
           <li><a href="http://stockrt.github.com/p/finding-the-next-prime-number-from-a-given-number" title="Finding the next prime number online is useful if you do not have time to calculate it but need a...">Finding the next prime number from a given number</a></li>
         
-          <li><a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. ### The basic one, substitution You already know this one: sed -i 's/old text/new...">sed quick tips</a></li>
+          <li><a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. The basic one, substitution You already know this one: sed -i &#39;s/old text/new text/g&#39;...">sed quick tips</a></li>
+        
+          <li><a href="http://stockrt.github.com/p/sunset-in-porto-alegre" title="Beautiful sunset in the capital city of Rio Grande do Sul, Brazil. My wife and I decided to take some...">Sunset in Porto Alegre</a></li>
         
       </ul>
     </div>
@@ -388,7 +470,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <ul>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about [emulating a browser in python with mechanize](http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize) I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a>
+                  <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about emulating a browser in python with mechanize I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a>
                 </li>
               
                 <li>&raquo;
@@ -396,7 +478,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </li>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn't come live right way...">Browser cache invalidation with Javascript and querystring</a>
+                  <a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn&#8217;t come live right way...">Browser cache invalidation with Javascript and querystring</a>
                 </li>
               
                 <li>&raquo;
@@ -404,7 +486,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </li>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. ### The basic one, substitution You already know this one: sed -i 's/old text/new...">sed quick tips</a>
+                  <a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. The basic one, substitution You already know this one: sed -i &#39;s/old text/new text/g&#39;...">sed quick tips</a>
                 </li>
               
                 <li>&raquo;

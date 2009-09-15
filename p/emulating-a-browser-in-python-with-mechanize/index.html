@@ -228,13 +228,20 @@ print br.geturl()</code></pre>
 
 <p>Downloading a file:</p>
 
-<pre><code>f = br.retrieve(&#39;http://www.google.com.br/intl/pt-BR_br/images/logo.gif&#39;)[0]
+<pre><code># Download
+f = br.retrieve(&#39;http://www.google.com.br/intl/pt-BR_br/images/logo.gif&#39;)[0]
 print f
 fh = open(f)</code></pre>
 
 <p>Setting a proxy for your http navigation:</p>
 
-<pre><code> br.set_proxies({&quot;http&quot;: &quot;joe:password@myproxy.example.com:3128&quot;})</code></pre>
+<pre><code># Proxy and user/password
+br.set_proxies({&quot;http&quot;: &quot;joe:password@myproxy.example.com:3128&quot;})
+
+# Proxy
+br.set_proxies({&quot;http&quot;: &quot;myproxy.example.com:3128&quot;})
+# Proxy password
+br.add_proxy_password(&quot;joe&quot;, &quot;password&quot;)</code></pre>
 
 <p>But, if you just want to quickly open an webpage, without the fancy features above, just issue that:</p>
 
@@ -247,7 +254,9 @@ import urllib
 opener = urllib.FancyURLopener()
 print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</code></pre>
 
-<p>See more in <a href='http://wwwsearch.sourceforge.net/mechanize'>Python mechanize site</a> and <a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'>docs</a>.</p>
+<p>See more in <a href='http://wwwsearch.sourceforge.net/mechanize'>Python mechanize site</a> , <a href='http://wwwsearch.sourceforge.net/mechanize/doc.html'>mechanize docs</a> and <a href='http://wwwsearch.sourceforge.net/ClientForm'>ClientForm docs</a>.</p>
+
+<p>Also, I have made this post to elucidate how to <a href='http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup'>handle html forms and sessions with python mechanize and BeautifulSoup</a></p>
   </div>
 
   <!-- google_friend_connect-recommendations -->
@@ -369,6 +378,8 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
       <h2>Related Posts</h2>
       <ul class="posts">
         
+          <li><a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about [emulating a browser in python with mechanize](http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize) I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a></li>
+        
           <li><a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt" title="Every time (every few minutes?) I was looking at my git versioned projects (all my projects?) I encounter myself in...">git branch in your shell prompt</a></li>
         
           <li><a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn't come live right way...">Browser cache invalidation with Javascript and querystring</a></li>
@@ -376,8 +387,6 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
           <li><a href="http://stockrt.github.com/p/finding-the-next-prime-number-from-a-given-number" title="Finding the next prime number online is useful if you do not have time to calculate it but need a...">Finding the next prime number from a given number</a></li>
         
           <li><a href="http://stockrt.github.com/p/sed-quick-tips" title="A little collection of sed tips. ### The basic one, substitution You already know this one: sed -i 's/old text/new...">sed quick tips</a></li>
-        
-          <li><a href="http://stockrt.github.com/p/sunset-in-porto-alegre" title="Beautiful sunset in the capital city of Rio Grande do Sul, Brazil. ![](http://stockrt.github.com/images/misc/pordosolnoguaiba.jpg) My wife and I decided to take...">Sunset in Porto Alegre</a></li>
         
       </ul>
     </div>
@@ -494,6 +503,10 @@ print opener.open(&#39;http://user:password@stockrt.github.com&#39;).read()</cod
           <div class="sidebar-node">
             <h3>More Posts</h3>
             <ul>
+              
+                <li>&raquo;
+                  <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about [emulating a browser in python with mechanize](http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize) I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a>
+                </li>
               
                 <li>&raquo;
                   <a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt" title="Every time (every few minutes?) I was looking at my git versioned projects (all my projects?) I encounter myself in...">git branch in your shell prompt</a>
