@@ -33,8 +33,8 @@ author:
     email: stockrt@gmail.com
 
 # Required
-# Lateral image
-image: http://stockrt.github.com/images/misc/pordosolnoguaiba_lat.jpg
+# Lateral image (width should be 200 and for posts should be 640)
+image: http://stockrt.github.com/images/misc/pordosolnoguaibadacasadecultura_lat.jpg
 
 # Optional
 # Limit the more posts listing in the sidebar
