@@ -226,6 +226,26 @@ br.follow_link(text=&#39;Sign out&#39;)</code></pre>
 <li>The first 3 mail messages will have it&#8217;s status changed to &#8220;read&#8221; if you look at it in the gmail web interface.</li>
 </ul>
 
+<p>You may ask, how do I know the name of the form fields to fill?</p>
+
+<p>We can inspect it, before filling:</p>
+
+<pre><code># Open the site
+br.open(&#39;http://gmail.com&#39;)
+
+# Forms
+for f in br.forms():
+    print f</code></pre>
+
+<p>The output contains the fields to fill in the form:</p>
+
+<pre><code>...
+&lt;TextControl(Email=)&gt;
+&lt;PasswordControl(Passwd=)&gt;
+...</code></pre>
+
+<p>And the rest you already know.</p>
+
 <p>Why gmail? It was only an example. I know we have <a href='http://libgmail.sourceforge.net'>libgmail</a> , but again, it was only an example, with login forms and a session to handle :)</p>
   </div>
 

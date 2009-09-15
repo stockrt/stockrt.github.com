@@ -92,5 +92,25 @@ The basic flow is:
 *   The first 3 mail messages will have it's status changed to "read" if you
 look at it in the gmail web interface.
 
+You may ask, how do I know the name of the form fields to fill?
+
+We can inspect it, before filling:
+
+    # Open the site
+    br.open('http://gmail.com')
+
+    # Forms
+    for f in br.forms():
+        print f
+
+The output contains the fields to fill in the form:
+
+    ...
+    <TextControl(Email=)>
+    <PasswordControl(Passwd=)>
+    ...
+
+And the rest you already know.
+
 Why gmail? It was only an example. I know we have [libgmail](http://libgmail.sourceforge.net)
 , but again, it was only an example, with login forms and a session to handle :)
