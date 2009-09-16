@@ -1,4 +1,8 @@
 
+separar bookmarks de social nets (seeds)
+
+snip posts to description in social bmks
+
 http://blogsearch.google.com/ping?url=stockrt.github.com&btnG=Submit+Blog&hl=en
 http://sites.google.com/site/stockrt/
 http://feeds.feedburner.com/weekendcodes?format=xml
@@ -39,5 +43,32 @@ Adsense CSE
 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
 
 
-blogmarks
-newsvine
+http://www.newsvine.com/_tools/seed&save?popoff=0&u=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&h=handling html forms with python mechanize and BeautifulSoup
+http://buzz.yahoo.com/buzz?targetUrl=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&headline=handling html forms with python mechanize and BeautifulSoup
+http://www.livejournal.com/update.bml?subject=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup
+http://twitthis.com/twit?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=handling html forms with python mechanize and BeautifulSoup
+
+http://blogmarks.net/my/new.php?mini=1&simple=1&url=&title
+
+Squidoo Squidoo
+submit to: squidoo.com/lensmaster/bookmark?{url}
+
+Blinkbits Blinkbits
+submit to: blinkbits.com/bookmarklets/save.php?v=1&source_url={url}
+
+Diigo Diigo
+submit to: diigo.com/post?url={url}&title={title}
+
+<a expr:href='&quot;http://dihitt.com.br?botao=enviar&amp;url=&quot;+ data:post.url + &quot;&amp;titulo=&quot; +data:post.title' target='_blank'>diHITT</a>
+<a expr:href='&quot;http://ocioso.com.br/enviarlink.asp?site=&quot;+ data:post.url+ &quot;&amp;titulo=&quot; +data:post.title' target='_blank'>Ocioso</a>
+<a expr:href='&quot;http://www.colmeia.blog.br/submit?url=&quot;+ data:post.url' target='_blank'>Colméia</a>
+<a expr:href='&quot;http://www.linkto.com.br/site.enviaNoticia.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Linkto</a>
+<a expr:href='&quot;http://postsocial.com.br/cgi-bin/ps/recomenda?url=&quot; +data:post.url + &quot;&amp;title=&quot; +data:post.title' target='_blank'>Post Social</a>
+<a expr:href='&quot;http://www.linkk.com.br/submit.php?url=&quot;+ data:post.url + &quot;&amp;title=&quot; +data:post.title' target='_blank'>LinkK</a>
+<a expr:href='&quot;http://ueba.com.br/NovoLink?url=&quot;+ data:post.url + &quot;&amp;titulo=&quot; +data:post.title' target='_blank'>Uêba</a>
+<a expr:href='&quot;http://www.totalnews.com.br/submit.php?url=&quot; + data:post.url' target='_blank'>Total News</a>
+<a expr:href='&quot;http://www.domelhor.net/submit.php?url=&quot; + data:post.url' target='_blank'>Do Melhor</a>
+<a expr:href='&quot;http://www.linkou.com.br/submit.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Linkou</a>
+<a expr:href='&quot;http://digacultura.net/submit.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Diga Cultura</a>
+<a expr:href='&quot;http://pigg.com.br/submit.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Pigg</a>
+<a href='http://www.blogblogs.com.br/my/gadgets/fave?url=http://dicasparablogs.com.br' rel='alternate' target='_blank'>Blogblogs</a></div><br/></div>
