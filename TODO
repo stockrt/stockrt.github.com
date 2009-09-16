@@ -1,13 +1,10 @@
-nomes - mudar para .org?
-
-** americanas e submarino
-
-about page
 
 http://blogsearch.google.com/ping?url=stockrt.github.com&btnG=Submit+Blog&hl=en
 http://sites.google.com/site/stockrt/
 http://feeds.feedburner.com/weekendcodes?format=xml
 http://validator.w3.org/feed/check.cgi?url=http://stockrt.github.com/atom.xml
+
+about page
 
 revisar js includes (disqus, google) em todas as paginas
   nao esta duplicando ou inserindo onde nao devia?
