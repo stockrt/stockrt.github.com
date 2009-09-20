@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   
-    <title>Weekend codes: git branch in your shell prompt</title>
+    <title>Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis</title>
   
 
   
@@ -17,7 +17,7 @@
   
 
   
-    <meta name="keywords" content="linux, programming, python, http, tips, tricks, stuff"/>
+    <meta name="keywords" content="linux, shell, ssh, encryption, tunnel, proxy"/>
   
 
   <!-- feed -->
@@ -117,50 +117,61 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
     <div id="content">
       <ul class="posts">
-  <div class="hentry" id="/p/git-branch-in-your-shell-prompt">
+  <div class="hentry" id="/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis">
   <h2 class="entry-title">
-    <a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt">git branch in your shell prompt</a>
+    <a href="http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis">Navegando com seguranca e sem tarifacao em cafes e hoteis</a>
   </h2>
 
   
     
   
 
-  <abbr class="published" title="2009-08-31T00:00:00-03:00">
-    31 Aug 2009
+  <abbr class="published" title="2009-09-20T00:00:00-03:00">
+    20 Sep 2009
   </abbr>
 
   <br class="clear"/>
 
   <div class="entry-content">
-    <p>Every time (every few minutes?) I was looking at my git versioned projects (all my projects?) I encounter myself in doubt:</p>
+    <p>Quando estiver pensando em se hospedar em um hotel, ou utilizar redes de cafés, pergunte primeiro o quanto custa o minuto ou diária de acesso à internet.</p>
 
-<p>Am I at the branch I think I am?</p>
+<p>Normalmente o custo é alto. Se este for o caso, opte pela conexão tarifada por minuto, e use o seguinte truque para economizar alguns trocados:</p>
 
-<p>And there was I, issuing a &#8220;git branch&#8221; command to check it&#8230;</p>
+<ol>
+<li>Logue no sistema do hotel normalmente, optanto pela menor tarifa para pouco tempo de utilização;</li>
 
-<p>That is enough! I said.</p>
+<li>Execute um dos comandos abaixo, ssh ou putty;</li>
 
-<p>Looking at the <a href='http://github.com/guides'>github guides</a> I found <a href='http://github.com/guides/put-your-git-branch-name-in-your-shell-prompt'>this tip</a> very interesting, so I decided to bettered it, and to publish as a tip here.</p>
+<li>Faça logoff do sistema de tarifação;</li>
 
-<p>It will show in your prompt which is your current branch, when your current work directory is a git initialized one.</p>
+<li>Configure seu browser e demais aplicativos para usar proxy SOCKS 5 na porta local escolhida.</li>
+</ol>
 
-<p>To use it, just place this line inside your ~/.bashrc or into /etc/profile.d/git-branch.sh or /etc/bashrc or even /etc/profile, the choice is yours:</p>
+<h3 id='usando_linux'>Usando linux</h3>
 
-<pre><code># git branch
-parse_git_branch() {
-    git branch 2&gt; /dev/null | sed -e &#39;/^[^*]/d&#39; -e &#39;s/* \(.*\)/(\1) /&#39;
-}
-PS1=&quot;\$(parse_git_branch)$PS1&quot;</code></pre>
+<p>Se estiver usando linux no seu notebook, você poderá fazer o seguinte: ssh -D 9999 user@servidor</p>
 
-<p>This will give you a prompt like this one:</p>
+<h3 id='usando_windows'>Usando windows</h3>
 
-<pre><code>stockrt@jackbauer ~ $ cd Dropbox/stockrt/git/stockrt.github.com
-(master) stockrt@jackbauer ~/Dropbox/stockrt/git/stockrt.github.com $</code></pre>
+<p>Se estiver no windows, utilize o putty: putty.exe -D 9999 user@servidor</p>
 
-<p>Here you can see a &#8220;normal&#8221; prompt and then, when I enter one of my git versioned directories, a &#8220;git branchned&#8221; prompt.</p>
+<dl>
+<dt>Nota: Você precisa, claro, ter um &#8220;servidor&#8221; rodando um sshd e uma conta nele</dt>
 
-<p>Way cool.</p>
+<dd>) Talvez o seu linux que fica rodando no desktop, em casa? Ou aquele servidor da faculdade/trabalho?</dd>
+</dl>
+
+<p>Outra dica é configurar o putty para manter a sessão sempre aberta, com keepalive (Category / Connection / Seconds between keepalives / 5) ou manter a sessão ativa deixando um comando qualquer rodando no shell, que gere tráfego no terminal: while true; do date; sleep 5; done</p>
+
+<h3 id='depois_de_criado_o_proxy_dinmico'>Depois de criado o proxy dinâmico</h3>
+
+<p>Agora você pode fazer logoff do sistema de internet tarifado e então apontar o firefox, ou qualquer outra aplicação (uma nova sessão de ssh, por exemplo), para o proxy dinâmico local, que agora ouve na porta local 9999.</p>
+
+<p><a href='http://vectrosecurity.com/content/view/67/26'>Outros</a> <a href='http://www.nardol.org/2009/3/9/maceio-took-some-days-off'>posts</a> também descrevem essa técnica.</p>
+
+<p>Com essas medidas você pode economizar no acesso, além de garantir uma navegação muito mais segura na internet, pois tudo será tunelado e codificado pelo ssh.</p>
+
+<p>Enjoy the hacking.</p>
   </div>
 
   <!-- google_friend_connect-recommendations -->
@@ -196,48 +207,50 @@ PS1=&quot;\$(parse_git_branch)$PS1&quot;</code></pre>
       
         <li>Tags:
           
-            <a href="http://stockrt.github.com/tags/#git">git</a>
+            <a href="http://stockrt.github.com/tags/#linux">linux</a>
           
-            <a href="http://stockrt.github.com/tags/#en-US">en-US</a>
+            <a href="http://stockrt.github.com/tags/#misc">misc</a>
+          
+            <a href="http://stockrt.github.com/tags/#pt-BR">pt-BR</a>
           
         </li>
       
     
 
     <li>Meta:
-      <a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt" rel="bookmark">permalink</a>
+      <a href="http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis" rel="bookmark">permalink</a>
       <a href="http://feeds.feedburner.com/weekendcodes">atom</a>
     </li>
 
     <li>Share:
       <span class="sbookmark">
-        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
-        <a href="http://twitter.com/home?status=Weekend codes: git branch in your shell prompt: http://stockrt.github.com/p/git-branch-in-your-shell-prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
-        <a href="http://ping.fm/ref/?link=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/pingfm.png" alt="Ping FM" title="Ping FM" border="0"></a>
-        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/git-branch-in-your-shell-prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
-        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
-        <a href="http://digg.com/submit?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
-        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
-        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
-        <a href="http://www.friendfeed.com/share?link=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/friendfeed.png" alt="FriendFeed" title="FriendFeed" border="0"></a>
-        <a href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&Url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&Title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/blinklist.png" alt="BlinkList" title="BlinkList" border="0"></a>
-        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
-        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/git-branch-in-your-shell-prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
-        <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
-        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&t=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
-        <a href="http://news.ycombinator.com/submitlink?u=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&t=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/ycombinator.png" alt="Ycombinator" title="Ycombinator" border="0"></a>
-        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
-        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
-        <a href="http://www.mixx.com/submit?page_url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/mixx.png" alt="Mixx it" title="Mixx it" border="0"></a>
-        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
-        <a href="http://www.newsvine.com/_tools/seed&save?popoff=0&u=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&h=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/newsvine.png" alt="Newsvine" title="Newsvine" border="0"></a>
-        <a href="http://buzz.yahoo.com/buzz?targetUrl=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&headline=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo Buzz" title="Yahoo Buzz" border="0"></a>
-        <a href="http://diigo.com/post?url=http://stockrt.github.com/p/git-branch-in-your-shell-prompt&title=Weekend codes: git branch in your shell prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/diigo.png" alt="Diigo" title="Diigo" border="0"></a>
-        <a href="http://www.livejournal.com/update.bml?subject=http://stockrt.github.com/p/git-branch-in-your-shell-prompt" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/livejournal.png" alt="Livejournal" title="Livejournal" border="0"></a>
+        <a href="http://del.icio.us/post?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/delicious.png" alt="del.icio.us" title="del.icio.us" border="0"></a>
+        <a href="http://twitter.com/home?status=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis: http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/twitter.png" alt="Twitter" title="Twitter" border="0"></a>
+        <a href="http://ping.fm/ref/?link=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/pingfm.png" alt="Ping FM" title="Ping FM" border="0"></a>
+        <a href="http://www.facebook.com/sharer.php?u=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/facebook.png" alt="Facebook" title="Facebook" border="0"></a>
+        <a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/google.png" alt="Google Bookmarks" title="Google Bookmarks" border="0"></a>
+        <a href="http://digg.com/submit?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/digg.png" alt="Digg this" title="Digg this" border="0"></a>
+        <a href="http://reddit.com/submit?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/reddit.png" alt="Reddit" title="Reddit" border="0"></a>
+        <a href="http://www.stumbleupon.com/submit?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/stumbleupon.png" alt="StumbleUpon" title="StumbleUpon" border="0"></a>
+        <a href="http://www.friendfeed.com/share?link=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/friendfeed.png" alt="FriendFeed" title="FriendFeed" border="0"></a>
+        <a href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&Url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&Title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/blinklist.png" alt="BlinkList" title="BlinkList" border="0"></a>
+        <a href="http://slashdot.org/slashdot-it.pl?op=basic&url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/slashdot.png" alt="Slashdot it" title="Slashdot it" border="0"></a>
+        <a href="http://www.technorati.com/faves?add=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/technorati.png" alt="Technorati" title="Technorati" border="0"></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/linkedin.png" alt="Linkedin" title="Linkedin" border="0"></a>
+        <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&t=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoomyweb.png" alt="Yahoo! MyWeb" title="Yahoo! MyWeb" border="0"></a>
+        <a href="http://news.ycombinator.com/submitlink?u=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&t=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/ycombinator.png" alt="Ycombinator" title="Ycombinator" border="0"></a>
+        <a href="http://www.spurl.net/spurl.php?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/spurl.png" alt="Spurl" title="Spurl" border="0"></a>
+        <a href="http://dzone.com/links/add.html?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/dzone.png" alt="DZone" title="DZone" border="0"></a>
+        <a href="http://www.mixx.com/submit?page_url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/mixx.png" alt="Mixx it" title="Mixx it" border="0"></a>
+        <a href="http://scriptandstyle.com/submit?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/scriptandstyle.png" alt="Script and Style" title="Script and Style" border="0"></a>
+        <a href="http://www.newsvine.com/_tools/seed&save?popoff=0&u=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&h=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/newsvine.png" alt="Newsvine" title="Newsvine" border="0"></a>
+        <a href="http://buzz.yahoo.com/buzz?targetUrl=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&headline=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/yahoobuzz.png" alt="Yahoo Buzz" title="Yahoo Buzz" border="0"></a>
+        <a href="http://diigo.com/post?url=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis&title=Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/diigo.png" alt="Diigo" title="Diigo" border="0"></a>
+        <a href="http://www.livejournal.com/update.bml?subject=http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/livejournal.png" alt="Livejournal" title="Livejournal" border="0"></a>
         <!-- addthis_toolbox -->
         
           
-            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/git-branch-in-your-shell-prompt', 'Weekend codes: git branch in your shell prompt')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
+            <a href="http://www.addthis.com/bookmark.php?v=250&pub=stockrt" onmouseover="return addthis_open(this, '', 'http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis', 'Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis')" onmouseout="addthis_close();" onclick="return addthis_sendto();" target="_blank"><img src="http://stockrt.github.com/images/sbuttons/addthis.png" alt="AddThis" title="AddThis" border="0"></a>
             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=stockrt"></script>
           
         
@@ -253,14 +266,14 @@ PS1=&quot;\$(parse_git_branch)$PS1&quot;</code></pre>
   <!-- favorites -->
   <script src="http://stockrt.github.com/javascripts/favorites.js" type="text/javascript"></script>
   <img src="http://stockrt.github.com/images/sbuttons/favorites.png" border="0">
-  <a href="javascript:addToFavorites('Weekend codes: git branch in your shell prompt', 'http://stockrt.github.com/p/git-branch-in-your-shell-prompt')" title="Add to Favorites">Favorites</a>
+  <a href="javascript:addToFavorites('Weekend codes: Navegando com seguranca e sem tarifacao em cafes e hoteis', 'http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis')" title="Add to Favorites">Favorites</a>
 
   <!-- disqus -->
   
     
       <!-- disqus_view_comments -->
       
-        <a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt/#disqus_thread">View Comments</a>
+        <a href="http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis/#disqus_thread">View Comments</a>
       
     
   
@@ -268,16 +281,14 @@ PS1=&quot;\$(parse_git_branch)$PS1&quot;</code></pre>
 
 </ul>
 
-<div class="hentry" id="/p/git-branch-in-your-shell-prompt">
+<div class="hentry" id="/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis">
   <ul class="posts">
     
     
-      <li>Previous: <a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn&#8217;t come live right way...">Browser cache invalidation with Javascript and querystring</a></li>
+      <li>Previous: <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about emulating a browser in python with mechanize I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a></li>
     
 
     
-    
-      <li><span>Next: <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about [emulating a browser in python with mechanize](http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize) I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a></li>
     
   </ul>
 </div>
@@ -288,9 +299,9 @@ PS1=&quot;\$(parse_git_branch)$PS1&quot;</code></pre>
       <h2>Related Posts</h2>
       <ul class="posts">
         
-          <li><a href="http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis" title="Quando estiver pensando em se hospedar em um hotel, ou utilizar redes de cafés, pergunte primeiro o quanto custa o...">Navegando com seguranca e sem tarifacao em cafes e hoteis</a></li>
+          <li><a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about emulating a browser in python with mechanize I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a></li>
         
-          <li><a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about [emulating a browser in python with mechanize](http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize) I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a></li>
+          <li><a href="http://stockrt.github.com/p/git-branch-in-your-shell-prompt" title="Every time (every few minutes?) I was looking at my git versioned projects (all my projects?) I encounter myself in...">git branch in your shell prompt</a></li>
         
           <li><a href="http://stockrt.github.com/p/browser-cache-invalidation-with-javascript-and-querystring" title="Some time ago I started my blog here at github and noticed that new posts didn&#8217;t come live right way...">Browser cache invalidation with Javascript and querystring</a></li>
         
@@ -428,7 +439,7 @@ PS1=&quot;\$(parse_git_branch)$PS1&quot;</code></pre>
                 </li>
               
                 <li>&raquo;
-                  <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about [emulating a browser in python with mechanize](http://stockrt.github.com/p/emulating-a-browser-in-python-with-mechanize) I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a>
+                  <a href="http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup" title="In the post about emulating a browser in python with mechanize I have showed you how to make some basic...">handling html forms with python mechanize and BeautifulSoup</a>
                 </li>
               
                 <li>&raquo;

@@ -56,3 +56,12 @@ http://www.linkou.com.br/submit.php?url= &title=
 http://digacultura.net/submit.php?url= &title=
 http://pigg.com.br/submit.php?url= &title=
 http://www.blogblogs.com.br/my/gadgets/fave?url=
+
+
+
+http://vectrosecurity.com/content/view/67/26/
+putty.exe -D 9853 username@sshhost
+$ssh -D 9999 username@ip-address-of-ssh-server
+http://foxyproxy.mozdev.org/
+http://www.nardol.org/2009/3/9/maceio-took-some-days-off
+

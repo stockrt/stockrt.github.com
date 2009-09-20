@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-09-20T02:54:01-03:00</updated>
+  <updated>2009-09-20T12:14:33-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -18,6 +18,52 @@
     
   
 
+  
+    <entry>
+      <title>Navegando com seguranca e sem tarifacao em cafes e hoteis</title>
+      <link href="http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis"/>
+      <updated>2009-09-20T00:00:00-03:00</updated>
+      <id>http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis</id>
+      <content type="html">&lt;p&gt;Quando estiver pensando em se hospedar em um hotel, ou utilizar redes de cafés, pergunte primeiro o quanto custa o minuto ou diária de acesso à internet.&lt;/p&gt;
+
+&lt;p&gt;Normalmente o custo é alto. Se este for o caso, opte pela conexão tarifada por minuto, e use o seguinte truque para economizar alguns trocados:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Logue no sistema do hotel normalmente, optanto pela menor tarifa para pouco tempo de utilização;&lt;/li&gt;
+
+&lt;li&gt;Execute um dos comandos abaixo, ssh ou putty;&lt;/li&gt;
+
+&lt;li&gt;Faça logoff do sistema de tarifação;&lt;/li&gt;
+
+&lt;li&gt;Configure seu browser e demais aplicativos para usar proxy SOCKS 5 na porta local escolhida.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id='usando_linux'&gt;Usando linux&lt;/h3&gt;
+
+&lt;p&gt;Se estiver usando linux no seu notebook, você poderá fazer o seguinte: ssh -D 9999 user@servidor&lt;/p&gt;
+
+&lt;h3 id='usando_windows'&gt;Usando windows&lt;/h3&gt;
+
+&lt;p&gt;Se estiver no windows, utilize o putty: putty.exe -D 9999 user@servidor&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Nota: Você precisa, claro, ter um &amp;#8220;servidor&amp;#8221; rodando um sshd e uma conta nele&lt;/dt&gt;
+
+&lt;dd&gt;) Talvez o seu linux que fica rodando no desktop, em casa? Ou aquele servidor da faculdade/trabalho?&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Outra dica é configurar o putty para manter a sessão sempre aberta, com keepalive (Category / Connection / Seconds between keepalives / 5) ou manter a sessão ativa deixando um comando qualquer rodando no shell, que gere tráfego no terminal: while true; do date; sleep 5; done&lt;/p&gt;
+
+&lt;h3 id='depois_de_criado_o_proxy_dinmico'&gt;Depois de criado o proxy dinâmico&lt;/h3&gt;
+
+&lt;p&gt;Agora você pode fazer logoff do sistema de internet tarifado e então apontar o firefox, ou qualquer outra aplicação (uma nova sessão de ssh, por exemplo), para o proxy dinâmico local, que agora ouve na porta local 9999.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://vectrosecurity.com/content/view/67/26'&gt;Outros&lt;/a&gt; &lt;a href='http://www.nardol.org/2009/3/9/maceio-took-some-days-off'&gt;posts&lt;/a&gt; também descrevem essa técnica.&lt;/p&gt;
+
+&lt;p&gt;Com essas medidas você pode economizar no acesso, além de garantir uma navegação muito mais segura na internet, pois tudo será tunelado e codificado pelo ssh.&lt;/p&gt;
+
+&lt;p&gt;Enjoy the hacking.&lt;/p&gt;</content>
+    </entry>
   
     <entry>
       <title>handling html forms with python mechanize and BeautifulSoup</title>
