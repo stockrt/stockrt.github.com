@@ -29,8 +29,8 @@ Se estiver no windows, utilize o putty:
 
     putty.exe -D 9999 user@servidor
 
-Você precisa, claro, ter um "servidor" rodando um sshd e uma conta nele
-:) Talvez o seu linux que fica rodando no desktop, em casa? Ou aquele
+Nota: Você precisa, claro, ter um "servidor" rodando um sshd e uma conta nele :)
+Talvez o seu linux que fica rodando no desktop, em casa? Ou aquele
 servidor da faculdade/trabalho?
 
 Outra dica é configurar o putty para manter a sessão sempre aberta, com
