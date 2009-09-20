@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2009-09-20T12:22:32-03:00</updated>
+  <updated>2009-09-20T12:36:23-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -20,10 +20,10 @@
 
   
     <entry>
-      <title>Navegando com seguranca e sem tarifacao em cafes e hoteis</title>
-      <link href="http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis"/>
+      <title>Navegando com segurança e sem tarifação em cafés e hotéis</title>
+      <link href="http://stockrt.github.com/p/navegando-com-seguran%C3%A7a-e-sem-tarifa%C3%A7%C3%A3o-em-caf%C3%A9s-e-hot%C3%A9is"/>
       <updated>2009-09-20T00:00:00-03:00</updated>
-      <id>http://stockrt.github.com/p/navegando-com-seguranca-e-sem-tarifacao-em-cafes-e-hoteis</id>
+      <id>http://stockrt.github.com/p/navegando-com-segurança-e-sem-tarifação-em-cafés-e-hotéis</id>
       <content type="html">&lt;p&gt;Quando estiver pensando em se hospedar em um hotel, ou utilizar redes de cafés, pergunte primeiro o quanto custa o minuto ou diária de acesso à internet.&lt;/p&gt;
 
 &lt;p&gt;Normalmente o custo é alto. Se este for o caso, opte pela conexão tarifada por minuto, e use o seguinte truque para economizar alguns trocados:&lt;/p&gt;
@@ -35,7 +35,7 @@
 
 &lt;li&gt;Faça logoff do sistema de tarifação;&lt;/li&gt;
 
-&lt;li&gt;Configure seu browser e demais aplicativos para usar proxy SOCKS 5 na porta local escolhida.&lt;/li&gt;
+&lt;li&gt;Configure seu browser e demais aplicativos para usar proxy SOCKS na porta local escolhida.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id='usando_linux'&gt;Usando linux&lt;/h3&gt;

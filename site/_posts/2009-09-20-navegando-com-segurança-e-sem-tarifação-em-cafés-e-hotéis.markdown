@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Navegando com seguranca e sem tarifacao em cafes e hoteis
+title: Navegando com segurança e sem tarifação em cafés e hotéis
 tags: [linux, misc, pt-BR]
 keywords: linux, shell, ssh, encryption, tunnel, proxy
 published: true
@@ -16,7 +16,7 @@ por minuto, e use o seguinte truque para economizar alguns trocados:
 pouco tempo de utilização;
 2. Execute um dos comandos abaixo, ssh ou putty;
 3. Faça logoff do sistema de tarifação;
-4. Configure seu browser e demais aplicativos para usar proxy SOCKS 5 na
+4. Configure seu browser e demais aplicativos para usar proxy SOCKS na
 porta local escolhida.
 
 ### Usando linux
