@@ -21,10 +21,12 @@ porta local escolhida.
 
 ### Usando linux
 Se estiver usando linux no seu notebook, você poderá fazer o seguinte:
+
     ssh -D 9999 user@servidor
 
 ### Usando windows
 Se estiver no windows, utilize o putty:
+
     putty.exe -D 9999 user@servidor
 
 Nota: Você precisa, claro, ter um "servidor" rodando um sshd e uma conta nele
@@ -35,6 +37,7 @@ Outra dica é configurar o putty para manter a sessão sempre aberta, com
 keepalive (Category / Connection / Seconds between keepalives / 5) ou manter
 a sessão ativa deixando um comando qualquer rodando no shell, que gere
 tráfego no terminal:
+
     while true; do date; sleep 5; done
 
 ### Depois de criado o proxy dinâmico

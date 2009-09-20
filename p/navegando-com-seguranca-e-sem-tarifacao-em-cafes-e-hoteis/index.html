@@ -149,11 +149,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <h3 id='usando_linux'>Usando linux</h3>
 
-<p>Se estiver usando linux no seu notebook, você poderá fazer o seguinte: ssh -D 9999 user@servidor</p>
+<p>Se estiver usando linux no seu notebook, você poderá fazer o seguinte:</p>
+
+<pre><code>ssh -D 9999 user@servidor</code></pre>
 
 <h3 id='usando_windows'>Usando windows</h3>
 
-<p>Se estiver no windows, utilize o putty: putty.exe -D 9999 user@servidor</p>
+<p>Se estiver no windows, utilize o putty:</p>
+
+<pre><code>putty.exe -D 9999 user@servidor</code></pre>
 
 <dl>
 <dt>Nota: Você precisa, claro, ter um &#8220;servidor&#8221; rodando um sshd e uma conta nele</dt>
@@ -161,7 +165,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <dd>) Talvez o seu linux que fica rodando no desktop, em casa? Ou aquele servidor da faculdade/trabalho?</dd>
 </dl>
 
-<p>Outra dica é configurar o putty para manter a sessão sempre aberta, com keepalive (Category / Connection / Seconds between keepalives / 5) ou manter a sessão ativa deixando um comando qualquer rodando no shell, que gere tráfego no terminal: while true; do date; sleep 5; done</p>
+<p>Outra dica é configurar o putty para manter a sessão sempre aberta, com keepalive (Category / Connection / Seconds between keepalives / 5) ou manter a sessão ativa deixando um comando qualquer rodando no shell, que gere tráfego no terminal:</p>
+
+<pre><code>while true; do date; sleep 5; done</code></pre>
 
 <h3 id='depois_de_criado_o_proxy_dinmico'>Depois de criado o proxy dinâmico</h3>
 
