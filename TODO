@@ -43,32 +43,22 @@ Adsense CSE
 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
 
 
-http://www.newsvine.com/_tools/seed&save?popoff=0&u=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&h=handling html forms with python mechanize and BeautifulSoup
-http://buzz.yahoo.com/buzz?targetUrl=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&headline=handling html forms with python mechanize and BeautifulSoup
-http://www.livejournal.com/update.bml?subject=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup
-http://twitthis.com/twit?url=http://stockrt.github.com/p/handling-html-forms-with-python-mechanize-and-BeautifulSoup&title=handling html forms with python mechanize and BeautifulSoup
+<a href="http://buzz.yahoo.com/buzz?targetUrl={{ site.url }}{{ post.url }}&headline={{ site.title }}: {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoobuzz.png" alt="Yahoo Buzz" title="Yahoo Buzz" border="0"></a>
+<a href="http://www.livejournal.com/update.bml?subject={{ site.url }}{{ post.url }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/livejournal.png" alt="Livejournal" title="Livejournal" border="0"></a>
+<a href="http://diigo.com/post?url={{ site.url }}{{ post.url }}&title={{ site.title }}: {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/diigo.png" alt="Diigo" title="Diigo" border="0"></a>
 
-http://blogmarks.net/my/new.php?mini=1&simple=1&url=&title
 
-Squidoo Squidoo
-submit to: squidoo.com/lensmaster/bookmark?{url}
+http://dihitt.com.br?botao=enviar&url= &titulo=
 
-Blinkbits Blinkbits
-submit to: blinkbits.com/bookmarklets/save.php?v=1&source_url={url}
-
-Diigo Diigo
-submit to: diigo.com/post?url={url}&title={title}
-
-<a expr:href='&quot;http://dihitt.com.br?botao=enviar&amp;url=&quot;+ data:post.url + &quot;&amp;titulo=&quot; +data:post.title' target='_blank'>diHITT</a>
-<a expr:href='&quot;http://ocioso.com.br/enviarlink.asp?site=&quot;+ data:post.url+ &quot;&amp;titulo=&quot; +data:post.title' target='_blank'>Ocioso</a>
-<a expr:href='&quot;http://www.colmeia.blog.br/submit?url=&quot;+ data:post.url' target='_blank'>Colméia</a>
-<a expr:href='&quot;http://www.linkto.com.br/site.enviaNoticia.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Linkto</a>
-<a expr:href='&quot;http://postsocial.com.br/cgi-bin/ps/recomenda?url=&quot; +data:post.url + &quot;&amp;title=&quot; +data:post.title' target='_blank'>Post Social</a>
-<a expr:href='&quot;http://www.linkk.com.br/submit.php?url=&quot;+ data:post.url + &quot;&amp;title=&quot; +data:post.title' target='_blank'>LinkK</a>
-<a expr:href='&quot;http://ueba.com.br/NovoLink?url=&quot;+ data:post.url + &quot;&amp;titulo=&quot; +data:post.title' target='_blank'>Uêba</a>
-<a expr:href='&quot;http://www.totalnews.com.br/submit.php?url=&quot; + data:post.url' target='_blank'>Total News</a>
-<a expr:href='&quot;http://www.domelhor.net/submit.php?url=&quot; + data:post.url' target='_blank'>Do Melhor</a>
-<a expr:href='&quot;http://www.linkou.com.br/submit.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Linkou</a>
-<a expr:href='&quot;http://digacultura.net/submit.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Diga Cultura</a>
-<a expr:href='&quot;http://pigg.com.br/submit.php?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>Pigg</a>
-<a href='http://www.blogblogs.com.br/my/gadgets/fave?url=http://dicasparablogs.com.br' rel='alternate' target='_blank'>Blogblogs</a></div><br/></div>
+http://ocioso.com.br/enviarlink.asp?site=& titulo=
+http://www.colmeia.blog.br/submit?url
+http://www.linkto.com.br/site.enviaNoticia.php?url= &title=
+http://postsocial.com.br/cgi-bin/ps/recomenda?url= &title=
+http://www.linkk.com.br/submit.php?url= &title=
+http://ueba.com.br/NovoLink?url=& titulo=
+http://www.totalnews.com.br/submit.php?url=
+http://www.domelhor.net/submit.php?url=
+http://www.linkou.com.br/submit.php?url= &title=
+http://digacultura.net/submit.php?url= &title=
+http://pigg.com.br/submit.php?url= &title=
+http://www.blogblogs.com.br/my/gadgets/fave?url=
