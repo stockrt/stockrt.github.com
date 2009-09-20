@@ -43,13 +43,7 @@ Adsense CSE
 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
 
 
-<a href="http://buzz.yahoo.com/buzz?targetUrl={{ site.url }}{{ post.url }}&headline={{ site.title }}: {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/yahoobuzz.png" alt="Yahoo Buzz" title="Yahoo Buzz" border="0"></a>
-<a href="http://www.livejournal.com/update.bml?subject={{ site.url }}{{ post.url }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/livejournal.png" alt="Livejournal" title="Livejournal" border="0"></a>
-<a href="http://diigo.com/post?url={{ site.url }}{{ post.url }}&title={{ site.title }}: {{ post.title }}" target="_blank"><img src="{{ site.url }}/images/sbuttons/diigo.png" alt="Diigo" title="Diigo" border="0"></a>
-
-
 http://dihitt.com.br?botao=enviar&url= &titulo=
-
 http://ocioso.com.br/enviarlink.asp?site=& titulo=
 http://www.colmeia.blog.br/submit?url
 http://www.linkto.com.br/site.enviaNoticia.php?url= &title=
