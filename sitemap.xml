@@ -311,7 +311,7 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/misc/</loc>
-  <lastmod>2009-08-11T03:27:47Z</lastmod>
+  <lastmod>2009-10-03T15:09:36Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -326,7 +326,7 @@
  </url>
  <url>
   <loc>http://stockrt.github.com/misc/vitae/</loc>
-  <lastmod>2009-08-11T03:27:47Z</lastmod>
+  <lastmod>2009-10-03T15:09:36Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -335,8 +335,113 @@
   <priority>0.5000</priority>
  </url>
  <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.docx</loc>
+  <lastmod>2009-10-03T14:26:15Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.html</loc>
+  <lastmod>2009-10-03T15:13:29Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.mhtml</loc>
+  <lastmod>2009-10-03T14:25:58Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
   <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.pdf</loc>
   <lastmod>2009-08-11T03:27:47Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider.rtf</loc>
+  <lastmod>2009-10-03T14:26:07Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/</loc>
+  <lastmod>2009-10-03T15:10:58Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/cnpqLoader.css</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/cnpqLoader.js</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/curriculo.css</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/hint_ajax.css</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/hint_ajax.js</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/ico_relevante.gif</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/jquery-1.3.2.min.js</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/servletcarimbo.jpg</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/servletrecuperafoto.jpg</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/rogerio_schneider_files/util.js</loc>
+  <lastmod>2009-10-03T15:14:10Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/vitae_online.html</loc>
+  <lastmod>2009-10-03T15:13:34Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/vitae_online_arquivos/</loc>
+  <lastmod>2009-10-03T15:08:29Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/vitae_online_arquivos/filelist.xml</loc>
+  <lastmod>2009-10-03T15:14:23Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/vitae_online_arquivos/image001.jpg</loc>
+  <lastmod>2009-10-03T15:14:23Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/vitae_online_arquivos/image002.jpg</loc>
+  <lastmod>2009-10-03T15:14:23Z</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://stockrt.github.com/misc/vitae/vitae_online_arquivos/image003.gif</loc>
+  <lastmod>2009-10-03T15:14:23Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
