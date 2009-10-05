@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /cur
+Sitemap: http://stockrt.github.com/sitemap.xml
