@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Traduzindo com pytranslate diretamente do Google
-tags: [linux, pt-BR]
-keywords: linux, shell, python
+tags: [python, pt-BR]
+keywords: pytranslate, python, google
 published: true
 ---
 Resolvi traduzir alguns textos em lote, e para isso utilizei esse módulo

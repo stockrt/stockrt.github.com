@@ -27,9 +27,10 @@ fi
 echo "---
 layout: post
 title: $To
-tags: [linux, en-US]
+tags: [linux, shell, python, pt-BR, en-US]
 keywords: linux, shell, python
 published: true
 ---
 your text here" >> "$P"
+
 echo "Created: \"$P\""
