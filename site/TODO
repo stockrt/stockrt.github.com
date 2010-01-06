@@ -1,4 +1,6 @@
 
+remover o nome do site dos titles todos!
+
 separar bookmarks de social nets (seeds)
 
 snip posts to description in social bmks
@@ -19,30 +21,6 @@ http://www.igvita.com/lifestream/
 
 - convert jpg png gif ico e pngcrunch e demais gif optm (perhaps com PIL?)
 
-
-Adsense CSE
-
-<form action="http://www.google.com.br/cse" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-1253631753473606:dbbreij60h9" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-
-<form action="http://www.google.com/cse" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-1253631753473606:pwtiikqr6cl" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-
-
 http://dihitt.com.br?botao=enviar&url= &titulo=
 http://ocioso.com.br/enviarlink.asp?site=& titulo=
 http://www.colmeia.blog.br/submit?url
@@ -56,28 +34,3 @@ http://www.linkou.com.br/submit.php?url= &title=
 http://digacultura.net/submit.php?url= &title=
 http://pigg.com.br/submit.php?url= &title=
 http://www.blogblogs.com.br/my/gadgets/fave?url=
-
-
-
-http://vectrosecurity.com/content/view/67/26/
-putty.exe -D 9853 username@sshhost
-$ssh -D 9999 username@ip-address-of-ssh-server
-http://foxyproxy.mozdev.org/
-http://www.nardol.org/2009/3/9/maceio-took-some-days-off
-
-
-
-
-
-
-<form action="http://stockrt.github.com" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-1253631753473606:4tf7bg-3vb6" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="ISO-8859-1" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-
