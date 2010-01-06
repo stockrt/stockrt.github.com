@@ -1,4 +1,15 @@
 // Add page to the browser's Favorites
 function addToFavorites(title, url) {
-    window.external.AddFavorite(url, title);
+    if (window.sidebar) {
+        // Mozilla Firefox Bookmark
+        window.sidebar.addPanel(title, url, "");
+    }
+    else if (window.external) {
+        // IE Favorite
+        window.external.AddFavorite(url, title);
+    }
+    else if (window.opera && window.print) {
+        // Opera Hotlist
+        return true;
+    }
 }
