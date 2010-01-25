@@ -28,4 +28,4 @@ facilidade. O retorno dele sempre será a sentença completa (frase) traduzida.
     cd stockrt-pytranslate*
     ./setup.py install
 
-Você pode obter o código dele [aqui](http://github.com/stockrt/pytranslate)
+Você pode obter o código do [pytranslate aqui](http://github.com/stockrt/pytranslate)

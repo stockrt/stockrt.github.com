@@ -1,6 +1,4 @@
 
-remover o nome do site dos titles todos!
-
 separar bookmarks de social nets (seeds)
 
 snip posts to description in social bmks
@@ -21,16 +19,36 @@ http://www.igvita.com/lifestream/
 
 - convert jpg png gif ico e pngcrunch e demais gif optm (perhaps com PIL?)
 
-http://dihitt.com.br?botao=enviar&url= &titulo=
-http://ocioso.com.br/enviarlink.asp?site=& titulo=
-http://www.colmeia.blog.br/submit?url
-http://www.linkto.com.br/site.enviaNoticia.php?url= &title=
-http://postsocial.com.br/cgi-bin/ps/recomenda?url= &title=
-http://www.linkk.com.br/submit.php?url= &title=
-http://ueba.com.br/NovoLink?url=& titulo=
-http://www.totalnews.com.br/submit.php?url=
-http://www.domelhor.net/submit.php?url=
-http://www.linkou.com.br/submit.php?url= &title=
-http://digacultura.net/submit.php?url= &title=
-http://pigg.com.br/submit.php?url= &title=
-http://www.blogblogs.com.br/my/gadgets/fave?url=
+
+
+topics
+- scrapping
+- easy_install (url, file, tar.gz, easy_install . ou /path/ ou nome)
+- html2text
+- filter_ascii (pre html2text)
+
+    soup = BeautifulSoup(html)
+
+    html2 = str(soup.findAll('span', attrs={'id': '_ctl0_content_Price'})[0])
+ou
+    s = soup.findAll('span', attrs={'id': '_ctl0_content_Price'})[0]
+    title = soup.find('span', attrs={'id': '_ctl0_content_HeadLine1'}).string 
+
+    html2 = s.string
+
+    newhtml = filter_ascii(html2)
+    price = html2text.html2text(newhtml)[1:].strip()
+
+    # Images src
+    soup = BeautifulSoup(html)
+    for img in soup.findAll('img', attrs={'id': re.compile('imgGallery\d+')}):
+        print 'http:' + img.get('src').strip()
+
+    title = soup.find('span',
+                          attrs={'id':
+                          '_ctl0_content_HeadLine1'}).string.strip() 
+
+
+
+http://blogs.netapp.com/eislers_nfs_blog/2008/08/blog-post-serie.html
+
