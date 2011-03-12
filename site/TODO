@@ -57,3 +57,14 @@ http://blogs.netapp.com/eislers_nfs_blog/2008/08/blog-post-serie.html
 def try_call_n_times(n, f, *args, **kwargs):
 
 def filter_ascii(text):
+
+
+
+date -d @Epoch
+date -d @1268727836
+date -d "1970-01-01 1268727836 sec GMT"
+date -d @1268727836 +"%d-%m-%Y %T %z"
+perl -e "print scalar(localtime(1268727836))"
+
+
+
