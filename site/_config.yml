@@ -160,8 +160,8 @@ google_friend_connect:
 links:
     - name: Projects
       url: http://stockrt.github.com/projects
-    - name: Directory listing at home
-      url: http://stockrtweb.homelinux.com
+    - name: Github
+      url: https://github.com/stockrt
 
 # Optional
 blogroll:
