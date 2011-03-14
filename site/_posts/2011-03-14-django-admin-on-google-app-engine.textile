@@ -1,0 +1,35 @@
+---
+layout: post
+title: Django Admin on Google App Engine
+
+tags: [gae, django, python, en-US]
+keywords: gae, django, python
+published: true
+---
+h2. Django Admin on GAE
+
+Did you ever wanted to run Django's Admin interface on Google's App Engine?
+Now you can and we have made a live sample so you can clone, try and use it.
+
+h2. Here is what you want to know
+
+This is running thanks to the projects listed below:
+"djangoappengine":app
+"django-nonrel":nonrel
+
+h2. The real thing, a live sample
+
+"https://github.com/stockrt/djangoadminongae":sample
+"http://djangoadminongae.appspot.com/admin":sampleonline
+
+h2. Starting your fresh project
+
+Here you can find a "djangoappengine bootstrap script":boot to start a fresh
+project like this one but with the newest possible versions of all deps. The
+same script was used to create this sample project.
+
+[app]http://www.allbuttonspressed.com/projects/djangoappengine
+[nonrel]http://www.allbuttonspressed.com/projects/django-nonrel
+[sample]https://github.com/stockrt/djangoadminongae
+[sampleonline]http://djangoadminongae.appspot.com/admin
+[boot]https://github.com/stockrt/djangoappengine_bootstrap
