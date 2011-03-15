@@ -4,7 +4,7 @@
   <subtitle>Codes and random stuff I am up to share with you</subtitle>
   <link href="http://feeds.feedburner.com/weekendcodes" rel="self"/>
   <link href="http://stockrt.github.com"/>
-  <updated>2011-03-14T00:29:36-03:00</updated>
+  <updated>2011-03-15T01:38:59-03:00</updated>
   <id>http://stockrt.github.com/</id>
 
   
@@ -55,13 +55,13 @@ same script was used to create this sample project.&lt;/p&gt;
 
 &lt;h3 id='utilizao'&gt;Utilização:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;import translate
+&lt;pre&gt;&lt;code&gt;import pytranslate
 
-print translate.translate(&amp;#39;hello&amp;#39;, sl=&amp;#39;english&amp;#39;, tl=&amp;#39;portuguese&amp;#39;)
-print translate.translate(&amp;#39;hello&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;portuguese&amp;#39;)
-print translate.translate(&amp;#39;hallo&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;portuguese&amp;#39;)
-print translate.translate(&amp;#39;hallo&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;french&amp;#39;)
-print translate.translate(&amp;#39;Bonjour&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;dutch&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+print pytranslate.translate(&amp;#39;hello&amp;#39;, sl=&amp;#39;english&amp;#39;, tl=&amp;#39;portuguese&amp;#39;)
+print pytranslate.translate(&amp;#39;hello&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;portuguese&amp;#39;)
+print pytranslate.translate(&amp;#39;hallo&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;portuguese&amp;#39;)
+print pytranslate.translate(&amp;#39;hallo&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;french&amp;#39;)
+print pytranslate.translate(&amp;#39;Bonjour&amp;#39;, sl=&amp;#39;auto&amp;#39;, tl=&amp;#39;dutch&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id='a_instalao__simples'&gt;A instalação é simples:&lt;/h3&gt;
 

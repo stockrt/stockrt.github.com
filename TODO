@@ -1,3 +1,8 @@
+import tab completion error ipython after new module installation (not loaded
+in tab):
+Issue:
+In [1]: %rehashx
+
 colocar author name em cada post com mailto
 
 separar bookmarks de social nets (seeds)
