@@ -23,7 +23,7 @@ facilidade. O retorno dele sempre será a sentença completa (frase) traduzida.
 
 ### A instalação é simples:
 
-    wget http://github.com/stockrt/pytranslate/tarball/master -O pytranslate.tar.gz
+    wget --no-check-certificate https://github.com/stockrt/pytranslate/tarball/master -O pytranslate.tar.gz
     tar xzvf pytranslate.tar.gz
     cd stockrt-pytranslate*
     ./setup.py install
