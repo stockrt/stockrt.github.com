@@ -16,12 +16,19 @@ facilidade. O retorno dele sempre será a sentença completa (frase) traduzida.
     import pytranslate
 
     print pytranslate.translate('hello', sl='english', tl='portuguese')
+    print pytranslate.translate('olá', sl='portuguese', tl='english')
     print pytranslate.translate('hello', sl='auto', tl='portuguese')
+    print pytranslate.translate('olá', sl='auto', tl='english')
     print pytranslate.translate('hallo', sl='auto', tl='portuguese')
     print pytranslate.translate('hallo', sl='auto', tl='french')
-    print pytranslate.translate('Bonjour', sl='auto', tl='dutch')
+    print pytranslate.translate('bonjour', sl='auto', tl='dutch')
+    print pytranslate.translate('olá meu velho amigo', sl='auto', tl='english')
 
 ### A instalação é simples:
+
+    pip install pytranslate
+
+    easy_install pytranslate
 
     wget --no-check-certificate https://github.com/stockrt/pytranslate/tarball/master -O pytranslate.tar.gz
     tar xzvf pytranslate.tar.gz
